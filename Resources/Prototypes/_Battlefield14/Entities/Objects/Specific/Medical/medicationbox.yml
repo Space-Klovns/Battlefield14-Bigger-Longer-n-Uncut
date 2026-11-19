@@ -1,5 +1,5 @@
 - type: entity
-  id: MedicationBoxBase
+  id: BF14MedicationBoxBase
   parent: [BaseStorageItem, RecyclableItemCardboard]
   name: medication box
   description: A small cardboard box holding some blister packets.
@@ -29,7 +29,7 @@
     size: Small
   - type: Tag
     tags:
-    - MedicationBox
+    - BF14MedicationBox
   - type: GenericVisualizer
     visuals:
       enum.StorageVisuals.Open:
@@ -39,8 +39,8 @@
   - type: Appearance
 
 - type: entity
-  id: MedicationBoxPillsTricordrazine
-  parent: MedicationBoxBase
+  id: BF14MedicationBoxPillsTricordrazine
+  parent: BF14MedicationBoxBase
   name: pill box
   suffix: Tricordrazine
   components:
@@ -54,12 +54,12 @@
     currentLabel: tricordrazine
   - type: StorageFill
     contents:
-    - id: BlisterPackTricordrazine
+    - id: BF14BlisterPackTricordrazine
       amount: 2
 
 - type: entity
-  id: MedicationBoxPillsBicaridine
-  parent: MedicationBoxBase
+  id: BF14MedicationBoxPillsBicaridine
+  parent: BF14MedicationBoxBase
   name: pill box
   suffix: Bicaridine
   components:
@@ -73,12 +73,12 @@
     currentLabel: bicaridine
   - type: StorageFill
     contents:
-    - id: BlisterPackBicaridine
+    - id: BF14BlisterPackBicaridine
       amount: 2
 
 - type: entity
-  id: MedicationBoxPillsKelotane
-  parent: MedicationBoxBase
+  id: BF14MedicationBoxPillsKelotane
+  parent: BF14MedicationBoxBase
   name: pill box
   suffix: Kelotane
   components:
@@ -92,12 +92,12 @@
     currentLabel: kelotane
   - type: StorageFill
     contents:
-    - id: BlisterPackKelotane
+    - id: BF14BlisterPackKelotane
       amount: 2
 
 - type: entity
-  id: MedicationBoxPillsDylovene
-  parent: MedicationBoxBase
+  id: BF14MedicationBoxPillsDylovene
+  parent: BF14MedicationBoxBase
   name: pill box
   suffix: Dylovene
   components:
@@ -111,12 +111,12 @@
     currentLabel: dylovene
   - type: StorageFill
     contents:
-    - id: BlisterPackDylovene
+    - id: BF14BlisterPackDylovene
       amount: 2
 
 - type: entity
-  id: MedicationBoxPillsDexalin
-  parent: MedicationBoxBase
+  id: BF14MedicationBoxPillsDexalin
+  parent: BF14MedicationBoxBase
   name: pill box
   suffix: Dexalin
   components:
@@ -130,12 +130,12 @@
     currentLabel: dexalin
   - type: StorageFill
     contents:
-    - id: BlisterPackDexalin
+    - id: BF14BlisterPackDexalin
       amount: 2
 
 - type: entity
-  id: MedicationBoxPillsIron
-  parent: MedicationBoxBase
+  id: BF14MedicationBoxPillsIron
+  parent: BF14MedicationBoxBase
   name: pill box
   suffix: Iron
   components:
@@ -149,12 +149,12 @@
     currentLabel: iron
   - type: StorageFill
     contents:
-    - id: BlisterPackIron
+    - id: BF14BlisterPackIron
       amount: 2
 
 - type: entity
-  id: MedicationBoxPillsDermaline
-  parent: MedicationBoxBase
+  id: BF14MedicationBoxPillsDermaline
+  parent: BF14MedicationBoxBase
   name: pill box
   suffix: Dermaline
   components:
@@ -168,12 +168,12 @@
     currentLabel: dermaline
   - type: StorageFill
     contents:
-    - id: BlisterPackDermaline
+    - id: BF14BlisterPackDermaline
       amount: 2
 
 - type: entity
-  id: MedicationBoxPillsHyronalin
-  parent: MedicationBoxBase
+  id: BF14MedicationBoxPillsHyronalin
+  parent: BF14MedicationBoxBase
   name: pill box
   suffix: Hyronalin
   components:
@@ -187,5 +187,5 @@
     currentLabel: hyronalin
   - type: StorageFill
     contents:
-    - id: BlisterPackHyronalin
+    - id: BF14BlisterPackHyronalin
       amount: 2

@@ -1,5 +1,5 @@
 - type: entity
-  id: DefibrillatorCompactBF
+  id: BF14DefibrillatorCompact
   parent: DefibrillatorCompact
   name: combat defibrillator
   description: "Doubles as a self-defense weapon against war-crime inclined vagrants. Battery drains idly when on."
@@ -45,7 +45,7 @@
         Shock: 15
 
 - type: entity
-  id: DefibrillatorDisposable
+  id: BF14DefibrillatorDisposable
   parent: DefibrillatorCompact
   name: disposable defibrillator
   description: "A small defibrillator, with an integrated cell, only allowing two uses. Battery drains idly while on."

@@ -1,5 +1,5 @@
 - type: entity
-  id: Bullet40x46mmHE
+  id: BF14Bullet40x46mmHE
   name: 40x46mm HE grenade
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
@@ -12,7 +12,7 @@
     deleteOnCollide: true
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: HandGrenade
+    explosionType: BF14HandGrenade
     totalIntensity: 20
     intensitySlope: 3
     maxIntensity: 2
@@ -29,7 +29,7 @@
     energy: 0.5
 
 - type: entity
-  id: Bullet40x46mmHEDPFragment
+  id: BF14Bullet40x46mmHEDPFragment
   name: 40x46mm HEDP fragment
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -55,7 +55,7 @@
     energy: 0.3
 
 - type: entity
-  id: Bullet40x46mmFragFragment
+  id: BF14Bullet40x46mmFragFragment
   name: 40x46mm fragment
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -81,7 +81,7 @@
     energy: 0.2
 
 - type: entity
-  id: Bullet40x46mmMPAPERS
+  id: BF14Bullet40x46mmMPAPERS
   name: MP-APERS projectile
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -110,11 +110,11 @@
     energy: 0.15
 
 - type: entity
-  id: 40x46mmMPAPERSSpread
+  id: BF1440x46mmMPAPERSSpread
   categories: [ HideSpawnMenu ]
-  parent: Bullet40x46mmMPAPERS
+  parent: BF14Bullet40x46mmMPAPERS
   components:
   - type: ProjectileSpread
-    proto: Bullet40x46mmMPAPERS
+    proto: BF14Bullet40x46mmMPAPERS
     count: 20
     spread: 10

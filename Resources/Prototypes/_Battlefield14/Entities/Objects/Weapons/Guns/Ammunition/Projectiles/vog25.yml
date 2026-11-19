@@ -1,5 +1,5 @@
 - type: entity
-  id: BulletVOG25Thermobaric
+  id: BF14BulletVOG25Thermobaric
   name: VG-40TB
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
@@ -12,13 +12,13 @@
     deleteOnCollide: true
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Thermobaric
+    explosionType: BF14Thermobaric
     totalIntensity: 20
     intensitySlope: 3
     maxIntensity: 2
     maxTileBreak: 0
   - type: SpawnOnTrigger
-    proto: InstantEffectGravityWellThermobaric
+    proto: BF14InstantEffectGravityWellThermobaric
   - type: Sprite
     sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
     layers:
@@ -31,7 +31,7 @@
     energy: 0.5
 
 - type: entity
-  id: ArtilleryMarkerVOG25Thermobaric
+  id: BF14ArtilleryMarkerVOG25Thermobaric
   name: artillery strike VG-40TB 40mm thermobaric
   components:
   - type: Sprite
@@ -42,18 +42,18 @@
   - type: DeleteOnTrigger
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Thermobaric
+    explosionType: BF14Thermobaric
     totalIntensity: 20
     intensitySlope: 3
     maxIntensity: 2
     maxTileBreak: 0
   - type: SpawnOnTrigger
-    proto: InstantEffectGravityWellThermobaric
+    proto: BF14InstantEffectGravityWellThermobaric
 
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: Pellet12_gaugeFlare
-  id: BulletVOG25Illumination
+  id: BF14BulletVOG25Illumination
   name: VSG-25
   components:
   - type: Sprite
@@ -69,7 +69,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
 #  parent: BaseBullet
-  id: ArtilleryMarkerVOG25Illumination
+  id: BF14ArtilleryMarkerVOG25Illumination
   name: VSG-25
   components:
   - type: Sprite
@@ -98,7 +98,7 @@
     energy: 9.0
 
 - type: entity
-  id: ArtilleryMarkerVOG25ParaFlare
+  id: BF14ArtilleryMarkerVOG25ParaFlare
   name: artillery strike VG-40OP 40mm paraflare
   components:
   - type: Sprite

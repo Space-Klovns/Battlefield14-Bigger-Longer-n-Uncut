@@ -2,7 +2,7 @@
   name: pill
   suffix: Desoxyephedrine 5u
   parent: Pill
-  id: PillDesoxyephedrine
+  id: BF14PillDesoxyephedrine
   components:
   - type: Pill
     pillType: 15
@@ -20,7 +20,7 @@
   name: pill
   suffix: Ethylredoxrazine 10u
   parent: Pill
-  id: PillEthylredoxrazine
+  id: BF14PillEthylredoxrazine
   components:
   - type: Pill
     pillType: 7

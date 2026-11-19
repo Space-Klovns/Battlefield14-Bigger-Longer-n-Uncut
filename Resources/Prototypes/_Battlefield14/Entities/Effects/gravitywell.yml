@@ -1,5 +1,5 @@
 - type: entity
-  id: InstantEffectGravityWellThermobaric
+  id: BF14InstantEffectGravityWellThermobaric
   suffix: Thermobaric Gravity Well
   parent: AdminInstantEffectBase
   components:

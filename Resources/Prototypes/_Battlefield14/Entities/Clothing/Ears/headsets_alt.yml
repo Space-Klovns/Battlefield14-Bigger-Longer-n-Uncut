@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadsetAlt
-  id: ClothingHeadsetAltWPS
+  id: BF14ClothingHeadsetAltWPS
   name: Chevron private security over-ear headset
   components:
     - type: EncryptionKeyHolder
@@ -8,7 +8,7 @@
     - type: ContainerFill
       containers:
         key_slots:
-        - EncryptionKeyWPS
+        - BF14EncryptionKeyWPS
         - EncryptionKeyCommon
     - type: Sprite
       sprite: Clothing/Ears/Headsets/security.rsi

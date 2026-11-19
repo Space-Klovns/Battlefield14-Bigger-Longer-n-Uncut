@@ -1,5 +1,5 @@
-names-smersh-dataset-1 = smersh belt rig
-names-smersh-dataset-2 = smerch belt rig
+bf14-names-smersh-dataset-1 = smersh belt rig
+bf14-names-smersh-dataset-2 = smerch belt rig
 stack-bf14-advanced-burn-kit = advanced burn kit
 stack-bf14-advanced-trauma-kit = advanced trauma kit
 stack-bf14-dressing = wound dressing

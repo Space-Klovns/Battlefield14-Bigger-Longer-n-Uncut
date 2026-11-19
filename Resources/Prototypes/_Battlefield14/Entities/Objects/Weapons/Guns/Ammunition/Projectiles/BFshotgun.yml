@@ -1,5 +1,5 @@
 - type: entity
-  id: PelletShotgunBF12GaugeBreaching
+  id: BF14PelletShotgun12GaugeBreaching
   name: 12 gauge breaching pellet
   parent: BaseBullet
   categories: [ HideSpawnMenu ]

@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckIFFtapeBlue
+  id: BF14ClothingNeckIFFtapeBlue
   name: IFF tape (blue)
   description: Prevents friendly fire as long as you have your colour-identification flash card.
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckIFFtapeYellow
+  id: BF14ClothingNeckIFFtapeYellow
   name: IFF tape (yellow)
   description: Prevents friendly fire as long as you have your colour-identification flash card.
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckIFFtapeGreen
+  id: BF14ClothingNeckIFFtapeGreen
   name: IFF tape (green)
   description: Prevents friendly fire as long as you have your colour-identification flash card.
   components:
@@ -33,7 +33,7 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckIFFtapeWhite
+  id: BF14ClothingNeckIFFtapeWhite
   name: IFF tape (white)
   description: Prevents friendly fire as long as you have your colour-identification flash card.
   components:
@@ -44,7 +44,7 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckIFFtapeRed # TODO make these just recolour the white one later
+  id: BF14ClothingNeckIFFtapeRed # TODO make these just recolour the white one later
   name: IFF tape (red)
   description: Prevents friendly fire as long as you have your colour-identification flash card.
   components:
@@ -55,7 +55,7 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckIFFtapeStGeorge
+  id: BF14ClothingNeckIFFtapeStGeorge
   name: IFF tape (St. George's ribbon)
   description: Prevents friendly fire as long as you have your colour-identification flash card.
   components:
@@ -70,7 +70,7 @@
 
 - type: entity
   parent: [ClothingNeckBase , BaseFoldable]
-  id: ClothingNeckIFFtapeFSB
+  id: BF14ClothingNeckIFFtapeFSB
   name: reversable IFF armband (FSB)
   description: Prevents friendly fire as long as you have your colour-identification flash card.
   components:

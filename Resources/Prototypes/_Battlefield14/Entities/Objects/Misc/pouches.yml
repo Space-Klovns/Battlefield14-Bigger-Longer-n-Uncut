@@ -1,5 +1,5 @@
 - type: entity
-  id: BasePouch
+  id: BF14BasePouch
   parent: BaseStorageItem
   abstract: true
   components:
@@ -26,8 +26,8 @@
     price: 100
 
 - type: entity
-  id: PouchMags
-  parent: BasePouch
+  id: BF14PouchMags
+  parent: BF14BasePouch
   name: magazine pouch
   description: A small pouch for holding magazines.
   components:
@@ -45,25 +45,25 @@
     - 0,0,1,1
     whitelist:
       tags:
-      - Magazine
+      - BF14Magazine
       - Cartridge
     storageOpenSound:
-      collection: BF_Magpouch_Open
+      collection: BF14MagpouchOpen
       params:
         volume: -1
         variation: 0.125
     storageCloseSound:
-      collection: BF_Magpouch_Open
+      collection: BF14MagpouchOpen
       params:
         volume: -1
         variation: 0.125
     storageInsertSound:
-      collection: BF_Magpouch_Insert
+      collection: BF14MagpouchInsert
       params:
         volume: -1
         variation: 0.125
     storageRemoveSound:
-      collection: BF_Magpouch_Remove
+      collection: BF14MagpouchRemove
       params:
         volume: -1
         variation: 0.125
@@ -74,8 +74,8 @@
     price: 100
 
 - type: entity
-  id: PouchMagsLarge
-  parent: PouchMags
+  id: BF14PouchMagsLarge
+  parent: BF14PouchMags
   name: large magazine pouch
   components:
   - type: Sprite
@@ -93,8 +93,8 @@
     price: 100
 
 - type: entity
-  id: PouchMagsPistol
-  parent: PouchMags
+  id: BF14PouchMagsPistol
+  parent: BF14PouchMags
   name: pistol magazine pouch
   description: A small pouch for holding pistol-sized magazines.
   components:
@@ -108,12 +108,12 @@
     - 0,0,2,1
     whitelist:
       tags:
-      - PistolMagazine
+      - BF14PistolMagazine
       - Cartridge
     blacklist:
       tags:
-      - Grenade
-      - Cartridge40x46mmGrenade
+      - BF14Grenade
+      - BF14Cartridge40x46mmGrenade
   - type: PhysicalComposition
     materialComposition:
       Plastic: 100
@@ -121,8 +121,8 @@
     price: 100
 
 - type: entity
-  id: PouchMagsPistolLarge
-  parent: PouchMagsPistol
+  id: BF14PouchMagsPistolLarge
+  parent: BF14PouchMagsPistol
   name: large pistol magazine pouch
   components:
   - type: Sprite
@@ -140,8 +140,8 @@
     price: 100
 
 - type: entity
-  id: PouchFlares
-  parent: BasePouch
+  id: BF14PouchFlares
+  parent: BF14BasePouch
   name: flare pouch
   description: A convenient set of pouches for holding flares and glowsticks for on the go lighting solutions.
   components:

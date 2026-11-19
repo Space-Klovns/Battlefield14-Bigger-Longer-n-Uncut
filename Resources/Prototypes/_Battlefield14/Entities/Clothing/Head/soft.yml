@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatZsoft
+  id: BF14ClothingHeadHatZsoft
   name: Z cap
   description: "It's a baseball hat with a white Z on the front."
   components:

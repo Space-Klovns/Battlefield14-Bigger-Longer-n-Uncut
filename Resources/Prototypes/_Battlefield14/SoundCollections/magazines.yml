@@ -1,5 +1,5 @@
 - type: soundCollection
-  id: BF_Magazine_Drop_Rifle
+  id: BF14MagazineDropRifle
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/magazines/rifle_magdrop.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/magazines/rifle_magdrop_1.ogg"
@@ -8,7 +8,7 @@
   - "/Audio/_Battlefield14/Weapons/Guns/magazines/rifle_magdrop_4.ogg"
 
 - type: soundCollection
-  id: BF_Magazine_Drop_SMG
+  id: BF14MagazineDropSMG
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/magazines/magdrop_smg.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/magazines/smg_pistol_magdrop_1.ogg"

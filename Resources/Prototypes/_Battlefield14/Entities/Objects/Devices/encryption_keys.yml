@@ -1,6 +1,6 @@
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeyWPS
+  id: BF14EncryptionKeyWPS
   name: Western private security communications encryption key
   description: Hey we got a civilian uhh littering over in rnd over.
   components:

@@ -66,7 +66,7 @@
 
 - type: entity
   parent: ClothingOuterVestHazard
-  id: ClothingOuterWorkJacket
+  id: BF14ClothingOuterWorkJacket
   name: work jacket
   description: A work jacket worn by blue collar workers.
   components:
@@ -77,7 +77,7 @@
 
 - type: entity
   parent: ClothingOuterBase
-  id: ClothingOuterBlackTrenchcoat
+  id: BF14ClothingOuterBlackTrenchcoat
   name: trench coat
   description: "It has a tag on the inside, with 'Not Important' written on it"
   components:
@@ -88,7 +88,7 @@
 
 - type: entity
   parent: ClothingOuterVestHazard
-  id: ClothingOuterWorkerHighViz
+  id: BF14ClothingOuterWorkerHighViz
   name: high-viz vest
   description: A high visibility vest worn by blue collar workers.
   components:

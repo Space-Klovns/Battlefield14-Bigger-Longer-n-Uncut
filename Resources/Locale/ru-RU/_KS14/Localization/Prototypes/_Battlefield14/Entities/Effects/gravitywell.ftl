@@ -1,4 +1,4 @@
 # Resources\Prototypes\_Battlefield14\Entities\Effects\gravitywell.yml
-ent-InstantEffectGravityWellThermobaric =
+ent-BF14InstantEffectGravityWellThermobaric =
     .desc = { ent-AdminInstantEffectBase.desc }
     .suffix = Термобарический гравитационный колодец

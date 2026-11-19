@@ -1,38 +1,41 @@
 - type: Tag
-  id: BF_CartridgePistol357
+  id: BF14CartridgePistol357
 
 - type: Tag
-  id: BF_CartridgeShotgun12Gauge
+  id: BF14CartridgeShotgun12Gauge
 
 - type: Tag
-  id: BF_CartridgeShotgun12GaugeBreaching
+  id: BF14CartridgeShotgun12GaugeBreaching
 
 - type: Tag
-  id: BF_CartridgeShotgun4Gauge
+  id: BF14CartridgeShotgun4Gauge
 
 - type: Tag
-  id: BF_CartridgeShotgun410Bore
+  id: BF14CartridgeShotgun410Bore
 
 - type: Tag
-  id: BlisterPack
+  id: BF14BlisterPack
 
 - type: Tag
-  id: Syrette
+  id: BF14Syrette
 
 - type: Tag
-  id: MedicationBox
+  id: BF14MedicationBox
 
 - type: Tag
-  id: PistolMagazine # for all kinds of pistol magazines, this is used for pistol magazine pouches
+  id: BF14PistolMagazine # for all kinds of pistol magazines, this is used for pistol magazine pouches
 
 - type: Tag
-  id: Magazine # generic tag for all magazine types
+  id: BF14Tourniquet
 
 - type: Tag
-  id: FitsInVoidsuitKit
+  id: BF14Magazine # generic tag for all magazine types
 
 - type: Tag
-  id: Cartridge43x30mmGrenade
+  id: BF14FitsInVoidsuitKit
+
+- type: Tag
+  id: BF14Cartridge43x30mmGrenade
 
 - type: Tag
   id: BF14Pistol9x19mmSuppressor
@@ -44,6 +47,9 @@
   id: BF14PatchChurkich
 
 # BF14-BLU: ported from Battlefield14
+
+- type: Tag
+  id: BF14Grenade
 
 - type: Tag
   id: Machete

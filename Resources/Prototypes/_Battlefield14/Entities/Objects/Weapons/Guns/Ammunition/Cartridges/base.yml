@@ -4,15 +4,15 @@
   abstract: true
   components:
   - type: CartridgeAmmo
-    muzzleFlash: MuzzleFlashEffectBFRifle
+    muzzleFlash: BF14MuzzleFlashEffectRifle
     soundEject:
-      collection: BF_Cartridge_Drop_556x45
+      collection: BF14CartridgeDrop556x45
       params:
         volume: -5
         variation: 0.125
   - type: EmitSoundOnLand
     sound:
-      collection: BF_Cartridge_Drop_556x45
+      collection: BF14CartridgeDrop556x45
       params:
         volume: -1
 
@@ -22,58 +22,58 @@
   abstract: true
   components:
   - type: CartridgeAmmo
-    muzzleFlash: MuzzleFlashEffectBFPistol
+    muzzleFlash: BF14MuzzleFlashEffectPistol
     soundEject:
-      collection: BF_Cartridge_Drop_9x19
+      collection: BF14CartridgeDrop9x19
       params:
         volume: -5
         variation: 0.125
   - type: EmitSoundOnLand
     sound:
-      collection: BF_Cartridge_Drop_9x19
+      collection: BF14CartridgeDrop9x19
       params:
         volume: -1
   - type: SpentAmmoVisuals
 
 - type: entity
   parent: BaseCartridge # BF14-BLU: no RecyclableItemSteelTiny, KS14 cartridges have no materials (MaterialArbitrageTest)
-  id: BaseCartridge40x46
+  id: BF14BaseCartridge40x46
   abstract: true
   components:
   - type: CartridgeAmmo
-    muzzleFlash: MuzzleFlashEffectBFShotgun
+    muzzleFlash: BF14MuzzleFlashEffectShotgun
     soundEject:
-      collection: BF_Cartridge_Drop_40x46mm
+      collection: BF14CartridgeDrop40x46mm
       params:
         volume: -5
         variation: 0.125
   - type: EmitSoundOnLand
     sound:
-      collection: BF_Cartridge_Drop_40x46mm
+      collection: BF14CartridgeDrop40x46mm
       params:
         volume: -1
 
 - type: entity
-  parent: BaseCartridge40x46
-  id: BaseCartridge40x53
+  parent: BF14BaseCartridge40x46
+  id: BF14BaseCartridge40x53
   abstract: true
 
 - type: entity
   parent: BaseCartridge # BF14-BLU: no RecyclableItemSteelTiny, KS14 cartridges have no materials (MaterialArbitrageTest)
-  id: BaseCartridgeLauncher
+  id: BF14BaseCartridgeLauncher
   description: "This item can be stored on your auxillary suit storage slot."
   abstract: true
   components:
   - type: CartridgeAmmo
-    muzzleFlash: MuzzleFlashEffectBFShotgun
+    muzzleFlash: BF14MuzzleFlashEffectShotgun
     soundEject:
-      collection: BF_Cartridge_Drop_40x46mm
+      collection: BF14CartridgeDrop40x46mm
       params:
         volume: -5
         variation: 0.125
   - type: EmitSoundOnLand
     sound:
-      collection: BF_Cartridge_Drop_40x46mm
+      collection: BF14CartridgeDrop40x46mm
       params:
         volume: -1
   - type: Clothing

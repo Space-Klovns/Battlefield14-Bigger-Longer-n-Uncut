@@ -1,6 +1,6 @@
 - type: entity
   name: blister pack
-  id: BlisterPack
+  id: BF14BlisterPack
   parent: [BaseStorageItem, RecyclableItemPlasticTiny]
   description: Holds up to 6 pills.
   components:
@@ -36,7 +36,7 @@
   - type: Tag
     tags:
       - PillCanister
-      - BlisterPack
+      - BF14BlisterPack
   - type: Storage
     grid:
     - 0,0,1,2
@@ -70,8 +70,8 @@
       path: /Audio/_Goobstation/Items/handling/pillbottle_drop.ogg
 
 - type: entity
-  id: BaseBlisterPackBlue
-  parent: BlisterPack
+  id: BF14BaseBlisterPackBlue
+  parent: BF14BlisterPack
   abstract: true
   components:
   - type: Icon
@@ -99,8 +99,8 @@
       visible: false
 
 - type: entity
-  id: BaseBlisterPackRed
-  parent: BlisterPack
+  id: BF14BaseBlisterPackRed
+  parent: BF14BlisterPack
   abstract: true
   components:
   - type: Icon
@@ -128,8 +128,8 @@
       visible: false
 
 - type: entity
-  id: BaseBlisterPackGreen
-  parent: BlisterPack
+  id: BF14BaseBlisterPackGreen
+  parent: BF14BlisterPack
   abstract: true
   components:
   - type: Icon
@@ -157,8 +157,8 @@
       visible: false
 
 - type: entity
-  id: BaseBlisterPackYellow
-  parent: BlisterPack
+  id: BF14BaseBlisterPackYellow
+  parent: BF14BlisterPack
   abstract: true
   components:
   - type: Icon
@@ -186,8 +186,8 @@
       visible: false
 
 - type: entity
-  id: BaseBlisterPackGrey
-  parent: BlisterPack
+  id: BF14BaseBlisterPackGrey
+  parent: BF14BlisterPack
   abstract: true
   components:
   - type: Icon
@@ -215,8 +215,8 @@
       visible: false
 
 - type: entity
-  id: BlisterPackSyrette
-  parent: BlisterPack
+  id: BF14BlisterPackSyrette
+  parent: BF14BlisterPack
   description: Holds up to 5 syrettes.
   components:
   - type: Icon
@@ -243,17 +243,17 @@
       visible: false
   - type: Tag
     tags:
-      - BlisterPack
+      - BF14BlisterPack
   - type: Storage
     grid:
     - 0,0,4,0
     whitelist:
       tags:
-      - Syrette
+      - BF14Syrette
     hideStackVisualsWhenClosed: false
   - type: ItemCounter
     count:
-      tags: [Syrette]
+      tags: [BF14Syrette]
     composite: true
     layerStates:
     - fill-ampuole-1
@@ -264,8 +264,8 @@
   - type: Appearance
 
 - type: entity
-  parent: BaseBlisterPackRed
-  id: BlisterPackBicaridine
+  parent: BF14BaseBlisterPackRed
+  id: BF14BlisterPackBicaridine
   suffix: Bicaridine 15u, 6
   components:
   - type: StorageFill
@@ -274,8 +274,8 @@
       amount: 6
 
 - type: entity
-  parent: BaseBlisterPackYellow
-  id: BlisterPackKelotane
+  parent: BF14BaseBlisterPackYellow
+  id: BF14BlisterPackKelotane
   suffix: Kelotane 15u, 6
   components:
   - type: StorageFill
@@ -284,8 +284,8 @@
       amount: 6
 
 - type: entity
-  parent: BaseBlisterPackBlue
-  id: BlisterPackTricordrazine
+  parent: BF14BaseBlisterPackBlue
+  id: BF14BlisterPackTricordrazine
   suffix: Tricordrazine 15u, 6
   components:
   - type: StorageFill
@@ -294,8 +294,8 @@
       amount: 6
 
 - type: entity
-  parent: BaseBlisterPackBlue
-  id: BlisterPackDexalin
+  parent: BF14BaseBlisterPackBlue
+  id: BF14BlisterPackDexalin
   suffix: Dexalin 15u, 6
   components:
   - type: StorageFill
@@ -304,8 +304,8 @@
       amount: 6
 
 - type: entity
-  parent: BaseBlisterPackGreen
-  id: BlisterPackDylovene
+  parent: BF14BaseBlisterPackGreen
+  id: BF14BlisterPackDylovene
   suffix: Dylovene 15u, 6
   components:
   - type: StorageFill
@@ -314,18 +314,18 @@
       amount: 6
 
 - type: entity
-  parent: BaseBlisterPackGreen
-  id: BlisterPackEthylredoxrazine
+  parent: BF14BaseBlisterPackGreen
+  id: BF14BlisterPackEthylredoxrazine
   suffix: Ethylredoxrazine 10u, 6
   components:
   - type: StorageFill
     contents:
-    - id: PillEthylredoxrazine
+    - id: BF14PillEthylredoxrazine
       amount: 6
 
 - type: entity
-  parent: BaseBlisterPackGrey
-  id: BlisterPackIron
+  parent: BF14BaseBlisterPackGrey
+  id: BF14BlisterPackIron
   suffix: Iron 10u, 6
   components:
   - type: StorageFill
@@ -334,8 +334,8 @@
       amount: 6
 
 - type: entity
-  parent: BlisterPack
-  id: BlisterPackPotassiumIodide
+  parent: BF14BlisterPack
+  id: BF14BlisterPackPotassiumIodide
   suffix: Potassium Iodide 10u, 6
   components:
   - type: StorageFill
@@ -344,8 +344,8 @@
       amount: 6
 
 - type: entity
-  parent: BaseBlisterPackYellow
-  id: BlisterPackDermaline
+  parent: BF14BaseBlisterPackYellow
+  id: BF14BlisterPackDermaline
   suffix: Dermaline 7.5u, 6
   components:
   - type: StorageFill
@@ -354,8 +354,8 @@
       amount: 6
 
 - type: entity
-  parent: BaseBlisterPackGreen
-  id: BlisterPackHyronalin
+  parent: BF14BaseBlisterPackGreen
+  id: BF14BlisterPackHyronalin
   suffix: Hyronalin 10u, 6
   components:
   - type: StorageFill

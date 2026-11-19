@@ -1,14 +1,14 @@
 - type: entity
-  id: BF_CartridgePistol357
+  id: BF14CartridgePistol357
   name: cartridge (.357 Magnum)
   parent: BF14BaseCartridgePistol
   components:
   - type: CartridgeAmmo
-    proto: BulletPistolBF357
+    proto: BF14BulletPistol357
   - type: Tag
     tags:
     - Cartridge
-    - BF_CartridgePistol357
+    - BF14CartridgePistol357
   - type: Sprite
     sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/pistol.rsi
     layers:

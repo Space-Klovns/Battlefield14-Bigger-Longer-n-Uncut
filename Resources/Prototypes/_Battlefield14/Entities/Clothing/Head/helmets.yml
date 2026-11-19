@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadHelmetBasic
-  id: ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetUS
   name: american camo helmet
   description: This isnt for catching shrap or rounds, its made to keep your grey matter from grossing out your buddies.
   components:
@@ -23,8 +23,8 @@
     damageCoefficient: 0.9
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetUSFAST
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetUSFAST
   description: A high cut helmet used by special ops units and larpers.
   name: FAST helmet
   components:
@@ -36,8 +36,8 @@
     damageCoefficient: 0.95 # high cut
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetUSFASTMandible
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetUSFASTMandible
   description: A high cut helmet used by special ops units and larpers. This one has a attached mandible cover that protects your ears and face from sharpnel.
   name: FAST helmet (mandible)
   components:
@@ -58,8 +58,8 @@
         Piercing: 0.5
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetUSACH
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetUSACH
   name: ACH helmet
   components:
   - type: Sprite
@@ -68,8 +68,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/ACH.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUSACH
-  id: ClothingHeadHatHelmetUSACHWoodland
+  parent: BF14ClothingHeadHatHelmetUSACH
+  id: BF14ClothingHeadHatHelmetUSACHWoodland
   name: ACH helmet (MARPAT woodland)
   components:
   - type: Sprite
@@ -78,8 +78,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/ACHWoodland.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetUSRiot
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetUSRiot
   name: american camo riot helmet
   description: This IS for catching shrap and rounds.
   components:
@@ -102,8 +102,8 @@
     damageCoefficient: 0.9
 
 - type: entity
-  parent: ClothingHeadHatHelmetUSRiot
-  id: ClothingHeadHatHelmetUSRiotACH
+  parent: BF14ClothingHeadHatHelmetUSRiot
+  id: BF14ClothingHeadHatHelmetUSRiotACH
   name: ACH riot helmet
   description: This IS for catching shrap and rounds.
   components:
@@ -113,8 +113,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/ACHRiot.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetUSUrban
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetUSUrban
   name: M81 urban camo helmet
   description: This isnt for catching shrap or rounds, its made to keep your grey matter from grossing out your buddies.
   components:
@@ -124,8 +124,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/ushelmeturban.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUSRiot
-  id: ClothingHeadHatHelmetUSUrbanRiot
+  parent: BF14ClothingHeadHatHelmetUSRiot
+  id: BF14ClothingHeadHatHelmetUSUrbanRiot
   name: M81 urban camo helmet
   description: This isnt for catching shrap or rounds, its made to keep your grey matter from grossing out your buddies.
   components:
@@ -136,7 +136,7 @@
 
 - type: entity
   parent: ClothingHeadHelmetBasic
-  id: ClothingHeadHatHelmetDEM92
+  id: BF14ClothingHeadHatHelmetDEM92
   name: M92 combat helmet (flecktarn)
   components:
   - type: Sprite
@@ -145,8 +145,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/dehelmetM92.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetRU
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetRU
   name: russian camo helmet
   description: This isnt for catching shrap or rounds, its made to keep your grey matter from grossing out your buddies.
   components:
@@ -156,8 +156,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/ruhelmet.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetRUEMR
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetRUEMR
   name: russian camo helmet (EMR)
   description: This isnt for catching shrap or rounds, its made to keep your grey matter from grossing out your buddies.
   components:
@@ -167,8 +167,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/emrhelmet.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUSRiot
-  id: ClothingHeadHatHelmetRUEMRRiot
+  parent: BF14ClothingHeadHatHelmetUSRiot
+  id: BF14ClothingHeadHatHelmetRUEMRRiot
   name: russian camo riot helmet (EMR)
   description: This IS for catching shrap and rounds.
   components:
@@ -178,8 +178,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/emrhelmetriot.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetRU
-  id: ClothingHeadHatHelmetRU6b47
+  parent: BF14ClothingHeadHatHelmetRU
+  id: BF14ClothingHeadHatHelmetRU6b47
   name: 6b47 helmet
   components:
   - type: Sprite
@@ -188,8 +188,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/6b47.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetRU6b47
-  id: ClothingHeadHatHelmetRU6b47Alt
+  parent: BF14ClothingHeadHatHelmetRU6b47
+  id: BF14ClothingHeadHatHelmetRU6b47Alt
   components:
   - type: Sprite
     sprite: _Battlefield14/Clothing/Head/Helmets/6b47alt.rsi
@@ -197,8 +197,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/6b47alt.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUSRiot
-  id: ClothingHeadHatHelmetRU6b47Riot
+  parent: BF14ClothingHeadHatHelmetUSRiot
+  id: BF14ClothingHeadHatHelmetRU6b47Riot
   name: 6b47 riot helmet
   components:
   - type: Sprite
@@ -207,8 +207,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/6b47Riot.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetRU6b47Riot
-  id: ClothingHeadHatHelmetRU6b47RiotAlt
+  parent: BF14ClothingHeadHatHelmetRU6b47Riot
+  id: BF14ClothingHeadHatHelmetRU6b47RiotAlt
   name: 6b47 riot helmet
   components:
   - type: Sprite
@@ -217,8 +217,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/6b47altRiot.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetRUSSh68
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetRUSSh68
   name: SSh-68 helmet
   description: A very old SSh-68 helmet, commonly nicknamed "penis helmet" due to its shape.
   components:
@@ -228,8 +228,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/ruhelmetssh68.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetRUSSh68
-  id: ClothingHeadHatHelmetRUSSh68Track
+  parent: BF14ClothingHeadHatHelmetRUSSh68
+  id: BF14ClothingHeadHatHelmetRUSSh68Track
   name: SSh-68 helmet
   description: A very old SSh-68 helmet, commonly nicknamed "penis helmet" due to its shape. This one has ben pained black with 2 white stripes.
   components:
@@ -239,8 +239,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/ruhelmetssh68track.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUSRiot
-  id: ClothingHeadHatHelmetRUAltyn
+  parent: BF14ClothingHeadHatHelmetUSRiot
+  id: BF14ClothingHeadHatHelmetRUAltyn
   name: Rys-T helmet
   description: Rated to stop shrapnel and pistol rounds, you didnt think it could stop rifle rounds like M855 did you?
   components:
@@ -272,8 +272,8 @@
   - type: HeldSpeedModifier
 
 - type: entity
-  parent: ClothingHeadHatHelmetRUAltyn
-  id: ClothingHeadHatHelmetRUAltynTrack
+  parent: BF14ClothingHeadHatHelmetRUAltyn
+  id: BF14ClothingHeadHatHelmetRUAltynTrack
   name: Rys-T helmet
   description: Rated to stop shrapnel and pistol rounds, you didnt think it could stop rifle rounds like M855 did you? This one has ben painted with white stripes.
   components:
@@ -283,8 +283,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/rutrackaltyn.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetUN
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetUN
   name: UN helmet
   description: Youre more likey to die wearing this than if you just left it in the ditch you found it in.
   components:
@@ -294,8 +294,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/unhelmet.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetSurplus
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetSurplus
   name: surplus helmet
   description: A old surplus helmet, its origin is unknown.
   components:
@@ -306,7 +306,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatHelmetHardhat
+  id: BF14ClothingHeadHatHelmetHardhat
   name: Hardhat
   description: A plastic hardhat, no its not gonna protect you from anything unless its raining bricks.
   components:
@@ -320,8 +320,8 @@
         Blunt: 2
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetSecurityBF14
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetSecurity
   name: security helmet
   description: This isnt for catching shrap or rounds, its made to keep your grey matter from grossing out your buddies.
   components:
@@ -331,8 +331,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/helmetsec.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetSecurityBF14
-  id: ClothingHeadHatHelmetCommand
+  parent: BF14ClothingHeadHatHelmetSecurity
+  id: BF14ClothingHeadHatHelmetCommand
   name: command helmet
   description: This isnt for catching shrap or rounds, its made to keep your grey matter from grossing out your buddies.
   components:
@@ -342,8 +342,8 @@
     sprite: _Battlefield14/Clothing/Head/Helmets/helmetcom.rsi
 
 - type: entity
-  parent: ClothingHeadHatHelmetUS
-  id: ClothingHeadHatHelmetPilotBlack
+  parent: BF14ClothingHeadHatHelmetUS
+  id: BF14ClothingHeadHatHelmetPilotBlack
   name: pilot helmet
   description: "Has enough protection to stop your head getting caved in after ejection and is equipped with an advanced IFF sensor suite and welding arc protection. Provides welding protection and sechud."
   components:
@@ -360,8 +360,8 @@
     coverage: EYES
 
 - type: entity
-  parent: ClothingHeadHatHelmetPilotBlack
-  id: ClothingHeadHatHelmetPilotNavyBlue
+  parent: BF14ClothingHeadHatHelmetPilotBlack
+  id: BF14ClothingHeadHatHelmetPilotNavyBlue
   name: pilot helmet
   description: "Has enough protection to stop your head getting caved in after ejection and is equipped with an advanced IFF sensor suite and welding arc protection. Provides welding protection and sechud."
   components:

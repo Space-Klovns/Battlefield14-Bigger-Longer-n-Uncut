@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitCombatScavBoss
+  id: BF14ClothingUniformJumpsuitCombatScavBoss
   name: Scavenger boss uniform
   description: Worn by the boss apart of the local scavenger gang.
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitCombatScavGuard
+  id: BF14ClothingUniformJumpsuitCombatScavGuard
   name: Scavenger uniform
   description: Worn by those apart of the local scavenger gang.
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitUtilityCrewblack
+  id: BF14ClothingUniformJumpsuitUtilityCrewblack
   name: black crew utility uniform
   description: Used on spacecraft/stations with assigned missions.
   components:
@@ -33,7 +33,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitUtilityCrewblackSec
+  id: BF14ClothingUniformJumpsuitUtilityCrewblackSec
   name: black security utility uniform
   description: Used on spacecraft/stations with assigned missions.
   components:
@@ -44,7 +44,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitUSPD
+  id: BF14ClothingUniformJumpsuitUSPD
   name: american police uniform
   description: Used by enforcers of the law across the United States.
   components:
@@ -55,7 +55,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitMilitaryColorWhiteTDM
+  id: BF14ClothingUniformJumpsuitMilitaryColorWhiteTDM
   description: unremovable identification suit
   name: white goon uniform
   suffix: Unremoveable

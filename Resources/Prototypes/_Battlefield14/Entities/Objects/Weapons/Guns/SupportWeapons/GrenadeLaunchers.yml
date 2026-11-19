@@ -1,7 +1,7 @@
 - type: entity
   name: M320
   parent: WeaponFlareGun
-  id: WeaponGrenadeLauncherUSM320
+  id: BF14WeaponGrenadeLauncherUSM320
   description: "The United States replacement to the classic M203 that allows for loading of longer cartridges, which despite contract requirements is heavier than the M203. Takes 40x46mm grenades. Has a minimum arming distance of 5 tiles. This weapon can be stored on your auxillary suit storage slot."
   components:
   - type: Sprite
@@ -33,7 +33,7 @@
         priority: 1
         whitelist:
           tags:
-            - Cartridge40x46mmGrenade
+            - BF14Cartridge40x46mmGrenade
         whitelistFailPopup: gun-magazine-whitelist-fail
   - type: Gun
     fireRate: 1
@@ -49,25 +49,25 @@
 
 - type: entity
   name: M320
-  parent: WeaponGrenadeLauncherUSM320
-  id: WeaponGrenadeLauncherUSM320Illumination
+  parent: BF14WeaponGrenadeLauncherUSM320
+  id: BF14WeaponGrenadeLauncherUSM320Illumination
   suffix: loaded, Flare
   components:
   - type: ItemSlots
     slots:
       gun_chamber:
-        startingItem: Cartridge40x46mmIllumination
+        startingItem: BF14Cartridge40x46mmIllumination
         insertSound: /Audio/_Battlefield14/Weapons/Guns/M320/gl_insert.ogg
         ejectSound: /Audio/_Battlefield14/Weapons/Guns/M320/gl_remove.ogg
         whitelist:
           tags:
-            - Cartridge40x46mmGrenade
+            - BF14Cartridge40x46mmGrenade
         whitelistFailPopup: gun-magazine-whitelist-fail
 
 - type: entity
   name: M79 (Embiggened)
   parent: WeaponFlareGun
-  id: WeaponGrenadeLauncherUSM79Big
+  id: BF14WeaponGrenadeLauncherUSM79Big
   description: An M79 grenade launcher big enough to fire 120mm cartridges. It's reccomended to prop it up on a rock or something before firing.
   components:
   - type: Sprite
@@ -94,7 +94,7 @@
         priority: 1
         whitelist:
           tags:
-            - Cartridge120mm
+            - BF14Cartridge120mm
   - type: Wieldable
     unwieldOnUse: false
   - type: Gun
@@ -110,7 +110,7 @@
 - type: entity
   name: GM-94
   parent: BaseWeaponShotgun
-  id: WeaponGrenadeLauncherRUGM94
+  id: BF14WeaponGrenadeLauncherRUGM94
   description: "An odd design, loaded from the top into a magazine tube, and then pumped, like a shotgun. Brings to mind the M90A from Halo™. Has a minimum arming distance of 5 tiles. Takes 43x30mm grenades."
   components:
   - type: Sprite
@@ -143,11 +143,11 @@
     autoCycle: true
     whitelist:
       tags:
-        - Cartridge43x30mmGrenade
+        - BF14Cartridge43x30mmGrenade
     capacity: 3
     proto: null
     soundInsert:
-      collection: BF_M870_ShellIn
+      collection: BF14M870ShellIn
       params:
         volume: -2
   - type: GunRequiresWield

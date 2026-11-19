@@ -1,6 +1,6 @@
 - type: entity
   parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
-  id: ClothingBeltMilitaryWebbingUS
+  id: BF14ClothingBeltMilitaryWebbingUS
   name: ALICE belt rig
   description: Standard issue load bearing equipment for oil sniffers.
   components:
@@ -19,29 +19,29 @@
     - 0,0,3,1
     - 5,0,8,1
     storageOpenSound:
-      collection: BF_Magpouch_Open
+      collection: BF14MagpouchOpen
       params:
         volume: -3
         variation: 0.125
     storageCloseSound:
-      collection: BF_Magpouch_Open
+      collection: BF14MagpouchOpen
       params:
         volume: -3
         variation: 0.125
     storageInsertSound:
-      collection: BF_Magpouch_Insert
+      collection: BF14MagpouchInsert
       params:
         volume: -1
         variation: 0.125
     storageRemoveSound:
-      collection: BF_Magpouch_Remove
+      collection: BF14MagpouchRemove
       params:
         volume: -1
         variation: 0.125
 
 - type: entity
-  parent: ClothingBeltMilitaryWebbingUS
-  id: ClothingBeltMilitaryWebbingDE
+  parent: BF14ClothingBeltMilitaryWebbingUS
+  id: BF14ClothingBeltMilitaryWebbingDE
   name: MOBAST belt rig
   description: I feel like a kangaroo wearing this.
   components:
@@ -51,8 +51,8 @@
     sprite: _Battlefield14/Clothing/Belt/de_webbing.rsi
 
 - type: entity
-  parent: ClothingBeltMilitaryWebbingUS
-  id: ClothingBeltMilitaryWebbingRU
+  parent: BF14ClothingBeltMilitaryWebbingUS
+  id: BF14ClothingBeltMilitaryWebbingRU
   name: smersh belt rig
   description: A nice piece of kit, highly sought by western larpers, pairs well with a gorka.
   components:
@@ -61,11 +61,11 @@
   - type: Clothing
     sprite: _Battlefield14/Clothing/Belt/smersh.rsi
   - type: RandomMetadata
-    nameSegments: [names_smersh]
+    nameSegments: [BF14NamesSmersh]
 
 - type: entity
-  parent: ClothingBeltMilitaryWebbingUS
-  id: ClothingBeltMilitaryWebbingSmallPouchesOlive
+  parent: BF14ClothingBeltMilitaryWebbingUS
+  id: BF14ClothingBeltMilitaryWebbingSmallPouchesOlive
   name: small pouch belt rig
   description: You wish you had a smersh.
   components:
@@ -81,8 +81,8 @@
     - 9,0,10,1
 
 - type: entity
-  parent: ClothingBeltMilitaryWebbingUS
-  id: ClothingBeltMilitaryWebbingIkea
+  parent: BF14ClothingBeltMilitaryWebbingUS
+  id: BF14ClothingBeltMilitaryWebbingIkea
   name: makeshift ikea rig
   description: Worn by tactical bums.
   components:
@@ -99,8 +99,8 @@
     - 0,0,3,1
 
 - type: entity
-  parent: ClothingBeltMilitaryWebbingUS
-  id: ClothingBeltMilitaryWebbingMP40
+  parent: BF14ClothingBeltMilitaryWebbingUS
+  id: BF14ClothingBeltMilitaryWebbingMP40
   name: MP40 webbing
   description: An outdated webbing that can only hold submachinegun or pistol magazines. Worn by tactical bums or larpers, may or may not be a reproduction depending on who you ask.
   components:
@@ -118,11 +118,11 @@
     - 4,0,6,1
     whitelist:
       tags:
-        - PistolMagazine
+        - BF14PistolMagazine
 
 - type: entity
   parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
-  id: ClothingBeltStationSecurity
+  id: BF14ClothingBeltStationSecurity
   name: security belt
   description: "A belt with a holster for holding goodies, baddies, guns, all sorts of things. It has a slot for a sidearm, alt-click to remove it."
   components:
@@ -137,10 +137,10 @@
         - Taser
         - SecBeltEquip
         - Radio
-        - Magazine
+        - BF14Magazine
         - CombatKnife
         - Truncheon
-        - Grenade
+        - BF14Grenade
       components:
         - Stunbaton
         - FlashOnTrigger
@@ -169,7 +169,7 @@
 
 - type: entity
   parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
-  id: ClothingBeltCommand
+  id: BF14ClothingBeltCommand
   name: command belt
   description: "A belt with a holster for a sidearm, along with pouches for whatever you may desire. It has a slot for a sidearm, alt-click to remove it."
   components:
@@ -194,7 +194,7 @@
 
 - type: entity
   parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
-  id: ClothingBeltMachete
+  id: BF14ClothingBeltMachete
   name: machete belt
   description: "A belt with a holster for a machete along the small of the back, along with pouches for whatever you may desire. It has a slot for a machete, alt-click to remove it."
   components:
@@ -218,8 +218,8 @@
     damageCoefficient: 0
 
 - type: entity
-  parent: ClothingBeltMilitaryWebbingIkea
-  id: ClothingBeltBrap
+  parent: BF14ClothingBeltMilitaryWebbingIkea
+  id: BF14ClothingBeltBrap
   name: Brap
   components:
   - type: Storage
@@ -228,8 +228,8 @@
     - 5,0,8,1
 
 - type: entity
-  parent: ClothingBeltBrap
-  id: ClothingBeltBrap2
+  parent: BF14ClothingBeltBrap
+  id: BF14ClothingBeltBrap2
   name: Brap2
   components:
   - type: Storage

@@ -10,13 +10,13 @@
 #        volume: -3
   - type: EmitSoundOnLand
     sound:
-      collection: BF_Magazine_Drop_Rifle
+      collection: BF14MagazineDropRifle
       params:
         volume: -2
 
 - type: entity
   parent: BaseItem
-  id: BaseMagazineSMG
+  id: BF14BaseMagazineSMG
   abstract: true # BF14-BLU: a base, it has no sprite of its own
   components:
 #  - type: EmitSoundOnDrop
@@ -26,7 +26,7 @@
 #        volume: -3
   - type: EmitSoundOnLand
     sound:
-      collection: BF_Magazine_Drop_SMG
+      collection: BF14MagazineDropSMG
       params:
         volume: -2
 

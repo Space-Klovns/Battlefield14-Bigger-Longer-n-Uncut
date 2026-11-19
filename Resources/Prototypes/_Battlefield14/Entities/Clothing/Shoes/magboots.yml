@@ -20,7 +20,7 @@
     modifier: 0.75
   - type: Tag
     tags:
-    - FitsInVoidsuitKit
+    - BF14FitsInVoidsuitKit
 
 - type: entity
   id: BF14ClothingShoesBootsMagTacticalFilled

@@ -23,13 +23,13 @@ ent-BF14ClothingOuterCoatFirstResponder = first responder jacket
     .desc = A bright yellow and black jacket for first responders.
 
 # Resources\Prototypes\_Battlefield14\Entities\Clothing\OuterClothing\coats.yml
-ent-ClothingOuterWorkJacket = work jacket
+ent-BF14ClothingOuterWorkJacket = work jacket
     .desc = A work jacket worn by blue collar workers.
 
 # Resources\Prototypes\_Battlefield14\Entities\Clothing\OuterClothing\coats.yml
-ent-ClothingOuterBlackTrenchcoat = trench coat
+ent-BF14ClothingOuterBlackTrenchcoat = trench coat
     .desc = It has a tag on the inside, with 'Not Important' written on it
 
 # Resources\Prototypes\_Battlefield14\Entities\Clothing\OuterClothing\coats.yml
-ent-ClothingOuterWorkerHighViz = high-viz vest
+ent-BF14ClothingOuterWorkerHighViz = high-viz vest
     .desc = A high visibility vest worn by blue collar workers.

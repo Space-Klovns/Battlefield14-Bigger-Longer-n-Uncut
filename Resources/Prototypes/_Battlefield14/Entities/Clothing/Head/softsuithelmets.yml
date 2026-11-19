@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadEVAHelmetBase
-  id: ClothingHeadHelmetSoftsuitNasa
+  id: BF14ClothingHeadHelmetSoftsuitNasa
   name: NASA softsuit helmet
   description: An american softsuit helmet. Designed for EVA.
   components:
@@ -16,11 +16,11 @@
   - type: IdentityBlocker
   - type: Tag
     tags:
-      - FitsInVoidsuitKit
+      - BF14FitsInVoidsuitKit
 
 - type: entity
   parent: ClothingHeadEVAHelmetBase
-  id: ClothingHeadHelmetSoftsuitVKS
+  id: BF14ClothingHeadHelmetSoftsuitVKS
   name: VKS softsuit helmet
   description: The helmet for the VKS softsuit, has a hose running out the back to connect to an oxygen supply.
   components:
@@ -36,4 +36,4 @@
   - type: IdentityBlocker
   - type: Tag
     tags:
-      - FitsInVoidsuitKit
+      - BF14FitsInVoidsuitKit

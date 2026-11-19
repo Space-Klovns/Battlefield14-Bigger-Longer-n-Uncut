@@ -66,6 +66,10 @@
     shape:
     - 0,0,0,2
   - type: DisarmMalus
+  # BF14-BLU: upstream's Machete tag, which the BF14 machete belt's slot takes
+  - type: Tag
+    tags:
+    - Machete
 
 #Longswords
 - type: entity

@@ -1,5 +1,5 @@
 - type: soundCollection
-  id: BF_Cartridge_Drop_40x46mm
+  id: BF14CartridgeDrop40x46mm
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/40mm_casing_1.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/casing-40mm-01.ogg"
@@ -10,7 +10,7 @@
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/casing-40mm-06.ogg"
 
 - type: soundCollection
-  id: BF_Cartridge_Drop_556x45
+  id: BF14CartridgeDrop556x45
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/casing_556_1.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/casing_556_2.ogg"
@@ -18,7 +18,7 @@
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/casing_556_4.ogg"
 
 - type: soundCollection
-  id: BF_Cartridge_Drop_9x19
+  id: BF14CartridgeDrop9x19
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/casing_9mm_1.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/casing_9mm_2.ogg"
@@ -26,7 +26,7 @@
   - "/Audio/_Battlefield14/Weapons/Guns/cartridges/casing_9mm_4.ogg"
 
 - type: soundCollection
-  id: BF_M870_ShellIn # M870 - Used for M870
+  id: BF14M870ShellIn # M870 - Used for M870
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_shell-insert-01.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_shell-insert-02.ogg"

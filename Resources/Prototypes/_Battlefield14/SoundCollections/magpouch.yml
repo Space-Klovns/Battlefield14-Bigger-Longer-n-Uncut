@@ -1,10 +1,10 @@
 - type: soundCollection
-  id: BF_Magpouch_Open
+  id: BF14MagpouchOpen
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/magpouch/magpouch.ogg"
 
 - type: soundCollection
-  id: BF_Magpouch_Insert
+  id: BF14MagpouchInsert
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/magpouch/magpouchin.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/magpouch/magpouchin2.ogg"
@@ -12,7 +12,7 @@
   - "/Audio/_Battlefield14/Weapons/Guns/magpouch/magpouch_replace_small.ogg"
 
 - type: soundCollection
-  id: BF_Magpouch_Remove
+  id: BF14MagpouchRemove
   files:
   - "/Audio/_Battlefield14/Weapons/Guns/magpouch/magpouchout.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/magpouch/magpouch_pull.ogg"

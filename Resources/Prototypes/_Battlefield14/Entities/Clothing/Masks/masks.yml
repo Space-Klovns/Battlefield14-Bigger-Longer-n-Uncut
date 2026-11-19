@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingMaskBase
-  id: ClothingBaseTrollfaceMask
+  id: BF14ClothingBaseTrollfaceMask
   name: troll mask
   description: What the fuck is this?
   components:

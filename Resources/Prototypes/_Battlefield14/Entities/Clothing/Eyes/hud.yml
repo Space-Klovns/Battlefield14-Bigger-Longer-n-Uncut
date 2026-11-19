@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingEyesHudMedical
-  id: ClothingEyesHudMedicalBF
+  id: BF14ClothingEyesHudMedical
   name: medical hud
   description: A heads-up display that scans the humanoids in view and provides accurate data about their health status.
   suffix: BF14, Soldier only

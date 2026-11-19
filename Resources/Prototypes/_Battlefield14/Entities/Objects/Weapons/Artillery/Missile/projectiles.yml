@@ -1,5 +1,5 @@
 - type: entity
-  id: ArtilleryMarkerIskander
+  id: BF14ArtilleryMarkerIskander
   name: artillery strike Iskander
   components:
   - type: Sprite
@@ -20,7 +20,7 @@
       cluster-payload: !type:Container
   - type: ProjectileGrenade
     triggerKey: trigger
-    fillPrototype: Bullet40x46mmHEDPFragment
+    fillPrototype: BF14Bullet40x46mmHEDPFragment
     capacity: 360
     randomAngle: true
     minVelocity: 25

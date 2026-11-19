@@ -1,7 +1,7 @@
 - type: entity
-  id: Cartridge40x46mmMPAPERS
+  id: BF14Cartridge40x46mmMPAPERS
   name: cartridge (40x46mm MP-APERS)
-  parent: BaseCartridge40x46
+  parent: BF14BaseCartridge40x46
   description: "Turns your grenade launcher into a shotgun with 20 projectiles. Designation M576."
   components:
   - type: Item
@@ -9,10 +9,10 @@
   - type: Tag
     tags:
     - Cartridge
-    - Cartridge40x46mmMPAPERS
-    - Cartridge40x46mmGrenade
+    - BF14Cartridge40x46mmMPAPERS
+    - BF14Cartridge40x46mmGrenade
   - type: CartridgeAmmo
-    proto: 40x46mmMPAPERSSpread
+    proto: BF1440x46mmMPAPERSSpread
   - type: Sprite
     sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/40x46.rsi
     layers:
@@ -24,9 +24,9 @@
     price: 100
 
 - type: entity
-  id: Cartridge40x46mmIllumination
+  id: BF14Cartridge40x46mmIllumination
   name: cartridge (40x46mm Illumination)
-  parent: BaseCartridge40x46
+  parent: BF14BaseCartridge40x46
   description: "An illumination grenade. Designation M585."
   components:
   - type: Item
@@ -34,7 +34,7 @@
   - type: Tag
     tags:
     - Cartridge
-    - Cartridge40x46mmGrenade
+    - BF14Cartridge40x46mmGrenade
   - type: CartridgeAmmo
     proto: Pellet12_gaugeFlare
   - type: Sprite

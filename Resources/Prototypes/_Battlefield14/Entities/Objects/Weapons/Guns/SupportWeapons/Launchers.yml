@@ -1,5 +1,5 @@
 - type: entity
-  id: WeaponHandlingLauncher
+  id: BF14WeaponHandlingLauncher
   description: "Has a minimum arming distance of 6 tiles."
   abstract: true
   components:
@@ -21,7 +21,7 @@
       state: all
 
 - type: entity
-  id: WeaponHandlingLauncherDisposable
+  id: BF14WeaponHandlingLauncherDisposable
   description: "Has a minimum arming distance of 6 tiles."
   abstract: true
   components:

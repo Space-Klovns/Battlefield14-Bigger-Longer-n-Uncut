@@ -23,13 +23,13 @@ ent-BF14ClothingOuterCoatFirstResponder = куртка спасателя
     .desc = Ярко-жёлтая с чёрным куртка для служб экстренного реагирования.
 
 # Resources\Prototypes\_Battlefield14\Entities\Clothing\OuterClothing\coats.yml
-ent-ClothingOuterWorkJacket = рабочая куртка
+ent-BF14ClothingOuterWorkJacket = рабочая куртка
     .desc = Рабочая куртка, которую носят работяги.
 
 # Resources\Prototypes\_Battlefield14\Entities\Clothing\OuterClothing\coats.yml
-ent-ClothingOuterBlackTrenchcoat = тренчкот
+ent-BF14ClothingOuterBlackTrenchcoat = тренчкот
     .desc = Внутри бирка с надписью «Not Important».
 
 # Resources\Prototypes\_Battlefield14\Entities\Clothing\OuterClothing\coats.yml
-ent-ClothingOuterWorkerHighViz = сигнальный жилет
+ent-BF14ClothingOuterWorkerHighViz = сигнальный жилет
     .desc = Сигнальный жилет, который носят работяги.

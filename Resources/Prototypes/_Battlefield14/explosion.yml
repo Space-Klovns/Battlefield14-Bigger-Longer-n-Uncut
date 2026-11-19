@@ -1,5 +1,5 @@
 - type: explosion
-  id: HandGrenade
+  id: BF14HandGrenade
   damagePerIntensity:
     types:
       Heat: 5
@@ -21,7 +21,7 @@
      collection: CivExplosionDistantFar
 
 - type: explosion
-  id: Thermobaric
+  id: BF14Thermobaric
   damagePerIntensity:
     types:
       Heat: 6

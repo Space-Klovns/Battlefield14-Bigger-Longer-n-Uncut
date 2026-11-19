@@ -1,19 +1,19 @@
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
-ent-PouchMags = подсумок для магазинов
+ent-BF14PouchMags = подсумок для магазинов
     .desc = Небольшой подсумок для магазинов.
 
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
-ent-PouchMagsLarge = большой подсумок для магазинов
-    .desc = { ent-PouchMags.desc }
+ent-BF14PouchMagsLarge = большой подсумок для магазинов
+    .desc = { ent-BF14PouchMags.desc }
 
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
-ent-PouchMagsPistol = подсумок для пистолетных магазинов
+ent-BF14PouchMagsPistol = подсумок для пистолетных магазинов
     .desc = Небольшой подсумок для пистолетных магазинов.
 
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
-ent-PouchMagsPistolLarge = большой подсумок для пистолетных магазинов
-    .desc = { ent-PouchMagsPistol.desc }
+ent-BF14PouchMagsPistolLarge = большой подсумок для пистолетных магазинов
+    .desc = { ent-BF14PouchMagsPistol.desc }
 
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
-ent-PouchFlares = подсумок для фальшфейеров
+ent-BF14PouchFlares = подсумок для фальшфейеров
     .desc = Удобный набор подсумков для фальшфейеров и химических источников света, чтобы освещать путь на ходу.

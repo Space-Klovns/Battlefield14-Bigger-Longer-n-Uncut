@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitPlain
+  id: BF14ClothingUniformJumpsuitPlain
   name: plain attire
   description: Black pants, white shirt.
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitGorka
+  id: BF14ClothingUniformJumpsuitGorka
   name: reproduction Gorka-4 uniform
   description: A Gorka-4, used by Russian Spetsnaz, mountain infantry and hunters. Reproduced with new materials for the modern larper.
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitAfganVet1
+  id: BF14ClothingUniformJumpsuitAfganVet1
   name: M88 Afganka uniform
   description: Afganka shirt and pants with a Telnyashka shirt underneath. Used to be common issue during the Soviet-Afghan War.
   components:
@@ -33,7 +33,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitAfganVet2
+  id: BF14ClothingUniformJumpsuitAfganVet2
   name: M88 Afganka uniform
   description: Afganka pants with a Telnyashka shirt. Used to be common issue during the Soviet-Afghan War.
   components:
@@ -44,7 +44,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitTracksuitRed
+  id: BF14ClothingUniformJumpsuitTracksuitRed
   name: red tracksuit
   description: A red tracksuit. This is what a peasant gopnik wears.
   components:
@@ -55,7 +55,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitTracksuitBlue
+  id: BF14ClothingUniformJumpsuitTracksuitBlue
   name: blue tracksuit
   description: A blue tracksuit. This is what a lesser gopnik wears.
   components:
@@ -66,7 +66,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitTracksuitBlack
+  id: BF14ClothingUniformJumpsuitTracksuitBlack
   name: black tracksuit
   description: A black tracksuit. This is what a true gopnik wears.
   components:
@@ -77,7 +77,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitTracksuitYellow
+  id: BF14ClothingUniformJumpsuitTracksuitYellow
   name: boss tracksuit
   description: A black tracksuit with a yellow tracksuit hoodie. This is what the king of gopniks wears.
   components:
@@ -88,7 +88,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitClerk
+  id: BF14ClothingUniformJumpsuitClerk
   name: clerk attire
   description: Blue jeans, white shirt, and a brown leather vest. Something the local koisk clerk would wear.
   components:
@@ -99,7 +99,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitDealer
+  id: BF14ClothingUniformJumpsuitDealer
   name: dealer attire
   description: Black pants, black hoodie just like what a drug dealer would wear.
   components:
@@ -110,7 +110,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitHunter
+  id: BF14ClothingUniformJumpsuitHunter
   name: hunter attire
   description: A cheap and crappy camo shirt with a pair of jeans.
   components:
@@ -121,7 +121,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitWorker
+  id: BF14ClothingUniformJumpsuitWorker
   name: worker attire
   description: Tough worker pants with a high viz strip.
   components:
@@ -141,7 +141,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitMechanic
+  id: BF14ClothingUniformJumpsuitMechanic
   name: mechanic jumpsuit
   description: A simple onsie jumpsuit, this one is blue meaning its worn by mechanics.
   components:
@@ -152,7 +152,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitEngineer
+  id: BF14ClothingUniformJumpsuitEngineer
   name: engineer jumpsuit
   description: A simple onsie jumpsuit, this one is red meaning its worn by engineer.
   components:
@@ -163,7 +163,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitPlainGraphicChud
+  id: BF14ClothingUniformJumpsuitPlainGraphicChud
   name: graphic tee (chud)
   description: CAUSE IM A CHUUD, IM AN INCEEEELLL.
   components:
@@ -181,7 +181,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitPlainGraphicHate
+  id: BF14ClothingUniformJumpsuitPlainGraphicHate
   name: graphic tee (hate)
   description: Annihilate everything that exists.
   components:
@@ -199,7 +199,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitTshirtJeansGrayGraphicZ
+  id: BF14ClothingUniformJumpsuitTshirtJeansGrayGraphicZ
   name: graphic tee (Z)
   description: Support your troops with a shirt with a letter on it.
   components:
@@ -215,7 +215,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitPatrioticUSA1
+  id: BF14ClothingUniformJumpsuitPatrioticUSA1
   name: patriotic shirt
   description: Worn by true patriots.
   components:
@@ -225,8 +225,8 @@
     sprite: _Civ14/Clothing/Uniforms/Jumpsuit/boomerwaffen1.rsi
 
 - type: entity
-  parent: ClothingUniformJumpsuitPatrioticUSA1
-  id: ClothingUniformJumpsuitPatrioticUSA2
+  parent: BF14ClothingUniformJumpsuitPatrioticUSA1
+  id: BF14ClothingUniformJumpsuitPatrioticUSA2
   components:
   - type: Sprite
     sprite: _Civ14/Clothing/Uniforms/Jumpsuit/boomerwaffen2.rsi
@@ -234,8 +234,8 @@
     sprite: _Civ14/Clothing/Uniforms/Jumpsuit/boomerwaffen2.rsi
 
 - type: entity
-  parent: ClothingUniformJumpsuitPatrioticUSA1
-  id: ClothingUniformJumpsuitPatrioticUSA3
+  parent: BF14ClothingUniformJumpsuitPatrioticUSA1
+  id: BF14ClothingUniformJumpsuitPatrioticUSA3
   components:
   - type: Sprite
     sprite: _Civ14/Clothing/Uniforms/Jumpsuit/boomerwaffen3.rsi
@@ -244,7 +244,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitSmiley
+  id: BF14ClothingUniformJumpsuitSmiley
   name: smiley shirt
   description: ":)"
   components:

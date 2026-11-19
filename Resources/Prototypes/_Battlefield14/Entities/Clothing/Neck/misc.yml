@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingNeckBase
-  id: BF_ClothingNeckIFFYellow
+  id: BF14ClothingNeckIFFYellow
   name: IFF yellow strobe
   description: Visible LED IFF kit that consists of helmet and shoulder strobes.
   components:

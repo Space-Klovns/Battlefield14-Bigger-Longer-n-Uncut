@@ -1,5 +1,5 @@
 - type: entity
-  id: ArtilleryMarkerM777Flare
+  id: BF14ArtilleryMarkerM777Flare
   name: artillery strike M118 155mm illumination flare shell
   components:
   - type: Sprite

@@ -1,6 +1,6 @@
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
-  id: ClothingHeadHelmetVoidsuitAmericanCombatMarine
+  id: BF14ClothingHeadHelmetVoidsuitAmericanCombatMarine
   categories: [ HideSpawnMenu ]
   name: Marine combat voidsuit helmet
   description: "A combat voidsuit helmet with internal pressurization systems and an inbuilt tracker system for ballistics. Allows you to see job icons."
@@ -36,8 +36,8 @@
     damageCoefficient: 0.9
 
 - type: entity
-  parent: ClothingHeadHelmetVoidsuitAmericanCombatMarine
-  id: ClothingHeadHelmetVoidsuitGermanCombat
+  parent: BF14ClothingHeadHelmetVoidsuitAmericanCombatMarine
+  id: BF14ClothingHeadHelmetVoidsuitGermanCombat
   categories: [ HideSpawnMenu ]
   name: German combat voidsuit helmet
   description: "A combat voidsuit helmet with internal pressurization systems and an inbuilt tracker system for ballistics. Allows you to see job icons."
@@ -52,8 +52,8 @@
     color: "#f1ffed"
 
 - type: entity
-  parent: ClothingHeadHelmetVoidsuitAmericanCombatMarine
-  id: ClothingHeadHelmetVoidsuitRussianCombat
+  parent: BF14ClothingHeadHelmetVoidsuitAmericanCombatMarine
+  id: BF14ClothingHeadHelmetVoidsuitRussianCombat
   categories: [ HideSpawnMenu ]
   name: Russian combat voidsuit helmet
   description: "A combat voidsuit helmet with internal pressurization systems and an inbuilt tracker system for ballistics. Allows you to see job icons."
@@ -68,8 +68,8 @@
     color: "#ffffed"
 
 - type: entity
-  parent: ClothingHeadHelmetVoidsuitRussianCombat
-  id: ClothingHeadHelmetVoidsuitRussianCombatHeavy
+  parent: BF14ClothingHeadHelmetVoidsuitRussianCombat
+  id: BF14ClothingHeadHelmetVoidsuitRussianCombatHeavy
   categories: [ HideSpawnMenu ]
   name: Russian heavy combat voidsuit helmet
   components:

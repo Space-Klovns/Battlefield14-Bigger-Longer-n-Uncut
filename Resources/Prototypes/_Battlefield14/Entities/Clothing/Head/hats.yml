@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatBoonie
+  id: BF14ClothingHeadHatBoonie
   name: Boonie
   description: A black boonie
   components:
@@ -14,7 +14,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatCabbie
+  id: BF14ClothingHeadHatCabbie
   name: Cabbie
   description: A black cabbie, worn by true gopniks.
   components:
@@ -28,7 +28,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatUshankaTrack
+  id: BF14ClothingHeadHatUshankaTrack
   name: Ushanka
   description: A black ushanka with white stripes, worn by gopniks during winter.
   components:
@@ -42,7 +42,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatUshankaBF
+  id: BF14ClothingHeadHatUshanka
   name: Ushanka
   description: A brown ushanka, worn by russians during winter.
   components:
@@ -56,7 +56,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatPompon
+  id: BF14ClothingHeadHatPompon
   name: Pompon beanie
   description: A bright red and blue beanie with a pompon.
   components:
@@ -70,7 +70,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatBeretVDV
+  id: BF14ClothingHeadHatBeretVDV
   name: ultramarine beret
   description: Traditional headwear for the Russian airborne forces, or VDV.
   components:
@@ -84,7 +84,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatBeretSecBF14
+  id: BF14ClothingHeadHatBeretSec
   name: security beret
   description: A black and red beret for conveying authority.
   components:

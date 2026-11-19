@@ -1,7 +1,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: BaseBulletTrigger
-  id: BulletRocket83mmHEDM
+  id: BF14BulletRocket83mmHEDM
   name: 83mm HEDM projectile # High explosive dual mode, explodes on contact in a 3x3 area to blast open walls and such
   components:
   - type: Sprite
@@ -26,7 +26,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: BaseBulletTrigger
-  id: BulletRocketM202FLASH
+  id: BF14BulletRocketM202FLASH
   name: 66mm incendiary rocket
   components:
   - type: Sprite
@@ -50,7 +50,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: BaseBulletTrigger
-  id: BulletRocketM72Thermobaric
+  id: BF14BulletRocketM72Thermobaric
   name: 66mm incendiary rocket
   components:
   - type: Sprite
@@ -64,7 +64,7 @@
         Blunt: 25
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Thermobaric
+    explosionType: BF14Thermobaric
     totalIntensity: 90
     intensitySlope: 4
     maxIntensity: 4
@@ -75,7 +75,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: BaseBulletTrigger
-  id: BulletRocketRPG26Thermobaric
+  id: BF14BulletRocketRPG26Thermobaric
   name: 72.5mm thermobaric rocket
   components:
   - type: Sprite
@@ -88,10 +88,10 @@
         Structural: 100
         Blunt: 25
   - type: SpawnOnTrigger
-    proto: InstantEffectGravityWellThermobaric
+    proto: BF14InstantEffectGravityWellThermobaric
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Thermobaric
+    explosionType: BF14Thermobaric
     totalIntensity: 90
     intensitySlope: 5
     maxIntensity: 6

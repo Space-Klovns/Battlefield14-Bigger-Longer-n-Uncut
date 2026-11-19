@@ -1,7 +1,7 @@
 - type: entity
-  id: BulletPistolBF357
+  id: BF14BulletPistol357
   name: bullet (.357 Magnum)
-  parent: BaseBulletPistol
+  parent: BF14BaseBulletPistol
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
