@@ -1,15 +1,15 @@
 - type: entity
-  name: rusich patch
+  name: Churkich patch
   parent: BaseItem
-  id: BF14ClothingPatchRusich
-  description: "A patch for the rusich group. Attaches to jumpsuits."
+  id: BF14ClothingPatchChurkich
+  description: "A patch for the Churkich group. Attaches to jumpsuits."
   components:
   - type: Sprite
     sprite: _Battlefield14/Clothing/Accessories/patches.rsi
-    state: rusich
+    state: Churkich
   - type: Item
     size: Tiny
   - type: Tag
     tags:
-    - BF14PatchRusich
+    - BF14PatchChurkich
   - type: ESGunAttachment

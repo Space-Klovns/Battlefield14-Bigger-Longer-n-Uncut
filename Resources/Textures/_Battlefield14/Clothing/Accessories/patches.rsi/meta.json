@@ -8,10 +8,10 @@
   },
   "states": [
     {
-      "name": "rusich"
+      "name": "churkich"
     },
     {
-      "name": "rusich-equipped",
+      "name": "churkich-equipped",
       "directions": 4
     }
   ]
