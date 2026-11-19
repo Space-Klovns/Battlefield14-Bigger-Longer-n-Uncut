@@ -6,7 +6,7 @@
   components:
   - type: Sprite
     sprite: _Battlefield14/Clothing/Accessories/patches.rsi
-    state: Churkich
+    state: churkich
   - type: Item
     size: Tiny
   - type: Tag
