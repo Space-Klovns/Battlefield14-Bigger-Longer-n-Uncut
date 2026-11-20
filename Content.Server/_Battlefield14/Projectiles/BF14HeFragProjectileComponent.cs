@@ -1,7 +1,6 @@
 // Taken from Battlefield14 (https://github.com/PunishedJoe/Battlefield14) at d24a6e8c2f5d995e6bdd0a2571e406923e53f883,
 //      Content.Server/Explosion/Components/HeFragProjectileComponent.cs
 
-using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._Battlefield14.Projectiles;
@@ -12,26 +11,21 @@ namespace Content.Server._Battlefield14.Projectiles;
 /// <remarks>
 ///     Server only. A shooter's client keeps its own copy of the round (<c>KsSharedPredictedSpawnSystem</c>), which just
 ///         hits and deletes itself; the fragments are the server's, spawned with no user, so everyone sees the same set.
+///
+///     BF14's version could also fire entities put in a container on the round; nothing ever put any there, and the
+///         container it made on spawn is not in the prototype, so this one only spawns <see cref="FillPrototype"/>.
 /// </remarks>
 [RegisterComponent, Access(typeof(BF14HeFragProjectileSystem))]
 public sealed partial class BF14HeFragProjectileComponent : Component
 {
-    public Container Container = default!;
-
     /// <summary>
-    ///     The fragment the projectile is filled with.
+    ///     The fragment the projectile bursts into.
     /// </summary>
     [DataField]
     public EntProtoId? FillPrototype;
 
     /// <summary>
-    ///     How many of <see cref="FillPrototype"/> are still to be spawned, on top of what <see cref="Container"/> holds.
-    /// </summary>
-    [ViewVariables]
-    public int UnspawnedCount;
-
-    /// <summary>
-    ///     The total number of fragments.
+    ///     How many fragments it bursts into.
     /// </summary>
     [DataField]
     public int Capacity = 3;
@@ -53,4 +47,10 @@ public sealed partial class BF14HeFragProjectileComponent : Component
     /// </summary>
     [DataField]
     public float MaxVelocity = 6f;
+
+    /// <summary>
+    ///     Whether it has burst already.
+    /// </summary>
+    [ViewVariables]
+    public bool Burst;
 }

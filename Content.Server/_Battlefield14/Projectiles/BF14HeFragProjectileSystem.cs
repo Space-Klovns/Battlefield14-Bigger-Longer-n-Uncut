@@ -4,7 +4,6 @@
 using Content.Server.Weapons.Ranged.Systems;
 using Content.Shared.Projectiles;
 using Robust.Server.GameObjects;
-using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
 
@@ -17,7 +16,6 @@ public sealed partial class BF14HeFragProjectileSystem : EntitySystem
 {
     [Dependency] private GunSystem _gunSystem = default!;
     [Dependency] private IRobustRandom _random = default!;
-    [Dependency] private SharedContainerSystem _containerSystem = default!;
     [Dependency] private TransformSystem _transformSystem = default!;
     [Dependency] private EntityQuery<ProjectileComponent> _projectileQuery = default!;
 
@@ -27,80 +25,35 @@ public sealed partial class BF14HeFragProjectileSystem : EntitySystem
     private const float SpawnOffset = 0.5f;
 
     [SubscribeLocalEvent]
-    private void OnInit(Entity<BF14HeFragProjectileComponent> entity, ref ComponentInit args)
-    {
-        entity.Comp.Container = _containerSystem.EnsureContainer<Container>(entity.Owner, "frag-payload");
-    }
-
-    [SubscribeLocalEvent]
-    private void OnStartup(Entity<BF14HeFragProjectileComponent> entity, ref ComponentStartup args)
-    {
-        if (entity.Comp.FillPrototype == null)
-            return;
-
-        entity.Comp.UnspawnedCount = Math.Max(0, entity.Comp.Capacity - entity.Comp.Container.ContainedEntities.Count);
-    }
-
-    [SubscribeLocalEvent]
     private void OnProjectileHit(Entity<BF14HeFragProjectileComponent> entity, ref ProjectileHitEvent args)
     {
-        FragmentIntoProjectiles(entity);
-    }
-
-    private void FragmentIntoProjectiles(Entity<BF14HeFragProjectileComponent> entity)
-    {
-        var totalCount = entity.Comp.Container.ContainedEntities.Count + entity.Comp.UnspawnedCount;
-        if (totalCount <= 0)
+        // Once: a round that goes through what it hits bursts at the first thing only, as BF14's emptied its payload.
+        if (entity.Comp.Burst || entity.Comp.FillPrototype is not { } fillPrototype || entity.Comp.Capacity <= 0)
             return;
 
+        entity.Comp.Burst = true;
+
         var hitCoordinates = _transformSystem.GetMapCoordinates(entity.Owner);
-        var segmentAngle = 360 / totalCount;
+        var segmentAngle = 360 / entity.Comp.Capacity;
 
         // BF14 made the round itself the fragments' weapon. It is deleted with this hit, and the weapon is networked, so
         //      it is the gun that fired the round instead: the fragments still hit the shooter, as BF14's did.
         var weaponUid = _projectileQuery.CompOrNull(entity.Owner)?.Weapon;
-        var shootCount = 0;
 
-        while (TrySpawnContents(hitCoordinates, entity.Comp, out var fragmentUid))
+        for (var i = 0; i < entity.Comp.Capacity; i++)
         {
-            Angle angle;
-            if (entity.Comp.RandomAngle)
-                angle = _random.NextAngle();
-            else
-            {
-                angle = Angle.FromDegrees(_random.Next(segmentAngle * shootCount, segmentAngle * (shootCount + 1)));
-                shootCount++;
-            }
+            var angle = entity.Comp.RandomAngle
+                ? _random.NextAngle()
+                : Angle.FromDegrees(_random.Next(segmentAngle * i, segmentAngle * (i + 1)));
 
             // The random velocity is BF14's: it makes the burst look uneven.
             var direction = angle.ToVec().Normalized();
             var velocity = _random.NextVector2(entity.Comp.MinVelocity, entity.Comp.MaxVelocity);
 
-            _transformSystem.SetMapCoordinates(fragmentUid, new MapCoordinates(hitCoordinates.Position + direction * SpawnOffset, hitCoordinates.MapId));
+            var fragmentUid = Spawn(fillPrototype, new MapCoordinates(hitCoordinates.Position + direction * SpawnOffset, hitCoordinates.MapId));
 
             // No user: a fragment is nobody's prediction, so every client, the shooter's too, sees the server's.
             _gunSystem.ShootProjectile(fragmentUid, direction, velocity, weaponUid);
         }
-    }
-
-    /// <summary>
-    ///     Takes the next fragment: a fresh one while any are left to spawn, then whatever the container holds.
-    /// </summary>
-    private bool TrySpawnContents(MapCoordinates coordinates, BF14HeFragProjectileComponent component, out EntityUid fragmentUid)
-    {
-        fragmentUid = default;
-
-        if (component.UnspawnedCount > 0)
-        {
-            component.UnspawnedCount--;
-            fragmentUid = Spawn(component.FillPrototype, coordinates);
-            return true;
-        }
-
-        if (component.Container.ContainedEntities.Count == 0)
-            return false;
-
-        fragmentUid = component.Container.ContainedEntities[0];
-        return _containerSystem.Remove(fragmentUid, component.Container);
     }
 }
