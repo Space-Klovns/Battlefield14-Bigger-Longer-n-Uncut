@@ -1,0 +1,119 @@
+- type: entity
+  id: BF14BaseShellShotgun12Gauge
+  name: shotgun shell (12 gauge)
+  parent: BaseCartridge
+  description: Standard shotgun round practically everywhere.
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgeShotgun12Gauge
+  - type: CartridgeAmmo
+    muzzleFlash: BF14MuzzleFlashEffectShotgun
+    soundEject:
+      collection: ShellEject
+      params:
+        variation: 0.06
+  - type: EmitSoundOnLand
+    sound:
+      collection: ShellEject
+      params:
+        variation: 0.06
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/12_gauge.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: BF14CartridgeShotgun12GaugeBreaching
+  name: shotgun shell (12 gauge breaching)
+  parent: BF14BaseShellShotgun12Gauge
+  components:
+  - type: Sprite
+    layers:
+      - state: breach
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BF14PelletShotgun12GaugeBreachingSpread
+  - type: SpentAmmoVisuals
+    state: "breach"
+
+- type: entity
+  id: BF14PelletShotgun12GaugeBreachingSpread
+  categories: [ HideSpawnMenu ]
+  parent: BF14PelletShotgun12GaugeBreaching
+  components:
+  - type: ProjectileSpread
+    proto: BF14PelletShotgun12GaugeBreaching
+    count: 7
+    spread: 15
+
+- type: entity
+  id: BF14BaseShellShotgun4Gauge
+  name: shotgun shell (4 gauge)
+  parent: BaseCartridge
+  description: A beefy 23mm shell with a brass case.
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgeShotgun4Gauge
+  - type: CartridgeAmmo
+    muzzleFlash: BF14MuzzleFlashEffectShotgun
+    soundEject:
+      collection: ShellEject
+      params:
+        variation: 0.06
+  - type: EmitSoundOnLand
+    sound:
+      collection: ShellEject
+      params:
+        variation: 0.06
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/4_gauge.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: BF14BaseShellShotgun410Bore
+  name: shotgun shell (.410 bore)
+  parent: BaseCartridge
+  description: A tiny shotgun shell.
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgeShotgun410Bore
+  - type: CartridgeAmmo
+    muzzleFlash: BF14MuzzleFlashEffectShotgun
+    soundEject:
+      collection: ShellEject
+      params:
+        variation: 0.06
+  - type: EmitSoundOnLand
+    sound:
+      collection: ShellEject
+      params:
+        variation: 0.06
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/410Bore.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1

@@ -1,0 +1,15 @@
+- type: entity
+  name: Churkich patch
+  parent: BaseItem
+  id: BF14ClothingPatchChurkich
+  description: "A patch for the Churkich group. Attaches to jumpsuits."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Clothing/Accessories/patches.rsi
+    state: churkich
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - BF14PatchChurkich
+  - type: ESGunAttachment

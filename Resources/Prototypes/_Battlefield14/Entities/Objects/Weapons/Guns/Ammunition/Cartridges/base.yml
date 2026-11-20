@@ -1,0 +1,85 @@
+- type: entity
+  parent: BaseCartridge # BF14-BLU: no RecyclableItemSteelTiny, KS14 cartridges have no materials (MaterialArbitrageTest)
+  id: BF14BaseCartridgeRifle
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    muzzleFlash: BF14MuzzleFlashEffectRifle
+    soundEject:
+      collection: BF14CartridgeDrop556x45
+      params:
+        volume: -5
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14CartridgeDrop556x45
+      params:
+        volume: -1
+
+- type: entity
+  parent: BaseCartridge # BF14-BLU: no RecyclableItemSteelTiny, KS14 cartridges have no materials (MaterialArbitrageTest)
+  id: BF14BaseCartridgePistol
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    muzzleFlash: BF14MuzzleFlashEffectPistol
+    soundEject:
+      collection: BF14CartridgeDrop9x19
+      params:
+        volume: -5
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14CartridgeDrop9x19
+      params:
+        volume: -1
+  - type: SpentAmmoVisuals
+
+- type: entity
+  parent: BaseCartridge # BF14-BLU: no RecyclableItemSteelTiny, KS14 cartridges have no materials (MaterialArbitrageTest)
+  id: BF14BaseCartridge40x46
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    muzzleFlash: BF14MuzzleFlashEffectShotgun
+    soundEject:
+      collection: BF14CartridgeDrop40x46mm
+      params:
+        volume: -5
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14CartridgeDrop40x46mm
+      params:
+        volume: -1
+
+- type: entity
+  parent: BF14BaseCartridge40x46
+  id: BF14BaseCartridge40x53
+  abstract: true
+
+- type: entity
+  parent: BaseCartridge # BF14-BLU: no RecyclableItemSteelTiny, KS14 cartridges have no materials (MaterialArbitrageTest)
+  id: BF14BaseCartridgeLauncher
+  description: "This item can be stored on your auxillary suit storage slot."
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    muzzleFlash: BF14MuzzleFlashEffectShotgun
+    soundEject:
+      collection: BF14CartridgeDrop40x46mm
+      params:
+        volume: -5
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14CartridgeDrop40x46mm
+      params:
+        volume: -1
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - SUITSTORAGE2
+#    clothingVisuals:
+#      suitstorage2:
+#      - state: equipped-BACKPACK
