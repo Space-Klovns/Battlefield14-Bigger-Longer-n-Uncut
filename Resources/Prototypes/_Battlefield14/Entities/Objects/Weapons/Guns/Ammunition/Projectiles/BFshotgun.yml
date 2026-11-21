@@ -23,3 +23,115 @@
     damage: 10 # ~10 hits to stun
   - type: TimedDespawn
     lifetime: 0.2
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14PelletShotgun12Gauge
+  name: 12 gauge shotgun pellet
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: small
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 9
+        Slash: 4.5
+        Structural: 6
+  - type: KsProjectileFalloff # BF14-BLU: was ProjectileDamageFalloff
+    fullDamageRange: 4
+    minDamageRange: 6
+    minMultiplier: 0.5
+  - type: StaminaDamageOnCollide
+    damage: 4 # ~25 hits to stun
+
+- type: entity
+  id: BF14SlugShotgun12Gauge
+  name: 12 gauge shotgun slug
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: slug
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 27
+        Piercing: 50
+        Structural: 50
+  - type: StaminaDamageOnCollide
+    damage: 15 # ~6 hits to stun
+
+- type: entity
+  id: BF14FlechetteShotgun12Gauge
+  name: 12 gauge flechette
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: sabot
+    scale: 0.5, 0.5
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 7
+        Slash: 3
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.1
+        Piercing: 0.1
+        Slash: 0.1
+  - type: KsProjectileFalloff # BF14-BLU: was ProjectileDamageFalloff
+    fullDamageRange: 7
+    minDamageRange: 12
+    minMultiplier: 0.5
+  - type: StaminaDamageOnCollide
+    damage: 2 # ~50 hits to stun
+
+- type: entity
+  id: BF14PelletShotgun4Gauge
+  name: 4 gauge shotgun pellet
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: small
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 17
+        Slash: 10
+        Structural: 8
+  - type: KsProjectileFalloff # BF14-BLU: was ProjectileDamageFalloff
+    fullDamageRange: 6
+    minDamageRange: 8
+    minMultiplier: 0.5
+  - type: StaminaDamageOnCollide
+    damage: 9 # ~11-12 hits to stun
+
+- type: entity
+  id: BF14SlugShotgun4Gauge
+  name: 4 gauge barricade slug
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: slug
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 15
+        Piercing: 75
+        Structural: 500 # this is made to take out engine blocks at 100 meters
+  - type: StaminaDamageOnCollide
+    damage: 20 # ~5 hits to stun | if this is any higher you will one-shot stun anyone with a plate

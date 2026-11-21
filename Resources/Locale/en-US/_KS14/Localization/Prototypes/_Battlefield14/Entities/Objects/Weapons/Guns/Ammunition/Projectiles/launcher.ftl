@@ -28,3 +28,14 @@ ent-BF14BulletRocketM72ThermobaricArmingDistance = 66mm incendiary rocket
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\launcher.yml
 ent-BF14BulletRocketRPG26ThermobaricArmingDistance = 72.5mm thermobaric rocket
     .desc = If you can see this you're probably dead!
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\launcher.yml
+ent-BF14PelletCarlGustavASM401 = ASM401 flechette
+    .desc = If you can see this you're probably dead!
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\launcher.yml
+ent-BF14BulletRocket83mmNEArmingDistance = 83mm Novel Explosive projectile
+    .desc = If you can see this you're probably dead!
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\launcher.yml
+ent-BF14BulletRocket83mmNE = 83mm Novel Explosive projectile
+    .desc = If you can see this you're probably dead!

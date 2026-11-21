@@ -59,3 +59,102 @@
 
 - type: Tag
   id: BF14CartridgeLauncher
+
+- type: Tag
+  id: BF14MagazinePistolKedr
+
+- type: Tag
+  id: BF14MagazinePistolDeagle
+
+- type: Tag
+  id: BF14MagazinePistolGlock17
+
+- type: Tag
+  id: BF14MagazinePistolGlock20
+
+- type: Tag
+  id: BF14MagazinePistolM1911
+
+- type: Tag
+  id: BF14MagazinePistolTT33
+
+- type: Tag
+  id: BF14MagazinePistolAPS
+
+- type: Tag
+  id: BF14MagazinePistolPM # down to here
+
+- type: Tag
+  id: BF14CartridgePistol45ACP
+
+- type: Tag
+  id: BF14CartridgePistol50AE
+
+- type: Tag
+  id: BF14CartridgePistol762x25
+
+- type: Tag
+  id: BF14CartridgePistol9x18
+
+- type: Tag
+  id: BF14CartridgePistol9x19
+
+- type: Tag
+  id: BF14CartridgePistol10x25
+
+- type: Tag
+  id: BF14CartridgeShotgun12GaugeBuckshot
+
+- type: Tag
+  id: BF14CartridgeShotgun12GaugeSlug
+
+- type: Tag
+  id: BF14CartridgePZF3
+
+- type: Tag
+  id: BF14MagazinePistolHiPower
+
+- type: Tag
+  id: BF14MagazinePistolM9
+
+- type: Tag
+  id: BF14MagazinePistolMP443
+
+- type: Tag
+  id: BF14MagazinePistolUSP45
+
+- type: Tag
+  id: BF14MagazinePistolUSP9
+
+- type: Tag
+  id: BF14MagazinePistolMP5
+
+- type: Tag
+  id: BF14MagazinePistolMP510
+
+- type: Tag
+  id: BF14MagazineSubmachinegunAR9
+
+- type: Tag
+  id: BF14MagazineSubmachinegunMP9
+
+- type: Tag
+  id: BF14MagazinePistolVityaz
+
+- type: Tag
+  id: BF14MagazinePistolMAC10
+
+- type: Tag
+  id: BF14MagazinePistolPPSh
+
+- type: Tag
+  id: BF14MagazineShotgunKSK
+
+- type: Tag
+  id: BF14MagazineShotgunUSAS
+
+- type: Tag
+  id: BF14MagazineShotgunUSASDrum
+
+- type: Tag
+  id: BF14SpeedLoader357magnum

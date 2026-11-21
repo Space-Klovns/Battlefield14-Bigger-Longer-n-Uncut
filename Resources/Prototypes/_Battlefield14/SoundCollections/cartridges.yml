@@ -31,3 +31,31 @@
   - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_shell-insert-01.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_shell-insert-02.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_shell-insert-03.ogg"
+
+# BF14-BLU: ported from Battlefield14
+
+- type: soundCollection
+  id: BF14MossbergShellIn # Some mossberg shotgun - Used for M590
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/Mossberg/shellin-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Mossberg/shellin-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Mossberg/shellin-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Mossberg/shellin-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Mossberg/shellin-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Mossberg/shellin-06.ogg"
+
+- type: soundCollection
+  id: BF14SPAS12ShellIn # SPAS-12 - Used for SPAS-12
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_shell-insert-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_shell-insert-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_shell-insert-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_shell-insert-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_shell-insert-05.ogg"
+
+- type: soundCollection
+  id: BF14M1014ShellIn # M1014 - Used for M1014
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/M1014/shell-insert-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/M1014/shell-insert-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/M1014/shell-insert-03.ogg"

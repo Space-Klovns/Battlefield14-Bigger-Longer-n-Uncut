@@ -57,3 +57,90 @@
     velocityMultiplier: 1
   - type: StaminaDamageOnCollide
     damage: 20
+
+- type: entity
+  id: BF14Bullet43x30mmHEFrag
+  name: 43x30mm HE-Frag grenade
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 80
+        Piercing: 50
+    deleteOnCollide: true
+  - type: BF14HeFragProjectile
+    fillPrototype: BF14Bullet43x30mmFragFragment
+    capacity: 30
+    randomAngle: true
+    minVelocity: 8
+    maxVelocity: 15
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    totalIntensity: 20
+    intensitySlope: 3
+    maxIntensity: 2
+    maxTileBreak: 0
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 3
+    color: orange
+    energy: 0.5
+
+- type: entity
+  id: BF14Bullet43x30mmFragFragment
+  name: 43x30mm fragment
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 7
+        Slash: 9
+        Piercing: 9
+  - type: StaminaDamageOnCollide
+    damage: 5 # ~20 hits to stun
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: shard
+  - type: TimedDespawn
+    lifetime: 2
+  - type: PointLight
+    radius: 1
+    color: orange
+    energy: 0.2
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14Bullet43x30mmHEFragArmingDistance
+  name: 43x30mm HE-Frag grenade
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: Projectile
+    damage:
+      types:
+        Structural: 50
+        Blunt: 40
+    deleteOnCollide: true
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14Bullet43x30mmHEFrag
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: StaminaDamageOnCollide
+    damage: 20

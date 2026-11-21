@@ -1,0 +1,71 @@
+- type: entity
+  id: BF14BulletGrenadeM67Fragment
+  name: M67 grenade fragment
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Slash: 8
+        Piercing: 8
+  - type: StaminaDamageOnCollide
+    damage: 5 # ~20 hits to stun
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: shard
+  - type: TimedDespawn
+    lifetime: 1
+  - type: PointLight
+    radius: 1
+    color: orange
+    energy: 0.2
+
+- type: entity
+  id: BF14BulletGrenadeF1Fragment
+  name: F1 grenade fragment
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Slash: 8
+        Piercing: 8
+  - type: StaminaDamageOnCollide
+    damage: 5 # ~20 hits to stun
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: shard
+  - type: TimedDespawn
+    lifetime: 1
+  - type: PointLight
+    radius: 1
+    color: orange
+    energy: 0.2
+
+- type: entity
+  id: BF14BulletGrenadeBallBearing
+  name: ball bearing
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Slash: 5
+        Piercing: 5
+  - type: StaminaDamageOnCollide
+    damage: 4 # ~25 hits to stun
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: small
+  - type: TimedDespawn
+    lifetime: 1
+  - type: PointLight
+    radius: 1
+    color: orange
+    energy: 0.2
