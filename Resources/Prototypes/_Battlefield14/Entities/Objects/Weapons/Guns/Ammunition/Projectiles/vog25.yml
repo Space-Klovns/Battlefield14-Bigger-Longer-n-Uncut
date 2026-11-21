@@ -157,3 +157,96 @@
     deleteOnRemove: true
   - type: StaminaDamageOnCollide
     damage: 20
+
+- type: entity
+  id: BF14BulletVOG25HEFrag
+  name: VOG-25
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Piercing: 40
+    deleteOnCollide: true
+  - type: BF14HeFragProjectile
+    fillPrototype: BF14Bullet43x30mmFragFragment
+    capacity: 15
+    randomAngle: true
+    minVelocity: 8
+    maxVelocity: 15
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    totalIntensity: 20
+    intensitySlope: 3
+    maxIntensity: 2
+    maxTileBreak: 0
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: base-spent
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 3
+    color: orange
+    energy: 0.5
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletVOG25HEFragArmingDistance
+  name: VOG-25
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: base-spent
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Blunt: 40
+    deleteOnCollide: false
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletVOG25HEFrag
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: StaminaDamageOnCollide
+    damage: 20
+
+- type: entity
+  id: BF14ArtilleryMarkerVOG25HEFrag
+  name: artillery strike VOG-25 40mm HE-Frag
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: base-spent
+  - type: TriggerOnSpawn
+  - type: DeleteOnTrigger
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    totalIntensity: 20
+    intensitySlope: 3
+    maxIntensity: 2
+    maxTileBreak: 0
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: ProjectileGrenade
+    triggerKey: trigger
+    fillPrototype: BF14Bullet43x30mmFragFragment
+    capacity: 15
+    randomAngle: true
+    minVelocity: 8
+    maxVelocity: 15

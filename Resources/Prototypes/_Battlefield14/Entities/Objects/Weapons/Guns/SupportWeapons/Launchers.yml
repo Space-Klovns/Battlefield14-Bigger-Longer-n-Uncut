@@ -43,3 +43,242 @@
     crosshair:
       sprite: _RMC14/Interface/MousePointer/explosive_mouse.rsi
       state: all
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  parent: BaseItem
+  id: BF14BaseWeaponLauncherDisposableFolded
+  description: "Use to unfold. This weapon can be stored on your auxillary suit storage slot."
+  abstract: true
+  suffix: folded
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+    layers:
+      - state: icon-storage
+  - type: Clothing
+    quickEquip: false
+    unequipDelay: 1
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+    slots:
+    - Back
+    - suitStorage
+    - SUITSTORAGE2
+    clothingVisuals:
+      suitstorage2:
+      - state: equipped-BACKPACK
+  - type: Item
+    size: Huge
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14WeaponLauncherUSSMAWDisposable
+    sound:
+      path: /Audio/_Goobstation/Items/weapons/Sniper/pickup2.ogg
+      params:
+        variation: 0.125
+
+- type: entity
+  parent: [ BaseWeaponLauncher , BaseGunWieldable , BF14WeaponHandlingLauncherDisposable ]
+  id: BF14BaseWeaponLauncherDisposable
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    quickEquip: false
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+    slots:
+    - Back
+    - suitStorage
+    - SUITSTORAGE2
+    clothingVisuals:
+      suitstorage2:
+      - state: equipped-BACKPACK
+    unequipDelay: 1
+  - type: Item
+  - type: Appearance
+  - type: Gun
+    projectileSpeed: 40
+    fireRate: 0.75
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: GunRequiresWield
+  - type: AmmoCounter
+  - type: BasicEntityAmmoProvider
+    proto: BF14BulletRocket83mmNE
+    capacity: 1
+
+- type: entity
+  parent: [ BaseWeaponLauncher , BaseGunWieldable , BF14WeaponHandlingLauncherDisposable ]
+  id: BF14BaseWeaponLauncherDisposableUnfolded
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+    slots:
+    - Back
+    - suitStorage
+    unequipDelay: 1
+  - type: Item
+  - type: Appearance
+  - type: Gun
+    projectileSpeed: 40
+    fireRate: 0.75
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: GunRequiresWield
+  - type: AmmoCounter
+  - type: BasicEntityAmmoProvider
+    proto: BF14BulletRocket83mmNE
+    capacity: 1
+
+- type: entity
+  parent: BF14BaseWeaponLauncherDisposableFolded
+  id: BF14WeaponLauncherUSSMAWDisposableFolded
+  name: SMAW-D
+  description: "SMAW-D, D for disposable. Fires an anti-infantry Novel Explosive round, cannot be reloaded, drop after use. Use to unfold. This weapon can be stored on your auxillary suit storage slot."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+    layers:
+      - state: icon-storage
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14WeaponLauncherUSSMAWDisposable
+
+- type: entity
+  name: SMAW-D
+  parent: BF14BaseWeaponLauncherDisposableUnfolded
+  id: BF14WeaponLauncherUSSMAWDisposable
+  description: "SMAW-D, D for disposable. Fires an anti-infantry Novel Explosive round, cannot be reloaded, drop after use. Has a minimum arming distance of 6 tiles."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/SMAWD.rsi
+  - type: BasicEntityAmmoProvider
+    proto: BF14BulletRocket83mmNEArmingDistance
+    capacity: 1
+
+- type: entity
+  parent: BF14BaseWeaponLauncherDisposableFolded
+  id: BF14WeaponLauncherUSM202FLASHFolded
+  name: M202 FLASH
+  description: "Flame Assault Shoulder. A 4 tube rocket launcher firing 66mm incendiary rockets, brutal. Use to unfold. This weapon can be stored on your auxillary suit storage slot."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/M202.rsi
+    layers:
+      - state: icon-folded
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/M202.rsi
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/M202-folded.rsi
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14WeaponLauncherUSM202FLASH
+
+- type: entity
+  name: M202 FLASH
+  parent: BF14BaseWeaponLauncherDisposableUnfolded
+  id: BF14WeaponLauncherUSM202FLASH
+  description: "Flame Assault Shoulder. A 4 tube rocket launcher firing 66mm incendiary rockets, brutal. This weapon can be stored on your auxillary suit storage slot, and has a minimum arming distance of 6 tiles."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/M202.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/M202.rsi
+  - type: BasicEntityAmmoProvider
+    proto: BF14BulletRocketM202FLASHArmingDistance
+    capacity: 4
+  - type: GunWieldBonus
+    minAngle: 0
+    maxAngle: 0
+  - type: Gun
+    minAngle: 3
+    maxAngle: 10
+    angleIncrease: 4
+    availableModes:
+    - SemiAuto
+    - Burst
+    selectedMode: SemiAuto
+    burstFireRate: 4
+    shotsPerBurst: 4
+    fireRate: 1.5
+    soundGunshot:
+      path: /Audio/_Battlefield14/Weapons/FighterWeapons/rocket3.ogg
+
+- type: entity
+  parent: BF14BaseWeaponLauncherDisposableFolded
+  id: BF14WeaponLauncherUSM72LAWThermobaricFolded
+  name: M72A9 LAW
+  description: "An M72 LAW with a modified warhead for a higher blast effect. Cannot be reloaded, drop after use. Use to unfold. This weapon can be stored on your auxillary suit storage slot."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/m72thermobaric.rsi
+    layers:
+      - state: folded
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/m72thermobaric.rsi
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14WeaponLauncherUSM72LAWThermobaric
+
+- type: entity
+  name: M72A9 LAW
+  parent: BF14BaseWeaponLauncherDisposableUnfolded
+  id: BF14WeaponLauncherUSM72LAWThermobaric
+  description: "An M72 LAW with a modified warhead for a higher blast effect. Cannot be reloaded, drop after use. Has a minimum arming distance of 6 tiles."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/m72thermobaric.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/m72thermobaric.rsi
+  - type: BasicEntityAmmoProvider
+    proto: BF14BulletRocketM72ThermobaricArmingDistance
+    capacity: 1
+
+- type: entity
+  name: "RPO-A 'Shmel'"
+  parent: BF14BaseWeaponLauncherDisposable
+  id: BF14WeaponLauncherRURPOAShmel
+  description: "Technically a flamethrower according to the Russian military, fires 93mm thermobaric projectiles. Has a minimum arming distance of 6 tiles."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/RPOA.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/RPOA.rsi
+  - type: BasicEntityAmmoProvider
+    proto: BF14BulletRocketRPG26ThermobaricArmingDistance
+    capacity: 1
+
+- type: entity
+  parent: BF14WeaponLauncherRURPOAShmel
+  id: BF14WeaponLauncherRURPOAShmelCamo
+  suffix: camo
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/RPOAcamo.rsi
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Launchers/RPOAcamo.rsi

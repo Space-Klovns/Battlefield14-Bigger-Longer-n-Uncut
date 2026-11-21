@@ -20,3 +20,14 @@ ent-BF14ArtilleryMarkerVOG25ParaFlare = artillery strike VG-40OP 40mm paraflare
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
 ent-BF14BulletVOG25ThermobaricArmingDistance = VG-40TB
     .desc = If you can see this you're probably dead!
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14BulletVOG25HEFrag = VOG-25
+    .desc = If you can see this you're probably dead!
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14BulletVOG25HEFragArmingDistance = VOG-25
+    .desc = If you can see this you're probably dead!
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14ArtilleryMarkerVOG25HEFrag = artillery strike VOG-25 40mm HE-Frag
+    .desc = { "" }

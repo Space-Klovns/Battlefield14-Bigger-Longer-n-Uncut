@@ -1,0 +1,66 @@
+- type: entity
+  id: BF14GassyMissileShrapnel
+  name: gas
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 10
+  - type: StaminaDamageOnCollide
+    damage: 5 # ~20 hits to stun
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: shard
+  - type: TimedDespawn
+    lifetime: 0.2
+  - type: PointLight
+    radius: 1
+    color: "#09ff00"
+    energy: 0.25
+
+- type: entity
+  name: decomissioner projectile
+  id: BF14BulletDecomissioner
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/robloxlaser.rsi
+    layers:
+    - state: robloxlaser
+      shader: unshaded
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Opaque # Mono
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectHeavyLaser
+  - type: StaminaDamageOnCollide
+    damage: 100
+  - type: Projectile
+    impactEffect: BulletImpactEffectRedDisabler
+    damage:
+      types:
+        Radiation: 500000
+      percentilePenetration: # BF14-BLU: was armorPenetration: 1
+        Radiation: 1
+    soundHit:
+      path: /Audio/_Battlefield14/Weapons/Misc/LaserGun_Hit.ogg
+    forceSound: true

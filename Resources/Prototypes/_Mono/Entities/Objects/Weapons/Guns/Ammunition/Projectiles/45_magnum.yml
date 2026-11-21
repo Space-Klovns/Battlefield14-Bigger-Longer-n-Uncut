@@ -1,0 +1,12 @@
+- type: entity
+  id: Bullet45_magnumFMJ
+  name: bullet (.45 magnum)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 35
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.1
+        Piercing: 0.1

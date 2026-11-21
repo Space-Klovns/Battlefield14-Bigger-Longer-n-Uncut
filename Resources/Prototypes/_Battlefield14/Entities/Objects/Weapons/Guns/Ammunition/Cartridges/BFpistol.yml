@@ -16,3 +16,112 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14CartridgePistol9x18
+  name: cartridge (9x18mm Makarov)
+  parent: BF14BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPistol9x18
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePistol9x18
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: BF14CartridgePistol9x19
+  name: cartridge (9x19mm Parabellum)
+  parent: BF14BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPistol9x19
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePistol9x19
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: BF14CartridgePistol10x25
+  name: cartridge (10x25mm Auto)
+  parent: BF14CartridgePistol9x19
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPistol10x25
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePistol10x25
+
+- type: entity
+  id: BF14CartridgePistol762x25
+  name: cartridge (7.62x25mm Tokarev)
+  parent: BF14BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPistol762x25
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePistol762x25
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/7.62x25.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: BF14CartridgePistol45ACP
+  name: cartridge (.45 ACP)
+  parent: BF14BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPistol45ACP
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePistol45ACP
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: BF14CartridgePistol50AE
+  name: cartridge (.50 Action Express)
+  parent: BF14BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPistol50AE
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePistol50AE
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
