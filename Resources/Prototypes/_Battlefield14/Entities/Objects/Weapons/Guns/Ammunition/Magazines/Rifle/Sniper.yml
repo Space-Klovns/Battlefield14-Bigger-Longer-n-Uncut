@@ -1,0 +1,227 @@
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineSniperIntervention
+  name: "Intervention magazine"
+  description: "A 5 round magazine for the M200 Intervention. Feeds .408 CT."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineSniperIntervention
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle408CT
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle408CT
+    capacity: 5
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Sniper/M107.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineSniperM40A5
+  name: "M40A5 magazine"
+  description: "It's a magazine. Feeds 7.62x51mm."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineSniperM40A5
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x51
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x51
+    capacity: 10
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x51mm/7.62x51mm_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineSniperAWP
+  name: "AWP magazine"
+  description: "It's a magazine. Feeds 7.62x51mm."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineSniperAWP
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x51
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x51
+    capacity: 10
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Sniper/AWM.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14MagazineSniperAWP
+  id: BF14MagazineSniperAWM
+  name: "AWM magazine"
+  description: "It's a magazine. Feeds .300WM."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineSniperAWM
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle300WM
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle300WM
+    capacity: 5
+
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineRifleSV98
+  name: "SV-98 magazine"
+  description: "A small, 5 round magazine for the SV-98, but dont let its small size fool you, these rounds pack a punch. Feeds 7.62x54mmR."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleSV98
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x54r
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x54r
+    capacity: 10
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Sniper/SV98.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineSniperSVD
+  name: "SVD magazine"
+  description: "A 10 round magazine for the SVD, for tapping americans a little further than your average infantryman. Feeds 7.62x54mmR."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineSniperSVD
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x54r
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x54r
+    capacity: 10
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Sniper/SVDS.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineRifleVPO215
+  name: "VPO-215 magazine"
+  description: "A small, 4 round magazine for the VPO-215. Feeds .366 TKM."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleVPO215
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle366
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle366
+    capacity: 4
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Sniper/SV98.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineRifleMagpulMosin
+  name: "Mosin-Nagant magazine"
+  description: "A magpul aftermarket, 10 round magazine for the Mosin-Nagant, Feeds 7.62x54mmR."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleMagpullMosin
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x54r
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x54r
+    capacity: 10
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Sniper/SV98.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance

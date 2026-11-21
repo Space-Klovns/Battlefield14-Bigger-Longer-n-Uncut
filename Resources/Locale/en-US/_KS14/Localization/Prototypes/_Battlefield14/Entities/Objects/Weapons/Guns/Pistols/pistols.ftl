@@ -66,3 +66,10 @@ ent-BF14WeaponPistolRUPM = PM Makarov
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
 ent-BF14WeaponPistolMP443 = MP443 'grok'
     .desc = Is this true?
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
+ent-BF14WeaponPistolBEFiveSeven = Five-seveN
+    .desc = Designed alongside the P90 PDW, firing what are basically miniature rifle rounds.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
+ent-BF14WeaponPistolRUSR1MP = SR1MP
+    .desc = Designed alongside the SR-2 Veresk by TsNIITochMash to use the 9x21mm cartridge. You can google that.

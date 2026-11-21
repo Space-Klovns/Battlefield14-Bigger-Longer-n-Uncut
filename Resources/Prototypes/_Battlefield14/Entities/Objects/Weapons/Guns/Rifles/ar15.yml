@@ -1,0 +1,651 @@
+- type: entity
+  name: M16A1
+  parent: BaseWeaponRifle
+  id: BF14WeaponRifleUSM16A1
+  description: "The original rifle that started the M16 and M4 family of rifles, nowadways most western made guns copy it. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M16A1.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M16A1
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: carryhandle
+      - state: stock-full
+      - state: rifle-length-barrel-M16
+      - state: muzzle-brake
+        offset: 0.19,0
+      - state: mag-20-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M16A1.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -47
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 3
+    maxAngle: 50 # 20
+    angleIncrease: 2
+    angleDecay: 80
+    projectileSpeed: 55 # twenty inch barrel
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+    soundGunshot:
+      collection: BF14M16Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+    fireRate: 12.5 # 750 RPM
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M16/rack.ogg
+      params:
+        volume: -2
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_chamber_press.ogg
+      params:
+        volume: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleSTANAGShort
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleSTANAG
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle556x45
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle556x45
+  - type: MagazineVisuals
+    magState: mag-20
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  parent: BF14WeaponRifleUSM16A1
+  id: BF14WeaponRifleUSM16A130
+  suffix: 30 round STANAG
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: carryhandle
+      - state: stock-full
+      - state: rifle-length-barrel-M16
+      - state: muzzle-brake
+        offset: 0.19,0
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleSTANAG
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleSTANAG
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle556x45
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle556x45
+  - type: MagazineVisuals
+    magState: mag-30
+    steps: 1
+    zeroVisible: true
+
+- type: entity
+  name: M16A2
+  parent: BF14WeaponRifleUSM16A1
+  id: BF14WeaponRifleUSM16A2
+  description: "An old Stoner design, many rifles have tried to take its place and many have failed. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M16A2.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M16A2
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: carryhandle
+      - state: stock-full
+      - state: rifle-length-barrel-clamshell
+      - state: muzzle-brake
+        offset: 0.19,0
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M16A2.rsi
+  - type: GunWieldBonus
+    minAngle: -47
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 3
+    maxAngle: 50 # 20
+    angleIncrease: 1.5
+    angleDecay: 80
+    availableModes:
+    - SemiAuto
+    - Burst
+    selectedMode: Burst
+    burstFireRate: 16
+    burstCooldown: 0.3
+    fireRate: 4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleSTANAG
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleSTANAG
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle556x45
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle556x45
+  - type: MagazineVisuals
+    magState: mag-30
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: M16A3
+  parent: BF14WeaponRifleUSM16A2
+  id: BF14WeaponRifleUSM16A3
+  description: "An M16A1 lower with an M16A2 upper and handguard, barely used outside of USAF security. Takes STANAG magazines."
+  components:
+  - type: Gun
+    angleIncrease: 2
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+    fireRate: 12.5 # 750 RPM
+
+- type: entity
+  name: M16A4
+  parent: BF14WeaponRifleUSM16A2
+  id: BF14WeaponRifleUSM16A4
+  description: "An old Stoner design, many rifles have tried to take its place and many have failed. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M16A4.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M16A4
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: acog
+      - state: stock-full
+      - state: rifle-length-barrel-quadrail
+      - state: muzzle-brake
+        offset: 0.19,0
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M16A4.rsi
+  - type: Appearance
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.5
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: acog
+
+- type: entity
+  name: XM177E2
+  parent: BF14WeaponRifleUSM16A1
+  id: BF14WeaponRifleUSXM177E2
+  description: "A favorite of tacticool larpers and MAC V SOG commandos alike. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M16A1.rsi
+    size: Large
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M4A1
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: carryhandle
+      - state: stock-full-short
+      - state: carbine-length-barrel-XM177
+      - state: mag-20-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/CAR15.rsi
+  - type: Gun
+    projectileSpeed: 40 # Shorter barrel
+
+- type: entity
+  name: M4A1 carbine
+  parent: BF14WeaponRifleUSM16A3
+  id: BF14WeaponRifleUSM4A1
+  description: "The classic American slugthrower. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4A1.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M4A1
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: reddot
+      - state: stock-adjustable-sopmod1
+      - state: carbine-length-barrel-quadrail
+      - state: muzzle-brake
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4A1.rsi
+  - type: Gun
+    projectileSpeed: 45
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: M68
+
+- type: entity
+  name: M4A1 carbine (ACOG)
+  parent: BF14WeaponRifleUSM4A1
+  id: BF14WeaponRifleUSM4A1ACOG
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4A1ACOG.rsi
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: acog
+      - state: stock-adjustable-sopmod1
+      - state: carbine-length-barrel-quadrail
+      - state: muzzle-brake
+      - state: foregrip
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4A1ACOG.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleSTANAGTracerRed
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleSTANAG
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle556x45TracerRed
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle556x45
+  - type: Gun
+    angleIncrease: 2.5
+    projectileSpeed: 45
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.35
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: acog
+
+- type: entity
+  name: M4A1 carbine SUPP.
+  parent: BF14WeaponRifleUSM4A1
+  id: BF14WeaponRifleUSM4A1SUPP
+  description: "This is so CAG bro!. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4A1SUPP.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M4A1
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: holosight
+      - state: stock-adjustable-sopmod2
+      - state: carbine-length-barrel-quadrail
+      - state: supp-sopmod # Lower in YML = higher priority
+        offset: 0.095, 0.03
+      - state: foregrip
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4A1SUPP.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: Gun
+    soundGunshot:
+      collection: BF14GalilGunshotsSUPP
+      params:
+        volume: -12
+        variation: 0.125
+        maxDistance: 15 # BF14-BLU: was Mono's range
+  - type: Appearance
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: eotech
+
+- type: entity
+  name: CAR-15
+  parent: BF14WeaponRifleUSM4A1
+  id: BF14WeaponRifleUSCAR15
+  description: "A favorite of tacticool larpers and MAC V SOG commandos alike. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/CAR15.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-CAR15
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: carryhandle
+      - state: stock-adjustable-sopmod1
+      - state: carbine-length-barrel-clamshell
+      - state: muzzle-brake
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/CAR15.rsi
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _RMC14/Interface/MousePointer/rifle_mouse.rsi
+      state: all
+
+- type: entity
+  name: M4 carbine
+  parent: BF14WeaponRifleUSM4A1
+  id: BF14WeaponRifleUSM4
+  description: "Before the M4 was A1 it had a 3 round burst Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4.rsi
+    size: Large
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M4
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: carryhandle
+      - state: stock-adjustable-sopmod1
+      - state: carbine-length-barrel-quadrail
+      - state: muzzle-brake
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4.rsi
+  - type: Gun
+    angleIncrease: 1.5
+    projectileSpeed: 45
+    availableModes:
+    - SemiAuto
+    - Burst
+    selectedMode: Burst
+    burstFireRate: 16
+    burstCooldown: 0.3
+    fireRate: 5
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _RMC14/Interface/MousePointer/rifle_mouse.rsi
+      state: all
+
+- type: entity
+  name: CAR-15 SUPP.
+  parent: BF14WeaponRifleUSCAR15
+  id: BF14WeaponRifleUSCAR15SUPP
+  description: "This is so CAG bro!. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/CAR15SUPP.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M4A1
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: carryhandle-reddot
+      - state: stock-adjustable-sopmod1
+      - state: carbine-length-barrel-clamshell
+      - state: supp
+        offset: 0.06, 0.03
+      - state: laser-taped
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/CAR15SUPP.rsi
+  - type: Gun
+    soundGunshot:
+      collection: BF14GalilGunshotsSUPP
+      params:
+        volume: -12
+        variation: 0.125
+        maxDistance: 15 # BF14-BLU: was Mono's range
+  - type: Appearance
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: M68
+
+- type: entity
+  name: AR-15
+  parent: BF14WeaponRifleUSCAR15
+  id: BF14WeaponRifleUSAR15
+  description: "A civilian pattern of AR15 marred with barrel length and select fire laws, this is as good as an American man can get off the shelf without paying an arm and a leg. Takes STANAG magazines."
+  components:
+  - type: Gun
+    fireRate: 5
+    availableModes:
+    - SemiAuto
+    selectedMode: SemiAuto
+
+- type: entity
+  name: AR-15 police carbine
+  parent: BF14WeaponRifleUSAR15
+  id: BF14WeaponRifleUSAR15Police
+  description: "An off the shelf AR-15 with some extra attachments and a law enforcement serial number. Takes STANAG magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+      - state: reddot
+      - state: stock-adjustable
+      - state: carbine-length-barrel-quadrail
+      - state: muzzle-brake
+      - state: foregrip
+      - state: railcover
+        offset: -0.155,0
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: RandomMetadata
+    nameSegments: [BF14NamesAR15Police]
+
+- type: entity
+  parent: BF14WeaponRifleUSM4A1
+  id: BF14WeaponRifleUSRandomM4
+  suffix: random
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/CAR15.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-CAR15
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip
+        map: [ "grip" ]
+      - state: carryhandle
+        map: [ "optic" ]
+      - state: stock-adjustable-sopmod1
+        map: [ "stock" ]
+      - state: carbine-length-barrel-quadrail
+        map: [ "barrel" ]
+      - state: muzzle-brake
+        map: [ "accessory" ]
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/CAR15.rsi
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _RMC14/Interface/MousePointer/rifle_mouse.rsi
+      state: all
+  - type: RandomSprite
+    available:
+    - grip:
+        grip-HK: ""
+    - optic:
+        carryhandle-reddot: ""
+        reddot: ""
+        holosight: ""
+    - stock:
+        stock-full: ""
+        stock-adjustable: ""
+        stock-adjustable-sopmod2: ""
+        stock-adjustable-HK: ""
+    - barrel:
+        carbine-length-barrel-clamshell: ""
+        carbine-length-barrel-M27: ""
+        rifle-length-barrel-M27: ""
+    - accessory:
+        laser: ""
+        laser-taped: ""
+        foregrip: ""
+        foregrip-short: ""
+        muzzle-comp: ""
+        railcover: ""
+
+- type: entity
+  parent: BF14WeaponRifleUSM16A1
+  id: BF14WeaponRifleUSXM16E1Patriot
+  name: "XM16E1 'Patriot'"
+  description: "A one of a kind chopped down XM16E1 with a double drum magazine, obviously extremely unwieldy and impractical, but you feel kindof important holding it. Takes STANAG magazines."
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/XM16E1patriot.rsi
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/XM16E1patriot.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/XM16E1patriot.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/XM16E1patriot.rsi
+  - type: GunWieldBonus
+    minAngle: -25
+    maxAngle: -35
+  - type: Gun
+    minAngle: 30
+    maxAngle: 60
+    angleIncrease: 2.5
+    projectileSpeed: 40
+    angleDecay: 80
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleSTANAGDoubleDrum
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleSTANAG
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle556x45
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle556x45
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true

@@ -158,3 +158,180 @@
 
 - type: Tag
   id: BF14SpeedLoader357magnum
+
+- type: Tag
+  id: BF14CartridgeRifle145x114 # willy you're a dickhead for just sticking all of this at the top of the file
+
+- type: Tag
+  id: BF14MagazineBeltRP46
+
+- type: Tag
+  id: BF14CartridgeRifle366
+
+- type: Tag
+  id: BF14MagazineRifleVPO215
+
+- type: Tag
+  id: BF14MagazineRifleMagpullMosin
+
+- type: Tag
+  id: BF14CartridgePDW46x30
+
+- type: Tag
+  id: BF14CartridgePDW57x28
+
+- type: Tag
+  id: BF14CartridgePDW9x21
+
+- type: Tag
+  id: BF14CartridgeRifle127x55
+
+- type: Tag
+  id: BF14CartridgeRifle300WM
+
+- type: Tag
+  id: BF14CartridgeRifle303British
+
+- type: Tag
+  id: BF14CartridgeRifle408CT
+
+- type: Tag
+  id: BF14CartridgeRifle473x33
+
+- type: Tag
+  id: BF14CartridgeRifle556x45
+
+- type: Tag
+  id: BF14CartridgeRifle545x39
+
+- type: Tag
+  id: BF14CartridgeRifle762x39
+
+- type: Tag
+  id: BF14CartridgeRifle762x51
+
+- type: Tag
+  id: BF14CartridgeRifle762x54r
+
+- type: Tag
+  id: BF14CartridgeRifle792x57
+
+- type: Tag
+  id: BF14CartridgeRifle9x39
+
+- type: Tag
+  id: BF14MagazineSniperAWM
+
+- type: Tag
+  id: BF14MagazineSniperAWP
+
+- type: Tag
+  id: BF14MagazineSniperIntervention
+
+- type: Tag
+  id: BF14MagazineRifleAKM
+
+- type: Tag
+  id: BF14MagazineRifleAK74
+
+- type: Tag
+  id: BF14MagazineRifleASH12
+
+- type: Tag
+  id: BF14MagazineRifleASVAL
+
+- type: Tag
+  id: BF14MagazineRifleFAL
+
+- type: Tag
+  id: BF14MagazineRifleL1A1
+
+- type: Tag
+  id: BF14MagazineRifleG3
+
+- type: Tag
+  id: BF14MagazineRifleG36
+
+- type: Tag
+  id: BF14MagazineRifleHK417
+
+- type: Tag
+  id: BF14MagazineRifleLeeEnfield
+
+- type: Tag
+  id: BF14MagazineRifleSTANAG
+
+- type: Tag
+  id: BF14MagazineRifleSCARH
+
+- type: Tag
+  id: BF14MagazineRifleSV98
+
+- type: Tag
+  id: BF14MagazineRifleM14
+
+- type: Tag
+  id: BF14MagazineRifleM30MRC
+
+- type: Tag
+  id: BF14MagazineRifleM41A
+
+- type: Tag
+  id: BF14MagazineBeltBoxM240
+
+- type: Tag
+  id: BF14MagazineBeltBoxM249
+
+- type: Tag
+  id: BF14MagazineBeltBoxMG3
+
+- type: Tag
+  id: BF14MagazineBeltBoxMG42
+
+- type: Tag
+  id: BF14MagazineBeltBoxMK48
+
+- type: Tag
+  id: BF14MagazineBeltBoxM60
+
+- type: Tag
+  id: BF14MagazineBeltBoxPKM
+
+- type: Tag
+  id: BF14MagazineSniperM40A5
+
+- type: Tag
+  id: BF14MagazineSniperSVD
+
+- type: Tag
+  id: BF14MagazinePistolFiveSeven
+
+- type: Tag
+  id: BF14MagazinePistolSR1MP
+
+- type: Tag
+  id: BF14MagazinePistolSR2Udav
+
+- type: Tag
+  id: BF14MagazineSubmachinegunSR2MP
+
+- type: Tag
+  id: BF14MagazinePistolMP7
+
+- type: Tag
+  id: BF14MagazinePistolP90
+
+- type: Tag
+  id: BF14SpeedLoaderSTANAG
+
+- type: Tag
+  id: BF14SpeedLoaderSKS
+
+- type: Tag
+  id: BF14AmmunitionBox
+
+- type: Tag
+  id: BF14CartridgePulseLinked
+
+- type: Tag
+  id: BF14MagazineBeltBoxAr2

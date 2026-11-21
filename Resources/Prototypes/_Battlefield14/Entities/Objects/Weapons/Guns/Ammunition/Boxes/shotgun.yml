@@ -142,3 +142,15 @@
       - state: mag-1
         map: ["enum.GunVisualLayers.Mag"]
       - state: slug
+
+- type: entity
+  parent: BF14MagazineBox9x19
+  id: BF14ShellBox410Bore
+  name: ammunition pack (.410 bore buckshot)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 20
+    proto: BF14CartridgeShotgun410BoreBuckshot
+    whitelist:
+      tags:
+        - BF14CartridgeShotgun410Bore

@@ -24,3 +24,6 @@ ent-BF14ShellBox4GaugeShrap25 = shotgun shell box (4 gauge shrap-25)
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Boxes\shotgun.yml
 ent-BF14ShellBox4GaugeBarricade = shotgun shell box (4 gauge barricade)
     .desc = { "" }
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Boxes\shotgun.yml
+ent-BF14ShellBox410Bore = ammunition pack (.410 bore buckshot)
+    .desc = { "" }
