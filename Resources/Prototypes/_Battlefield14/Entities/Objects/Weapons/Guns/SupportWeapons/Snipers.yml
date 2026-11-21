@@ -1,0 +1,164 @@
+- type: entity
+  name: Mk-14 EBR
+  parent: BF14WeaponRifleUSM14
+  id: BF14WeaponSniperUSM14EBR
+  description: The M14 was kindof a flop, it tried to be too many things at once. After it was replaced it had a second life as a designated marksman rifle, even recieving this upgraded chassis.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/M14EBR.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/M14EBR.rsi
+  - type: GunRequiresWield
+  - type: GunWieldBonus # needed so min angle doesn't go negative
+    minAngle: 0
+    maxAngle: 0
+  - type: Gun
+    fireRate: 4
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 5.5
+    angleDecay: 13
+    projectileSpeed: 50
+    soundGunshot:
+      collection: BF14M14Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: acog
+
+- type: entity
+  name: G28
+  parent: BF14WeaponRifleUSM14
+  id: BF14WeaponSniperDEG28
+  description: "Based off the civilian MR308 rifle (or MR762 if you're American), this 417 style rifle is used by bundeswehr designated marksmen as the G28. Takes 417 pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/G28.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/G28.rsi
+  - type: GunRequiresWield
+  - type: GunWieldBonus # needed so min angle doesn't go negative
+    minAngle: 0
+    maxAngle: 0
+  - type: Gun
+    fireRate: 4
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 5.5
+    angleDecay: 13
+    projectileSpeed: 50
+    soundGunshot:
+      collection: BF14M14Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleG28
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleHK417
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: acog
+
+- type: entity
+  name: PTRD-41
+  parent: [WeaponFlareGun, BaseGunWieldable]
+  id: BF14WeaponRifleRUPTRD41
+  description: A ancient single-shot anti-materiel rifle that was used all the way back in world war 2. Now used in museums as a show piece.
+  components:
+  - type: Item
+    size: Huge
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/PTRD41.rsi
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/PTRD41.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/PTRD41.rsi
+  - type: GunWieldBonus
+    minAngle: -29
+    maxAngle: -27
+  - type: Gun
+    minAngle: 31
+    maxAngle: 40
+    angleIncrease: 1
+    angleDecay: 16
+    availableModes:
+    - SemiAuto
+    selectedMode: SemiAuto
+    fireRate: 5
+    projectileSpeed: 67 # same as the M107
+    soundGunshot:
+      path: /Audio/_Battlefield14/Weapons/Guns/PTRD41/fire.ogg
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle145x114
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle145x114
+  - type: Appearance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier

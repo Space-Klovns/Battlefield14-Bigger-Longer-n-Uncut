@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from civ13 at https://github.com/Civ13/Civ13/blob/c1d4512d573f18d9e9fee5c227b8aaff93806ac3/icons/obj/gun.dmi and modified by JoeHammad; taken from Battlefield14 (https://github.com/PunishedJoe/Battlefield14) at d24a6e8c2f5d995e6bdd0a2571e406923e53f883",
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "mag-1"
+        },
+        {
+            "name": "mag-2"
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+- type: entity
+  id: BF14CartridgePulseLinked
+  name: linked pulse plug
+  parent: BF14BaseCartridgeRifle
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePulseLinked
+  - type: CartridgeAmmo
+    proto: BF14BulletRiflePulse
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/pulseplug.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14CartridgeDrop556x45
+      params:
+        volume: -1

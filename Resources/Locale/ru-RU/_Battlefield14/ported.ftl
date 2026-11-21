@@ -1,3 +1,6 @@
+bf14-names-ar15-police-dataset-1 = полицейский карабин AR-15
+bf14-names-ar15-police-dataset-2 = полицейский карабин RO933
+bf14-names-ar15-police-dataset-3 = патрульная винтовка
 bf14-names-smersh-dataset-1 = разгрузка «Смерш»
 bf14-names-smersh-dataset-2 = разгрузка «Смерч»
 stack-bf14-advanced-burn-kit = продвинутый набор от ожогов

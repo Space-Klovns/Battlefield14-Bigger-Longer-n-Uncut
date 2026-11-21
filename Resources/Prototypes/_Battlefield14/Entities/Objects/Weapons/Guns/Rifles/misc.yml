@@ -1,0 +1,220 @@
+- type: entity
+  name: M-30 MR-C
+  parent: BaseWeaponRifle
+  id: BF14WeaponRifleUSM30MRC
+  description: Cal 4.73x33, model 30, modular rifle caseless. The culmination of decades of research into caseless ammunition, the first practical caseless rifle.
+  components:
+  - type: Item
+    size: Huge
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/lecter_inhands_32x.rsi
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/lecter.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/lecter_inhands_32x.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -47
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 3
+    maxAngle: 50 # 20
+    angleIncrease: 2
+    angleDecay: 80
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    - Burst
+    selectedMode: FullAuto
+    fireRate: 12.5 # 750 RPM
+    projectileSpeed: 45
+    shotsPerBurst: 3
+    burstCooldown: 0.3
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/light_rifle_1.ogg
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # It's caseless so it doesn't need a bolt, see G11
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleM30MRC
+        insertSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagIn/m16_magin.ogg
+        ejectSound: /Audio/_Mono/Weapons/Guns/SmallArms/MagOut/skm_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleM30MRC
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle473x33
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle473x33
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 750
+
+- type: entity
+  name: M42A5
+  parent: BaseWeaponRifle
+  id: BF14WeaponRifleUSM42A5
+  description: Something isn't right here.
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Mono/Objects/Weapons/Guns/Rifles/lecter_inhands_32x.rsi # Teeeemp
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/M42A5.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/M42A5.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M4A1.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -47
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 3
+    maxAngle: 50 # 20
+    angleIncrease: 3
+    angleDecay: 80
+    projectileSpeed: 50
+    fireRate: 12.5 # 750 RPM
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/m41.ogg
+      params:
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_chamber_press.ogg
+      params:
+        volume: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleM42A5
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleM41A
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle473x33
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle473x33
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: OSIPR-IAR
+  parent: BaseWeaponRifle
+  id: BF14WeaponRifleCMBLMG
+  description: Now THIS is an AR3.
+  suffix: ar3
+  components:
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR2.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR2.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR2.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -42
+    maxAngle: -42
+  - type: Gun
+    minAngle: 50 # 8
+    maxAngle: 50 # 8
+    angleIncrease: 3
+    angleDecay: 2
+    projectileSpeed: 50
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/_Battlefield14/Weapons/Guns/pulse/ar2_shot.ogg
+    soundEmpty: /Audio/_Battlefield14/Weapons/Guns/pulse/empty.ogg
+    fireRate: 12.5 # 750 RPM
+  - type: ChamberMagazineAmmoProvider
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/pulse/bolt_in.ogg
+      params:
+        volume: -5
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/pulse/bolt_out.ogg
+      params:
+        volume: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineBeltBoxAr2
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/pulse/mag_in.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/pulse/mag_out.ogg
+        priority: 2
+        swap: false
+        whitelist:
+          tags:
+            - BF14MagazineBeltBoxAr2
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePulseLinked
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePulseLinked
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Appearance
