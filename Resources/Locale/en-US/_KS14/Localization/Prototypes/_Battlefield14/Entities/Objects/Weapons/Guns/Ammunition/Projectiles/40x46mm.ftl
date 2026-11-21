@@ -13,3 +13,22 @@ ent-BF14Bullet40x46mmFragFragment = 40x46mm fragment
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
 ent-BF14Bullet40x46mmMPAPERS = MP-APERS projectile
     .desc = If you can see this you're probably dead!
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
+ent-BF14Bullet40x46mmHEDP = 40x46mm HEDP grenade
+    .desc = If you can see this you're probably dead!
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
+ent-BF14Bullet40x46mmFrag = 40x46mm fragmentation grenade
+    .desc = If you can see this you're probably dead!
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
+ent-BF14Bullet40x46mmHEArmingDistance = 40x46mm HE grenade
+    .desc = If you can see this you're probably dead!
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
+ent-BF14Bullet40x46mmHEDPArmingDistance = 40x46mm HEDP grenade
+    .desc = If you can see this you're probably dead!
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
+ent-BF14Bullet40x46mmFragArmingDistance = 40x46mm fragmentation grenade
+    .desc = If you can see this you're probably dead!
