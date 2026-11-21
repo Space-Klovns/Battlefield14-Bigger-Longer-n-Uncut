@@ -4,6 +4,9 @@
   name: ammunition pack
   abstract: true
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Tag
     tags:
       - BF14AmmunitionBox
@@ -32,6 +35,9 @@
   id: BF14MagazineBox556x45Big
   name: bulk ammunition box (5.56x45mm)
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Tag
     tags:
       - BF14AmmunitionBox

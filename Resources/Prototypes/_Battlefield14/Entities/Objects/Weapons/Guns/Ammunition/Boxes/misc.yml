@@ -3,6 +3,9 @@
   id: BF14MagazineBox473x33Big
   name: bulk ammunition box (4.73x33mm)
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Tag
     tags:
       - BF14AmmunitionBox

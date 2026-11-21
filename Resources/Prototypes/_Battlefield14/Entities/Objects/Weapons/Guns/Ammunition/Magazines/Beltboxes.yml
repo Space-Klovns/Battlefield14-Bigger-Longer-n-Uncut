@@ -4,6 +4,9 @@
   name: "M249 belt box (5.56x45mm)"
   description: A big box that has a belt in it, for 5.56x45 millimeter ammo.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Tag
     tags:
       - BF14MagazineBeltBoxM249
@@ -54,6 +57,9 @@
   name: "MK 48 belt box (7.62x51mm)"
   description: "A big box that has a belt in it, for 7.62x51 millimeter ammo. Uses a maximi pattern attachment system."
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Tag
     tags:
       - BF14MagazineBeltBoxMK48
@@ -99,6 +105,9 @@
   name: "MG3 belt box (7.62x51mm)"
   description: A big box that has a belt in it, for 7.62x51 millimeter ammo.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     size: Normal
     shape:
@@ -168,6 +177,9 @@
   name: "PKM belt box (7.62x54mmR)"
   description: A big box that has a belt in it, for 7.62x54 millimeter rimmed ammo.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Tag
     tags:
       - BF14MagazineBeltBoxPKM
@@ -201,6 +213,9 @@
   name: "RP-46 belt (7.62x54mmR)"
   description: A long, 50 round belt for the RP-46 machinegun, you better not lose it because you wont find a new one.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Tag
     tags:
       - BF14MagazineBeltRP46
@@ -232,6 +247,9 @@
   name: "OSIPR-IAR belt box"
   description: A big box that has a belt in it.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Tag
     tags:
       - BF14MagazineBeltBoxAr2

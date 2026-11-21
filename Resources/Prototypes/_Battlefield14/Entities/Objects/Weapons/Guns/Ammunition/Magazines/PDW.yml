@@ -66,6 +66,9 @@
   name: P90 magazine (5.7x28mm)
   description: A bunch of itty bitty bullets that like to go ZIP right through you, packaged all neat.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/PDW/P90.rsi
 #    storedRotation: -90
