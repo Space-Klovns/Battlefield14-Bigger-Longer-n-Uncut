@@ -3,6 +3,8 @@
   name: reinforced window
   parent: [BaseDeltaPressureReinforcedGlass, Window]
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 4
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/reinforced_window.rsi
@@ -67,6 +69,8 @@
     snap:
     - Window
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 2
   - type: Sprite
     sprite: Structures/Windows/directional.rsi
     state: reinforced_window

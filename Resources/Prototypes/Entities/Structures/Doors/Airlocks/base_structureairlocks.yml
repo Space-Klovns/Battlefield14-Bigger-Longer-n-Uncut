@@ -4,6 +4,8 @@
   name: airlock
   description: It opens, it closes, and maybe crushes you.
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 5
   - type: Anchorable
     flags:
     - Anchorable
