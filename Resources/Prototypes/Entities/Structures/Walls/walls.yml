@@ -63,6 +63,8 @@
   parent: BaseStructureWall
   id: BaseWall
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 3
   - type: Occluder # Breaks on diagonal walls
   - type: KsThermalSource # KS14: exterior walls radiate heat; summed by IRST sensors into a grid's thermal signature
   - type: KsRadarSource # KS14: exterior walls reflect radar; summed by active radar into a grid's radar cross-section
@@ -499,6 +501,8 @@
   name: plastitanium wall
   suffix: indestructible
   components:
+    - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+      canBePierced: false
     - type: Sprite
       sprite: Structures/Walls/plastitanium.rsi
     - type: Icon
@@ -550,6 +554,8 @@
   name: plastitanium wall
   suffix: diagonal, indestructible
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    canBePierced: false
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/plastitanium_diagonal.rsi
@@ -599,6 +605,8 @@
   id: WallReinforced
   name: reinforced wall
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 4
   - type: Sprite
     sprite: Structures/Walls/solid.rsi
   - type: Icon
@@ -1296,6 +1304,8 @@
   name: wood wall
   description: The traditional greytide defense.
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 1
   - type: Sprite
     sprite: Structures/Walls/wood.rsi
   - type: Icon
@@ -1335,6 +1345,8 @@
   name: web wall
   description: Keeps the spiders in and the greytide out.
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 1
   - type: MeleeSound
     soundGroups:
       Brute:
@@ -1578,6 +1590,8 @@
   name: cobblestone brick wall
   description: Stone by stone, perfectly fitted together to form a wall.
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 2
   - type: Sprite
     sprite: Structures/Walls/cobblebrick.rsi
   - type: Icon

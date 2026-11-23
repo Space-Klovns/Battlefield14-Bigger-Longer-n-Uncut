@@ -1,0 +1,276 @@
+- type: entity
+  parent: BaseItem
+  id: BF14MagazineBeltBoxM249
+  name: "M249 belt box (5.56x45mm)"
+  description: A big box that has a belt in it, for 5.56x45 millimeter ammo.
+  components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Tag
+    tags:
+      - BF14MagazineBeltBoxM249
+  - type: Item
+    size: Normal
+    shape:
+      - 0,0,2,1 # 3 wide, basically 3 magazines wide 
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle556x45TracerRed
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle556x45
+    capacity: 200
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/BeltBoxes/M249.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14MagazineBeltBoxMK48
+  id: BF14MagazineBeltBoxM240
+  name: "M240 belt box (7.62x51mm)"
+  description: "A big box that has a belt in it, for 7.62x51 millimeter ammo. Uses a MAG 58 pattern attachment system."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineBeltBoxM240
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/BeltBoxes/M240.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseItem
+  id: BF14MagazineBeltBoxMK48
+  name: "MK 48 belt box (7.62x51mm)"
+  description: "A big box that has a belt in it, for 7.62x51 millimeter ammo. Uses a maximi pattern attachment system."
+  components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Tag
+    tags:
+      - BF14MagazineBeltBoxMK48
+  - type: Item
+    size: Normal
+    shape:
+      - 0,0,2,1 # 3 wide
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x51TracerRed
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x51
+    capacity: 100
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/BeltBoxes/M249.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14MagazineBeltBoxM240
+  id: BF14MagazineBeltBoxM60
+  name: "M60 belt box (7.62x51mm)"
+  description: "A big box that has a belt in it, for 7.62x51 millimeter ammo. Uses an M60 pattern attachment system."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/BeltBoxes/M60.rsi
+  - type: Tag
+    tags:
+      - BF14MagazineBeltBoxM60
+
+- type: entity
+  parent: BaseItem
+  id: BF14MagazineBeltBoxMG3
+  name: "MG3 belt box (7.62x51mm)"
+  description: A big box that has a belt in it, for 7.62x51 millimeter ammo.
+  components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Normal
+    shape:
+      - 0,0,2,1 # 3 wide
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x51TracerRed
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x51
+    capacity: 100
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/BeltBoxes/MG3.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Tag
+    tags:
+      - BF14MagazineBeltBoxMG3
+  - type: Appearance
+
+- type: entity
+  parent: BF14MagazineBeltBoxMG3
+  id: BF14MagazineBeltBoxMG3Short
+  name: "MG3 drum (7.62x51mm)"
+  description: A big circular drum that has a belt in it, for 7.62x51 millimeter ammo.
+  components:
+  - type: Item
+    size: Normal
+  - type: BallisticAmmoProvider
+    capacity: 50
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/BeltBoxes/MG3Short.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  parent: BF14MagazineBeltBoxMG3Short
+  id: BF14MagazineBeltBoxBonesaw
+  name: "bonesaw drum (7.92x57mm)"
+  description: A big circular drum that has a belt in it, for 7.92x57 millimeter ammo.
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineBeltBoxMG42
+  - type: Item
+    size: Normal
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle792x57TracerRed
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle792x57
+    capacity: 50
+
+- type: entity
+  parent: BaseItem
+  id: BF14MagazineBeltBoxPKM
+  name: "PKM belt box (7.62x54mmR)"
+  description: A big box that has a belt in it, for 7.62x54 millimeter rimmed ammo.
+  components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Tag
+    tags:
+      - BF14MagazineBeltBoxPKM
+  - type: Item
+    size: Normal
+    shape:
+      - 0,0,2,1 # 3 wide
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x54r
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x54r
+    capacity: 100
+  - type: Sprite
+    sprite: _WorldAblaze1968/Objects/Weapons/Magazines/6zh1m.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BaseItem
+  id: BF14MagazineBeltRP46
+  name: "RP-46 belt (7.62x54mmR)"
+  description: A long, 50 round belt for the RP-46 machinegun, you better not lose it because you wont find a new one.
+  components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Tag
+    tags:
+      - BF14MagazineBeltRP46
+  - type: Item
+    size: Normal
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x54r
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x54r
+    capacity: 50
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/BeltBoxes/RP46.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 14
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BaseItem
+  id: BF14MagazineBeltBoxAr2
+  name: "OSIPR-IAR belt box"
+  description: A big box that has a belt in it.
+  components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Tag
+    tags:
+      - BF14MagazineBeltBoxAr2
+  - type: Item
+    size: Normal
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgePulseLinked
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgePulseLinked
+    capacity: 80
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/BeltBoxes/ar2.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance

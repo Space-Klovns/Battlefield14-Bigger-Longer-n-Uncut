@@ -64,3 +64,30 @@
     soundHit:
       path: /Audio/_Battlefield14/Weapons/Misc/LaserGun_Hit.ogg
     forceSound: true
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14BulletRiflePulse
+  name: pulse
+  parent: BF14BaseBulletIntermediate
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: pulse
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+        Structural: 3
+  - type: StaminaDamageOnCollide
+    damage: 8 # ~13 hits to stun
+  - type: PointLight
+    radius: 2
+    color: blue
+    energy: 1.6
+  - type: Tracer
+    color: blue
+    length: 3

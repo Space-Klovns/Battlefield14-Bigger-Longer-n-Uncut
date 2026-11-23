@@ -1,0 +1,105 @@
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineRifleSTANAG
+  name: "STANAG magazine"
+  description: "STANdardised AGreement magazine, standard for most NATO weaponry, can fit in platforms like the M16, L85, and the M249 believe it or not. Feeds 5.56x45mm."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleSTANAG
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle556x45
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle556x45
+    capacity: 30
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/STANAG.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14MagazineRifleSTANAG
+  id: BF14MagazineRifleSTANAGTracerRed
+  name: "STANAG magazine (tracer)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle556x45TracerRed
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle556x45
+    capacity: 30
+
+- type: entity
+  parent: BF14MagazineRifleSTANAG
+  id: BF14MagazineRifleSTANAGShort
+  name: "STANAG 20 round magazine"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle556x45
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle556x45
+    capacity: 20
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/STANAG20.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleSTANAGShort
+  id: BF14MagazineRifleSTANAGShortTracerRed
+  name: "STANAG magazine (tracer)"
+  description: "STANdardised AGreement magazine, standard for most NATO weaponry, can fit in platforms like the M16, L85, and the M249 believe it or not. Feeds 5.56x45mm."
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle556x45TracerRed
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle556x45
+    capacity: 30
+
+- type: entity
+  parent: BF14MagazineRifleSTANAG
+  id: BF14MagazineRifleSTANAGDoubleDrum
+  name: "Beta-C double drum magazine"
+  description: "Oh heavens no, the M16 has balls. Feeds 5.56x45mm."
+  components:
+  - type: Item
+    size: Normal
+    shape:
+      - 0,0,2,1 # 3 wide, basically 3 magazines wide
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/G36doubledrum.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle556x45
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle556x45
+    capacity: 100

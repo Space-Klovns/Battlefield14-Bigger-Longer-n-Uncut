@@ -1,0 +1,581 @@
+- type: entity
+  name: M249 Para
+  parent: BaseWeaponLightMachineGun
+  id: BF14WeaponMachineGunUSM249Para
+  description: "A specialised version of the M249 for use by paratroopers, with a shorter barrel and collapsing stock meaning it's easier to haul around but has a lower muzzle velocity compared to other machine guns. Particularly useful for room clearing. Takes STANAG magazines and M249 belt boxes."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/M249Para.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/M249Paraworn.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -16
+    maxAngle: -35
+  - type: Gun
+    minAngle: 20 # Wielded = 4
+    maxAngle: 50 # wielded = 15
+    angleIncrease: 1
+    angleDecay: 20
+    availableModes:
+    - FullAuto
+    - Burst
+    selectedMode: FullAuto
+    fireRate: 14 # ~850 RPM
+    projectileSpeed: 40 # 13 inch barrel
+    shotsPerBurst: 8 # Fictional, to help with conserving ammo
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: BF14M249Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: false
+    autoOpenBoltOnEmpty: false
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineBeltBoxM249
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxinsert.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxremove.ogg
+        swap: false
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineBeltBoxM249
+            - BF14MagazineRifleSTANAG # It can do this in real life you know
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle556x45TracerRed
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: GunRequiresWield
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _RMC14/Interface/MousePointer/lmg_mouse.rsi
+      state: all
+  - type: KsWieldDelay
+    baseDelay: 1
+    preventFiring: true
+
+- type: entity
+  name: M240B
+  parent: BF14WeaponMachineGunUSM249Para
+  id: BF14WeaponMachineGunUSM240B
+  description: "When you add the belgian MAG 58 and a decade of desert warfare, you get this thing. Takes MAG 58 pattern belt boxes."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/M240B.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/M240B.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -35
+  - type: Gun
+    minAngle: 19 # Wielded = 0
+    maxAngle: 55 # wielded = 20
+    angleIncrease: 1
+    angleDecay: 20
+    availableModes:
+    - FullAuto
+    - Burst
+    selectedMode: FullAuto
+    fireRate: 10.8 # 650 RPM
+    projectileSpeed: 50 # full length barrel
+    shotsPerBurst: 5 # Fictional, to help with conserving ammo
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: BF14M60Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M60/rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineBeltBoxM240
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M60/boxinsert.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M60/boxremove.ogg
+        swap: false
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineBeltBoxM240
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51TracerRed
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.9
+    sprintModifier: 0.9
+
+- type: entity
+  name: MK 48
+  parent: BF14WeaponMachineGunUSM249Para
+  id: BF14WeaponMachineGunUSMK48
+  description: "Special forces didn't think the M249 was enough and asked for the same thing but in 7.62x51. Terrifying. Takes maximi pattern belt boxes."
+  suffix: DO NOT MAP # this is basically just the M249 para in 7.62x51, should not be obtainable by normal means, in other cases use the M240B
+  components:
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -35
+  - type: Gun
+    minAngle: 19 # Wielded = 0
+    maxAngle: 60 # wielded = 25
+    angleIncrease: 1
+    availableModes:
+    - FullAuto
+    - Burst
+    selectedMode: FullAuto
+    projectileSpeed: 40 # 13 inch barrel
+    shotsPerBurst: 8 # Fictional, to help with conserving ammo
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: BF14M249Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineBeltBoxMK48
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxinsert.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxremove.ogg
+        swap: false
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineBeltBoxMK48
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51TracerRed
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: M60
+  parent: BF14WeaponMachineGunUSM240B
+  id: BF14WeaponMachineGunUSM60
+  description: "The original all american GPMG. Takes M60 pattern belt boxes."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/M60.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/M60.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -35
+  - type: Gun
+    minAngle: 19 # Wielded = 0
+    maxAngle: 55 # wielded = 20
+    angleIncrease: 1
+    angleDecay: 20
+    availableModes:
+    - FullAuto
+    - Burst
+    selectedMode: FullAuto
+    fireRate: 8.3 # 500 RPM
+    projectileSpeed: 50 # full length barrel
+    shotsPerBurst: 5 # Fictional, to help with conserving ammo
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: BF14M60Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M60/rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineBeltBoxM60
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M60/boxinsert.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M60/boxremove.ogg
+        swap: false
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineBeltBoxM60
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51TracerRed
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+
+- type: entity
+  name: MG3
+  parent: BaseWeaponLightMachineGun
+  id: BF14WeaponMachineGunDEMG3
+  description: It's just an MG42 rechambered for 7.62x51, making modernisation cheap and easy for the young bundeswehr.
+  components:
+  - type: Sprite
+    sprite: _WorldAblaze1968/Objects/Weapons/Smallarms/Machineguns/mg3.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _WorldAblaze1968/Objects/Weapons/Smallarms/Machineguns/mg3.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -14
+    maxAngle: -35
+  - type: Gun
+    minAngle: 19 # Wielded = 5
+    maxAngle: 60 # wielded = 25
+    angleIncrease: 1.5
+    angleDecay: 20
+    availableModes:
+    - FullAuto
+    - Burst
+    selectedMode: FullAuto
+    fireRate: 20
+    projectileSpeed: 50 # full length barrel
+    shotsPerBurst: 5 # Fictional, to help with conserving ammo
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/l6_fire.ogg # TODO unique sounds
+      params:
+        volume: -3
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: false
+    autoOpenBoltOnEmpty: false
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineBeltBoxMG3Short
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxinsert.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxremove.ogg
+        swap: false
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineBeltBoxMG3
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51TracerRed
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: GunRequiresWield
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _RMC14/Interface/MousePointer/lmg_mouse.rsi
+      state: all
+  - type: KsWieldDelay
+    baseDelay: 1
+    preventFiring: true
+
+- type: entity
+  name: PKM
+  parent: BaseWeaponLightMachineGun
+  id: BF14WeaponMachineGunRUPKM
+  description: A soviet era general purpose machinegun, putting down high caliber rounds from 100 round belt boxes.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/PKM.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/PKM.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -14
+    maxAngle: -35
+  - type: Gun
+    minAngle: 19 # Wielded = 5
+    maxAngle: 60 # wielded = 25
+    angleIncrease: 1.65
+    angleDecay: 20
+    availableModes:
+    - FullAuto
+    - Burst
+    selectedMode: FullAuto
+    fireRate: 10.8 # 650 RPM
+    projectileSpeed: 50 # full length barrel
+    shotsPerBurst: 8 # Fictional, to help with conserving ammo
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/l6_fire.ogg # TODO unique sounds
+      params:
+        volume: -3
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: false
+    autoOpenBoltOnEmpty: false
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineBeltBoxPKM
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxinsert.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxremove.ogg
+        swap: false
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineBeltBoxPKM
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x54r
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x54r
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Appearance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: GunRequiresWield
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _RMC14/Interface/MousePointer/lmg_mouse.rsi
+      state: all
+  - type: KsWieldDelay
+    baseDelay: 1
+    preventFiring: true
+
+- type: entity
+  name: PKP pecheneg
+  parent: BF14WeaponMachineGunRUPKM
+  id: BF14WeaponMachineGunRUPKP
+  description: A further modernised PKM, for the modern RGF.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/PKP.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/PKP.rsi
+
+- type: entity
+  name: RP-46
+  parent: BaseWeaponLightMachineGun
+  id: BF14WeaponMachineGunRURP46
+  description: A very old and very rare soviet machinegun, this one was probably found in a museum by from the fact that it isnt rusted down. Uses 7.62x54mmR belts.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/RP46.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/MachineGuns/RP46.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -14
+    maxAngle: -35
+  - type: Gun
+    minAngle: 19 # Wielded = 5
+    maxAngle: 60 # wielded = 25
+    angleIncrease: 1.65
+    angleDecay: 10
+    availableModes:
+    - FullAuto
+    - Burst
+    selectedMode: FullAuto
+    fireRate: 10
+    projectileSpeed: 50 # full length barrel
+    shotsPerBurst: 8 # Fictional, to help with conserving ammo
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/l6_fire.ogg # TODO unique sounds
+      params:
+        volume: -3
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: false
+    autoOpenBoltOnEmpty: false
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineBeltRP46
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxinsert.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M249/uc_m249_boxremove.ogg
+        swap: false
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineBeltRP46
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x54r
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x54r
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 10
+    zeroVisible: true
+  - type: Appearance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: GunRequiresWield
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _RMC14/Interface/MousePointer/lmg_mouse.rsi
+      state: all
+  - type: KsWieldDelay
+    baseDelay: 1
+    preventFiring: true

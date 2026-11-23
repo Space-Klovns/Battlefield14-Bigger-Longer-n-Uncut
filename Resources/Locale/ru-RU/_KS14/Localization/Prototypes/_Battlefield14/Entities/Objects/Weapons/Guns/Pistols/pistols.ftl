@@ -66,3 +66,10 @@ ent-BF14WeaponPistolRUPM = ПМ Макарова
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
 ent-BF14WeaponPistolMP443 = МР-443 «Грок»
     .desc = Это правда?
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
+ent-BF14WeaponPistolBEFiveSeven = Five-seveN
+    .desc = Создан вместе с ПП P90 и стреляет, по сути, миниатюрными винтовочными патронами.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
+ent-BF14WeaponPistolRUSR1MP = СР-1МП
+    .desc = Создан в ЦНИИТочМаш вместе с СР-2 «Вереск» под патрон 9x21 мм. Можете погуглить.

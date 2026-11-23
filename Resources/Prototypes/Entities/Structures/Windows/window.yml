@@ -8,6 +8,8 @@
     snap:
     - Window
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 3
   - type: KsThrowHitPriority # KS14: something thrown at a window hits it before the grille under it
   - type: Stainable # KS14: stains
   - type: Anchorable
@@ -142,6 +144,8 @@
     snap:
     - Window
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 1
   - type: Stainable # KS14: stains
   # ES START
   # - type: WallMount

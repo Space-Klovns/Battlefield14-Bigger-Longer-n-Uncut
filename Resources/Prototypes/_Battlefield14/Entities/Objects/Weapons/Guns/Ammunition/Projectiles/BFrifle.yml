@@ -1,0 +1,258 @@
+- type: entity
+  id: BF14BulletRifle366
+  name: bullet (366)
+  parent: BF14BaseBulletIntermediate
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 32
+        Structural: 3
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.15
+        Piercing: 0.15
+        Structural: 0.15
+  - type: StaminaDamageOnCollide
+    damage: 8 # ~13 hits to stun
+
+- type: entity
+  id: BF14BulletRifle556x45
+  name: bullet (5.56x45)
+  parent: BF14BaseBulletIntermediate
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: BF14BulletRifle556x45TracerRed
+  parent: [BF14BaseBulletIntermediate , BF14BaseTracerRed]
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: BF14BulletRifle545x39
+  name: bullet (5.45x39)
+  parent: BF14BaseBulletIntermediate
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: BF14BulletRifle545x39TracerGreen
+  parent: [BF14BaseBulletIntermediate , BF14BaseTracerGreen]
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: BF14BulletRifle762x39
+  name: bullet (7.62x39)
+  parent: BF14BaseBulletIntermediate
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 27
+        Structural: 3
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.2
+        Piercing: 0.2
+        Structural: 0.2
+  - type: StaminaDamageOnCollide
+    damage: 8 # ~13 hits to stun
+
+- type: entity
+  id: BF14BulletRifle762x39TracerGreen
+  parent: [BF14BulletRifle762x39 , BF14BaseTracerGreen]
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: BF14BulletRifle762x51
+  name: bullet (7.62x51)
+  parent: BF14BaseBulletRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+        Structural: 5
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.3
+        Piercing: 0.3
+        Structural: 0.3
+
+- type: entity
+  id: BF14BulletRifle762x51TracerRed
+  parent: [BF14BulletRifle762x51 , BF14BaseTracerRed]
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: BF14BulletRifle9x39
+  name: bullet (9x39)
+  parent: BF14BaseBulletRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+        Structural: 3
+  - type: StaminaDamageOnCollide
+    damage: 7 # ~15 hits to stun
+
+- type: entity
+  id: BF14BulletRifle762x54mmR
+  name: bullet (7.62x54mmR)
+  parent: BF14BaseBulletRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+        Structural: 5
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.15
+        Piercing: 0.15
+        Structural: 0.15
+  - type: StaminaDamageOnCollide
+    damage: 10 # ~10 hits to stun
+
+- type: entity
+  id: BF14BulletRifle300WM
+  name: bullet (.300 WM)
+  parent: BF14BaseBulletRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 60
+        Structural: 15
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.4
+        Piercing: 0.4
+        Structural: 0.4
+  - type: StaminaDamageOnCollide
+    damage: 15 # ~7 hits to stun
+
+- type: entity
+  id: BF14BulletRifle303British
+  name: bullet (.303 British)
+  parent: BF14BaseBulletRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+        Structural: 5
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.15
+        Piercing: 0.15
+        Structural: 0.15
+  - type: StaminaDamageOnCollide
+    damage: 10 # ~10 hits to stun
+
+- type: entity
+  id: BF14BulletRifle792x57
+  name: bullet (7.92x57mm)
+  parent: BF14BulletRifle762x54mmR
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: BF14BulletRifle792x57TracerRed
+  parent: [BF14BulletRifle792x57, BF14BaseTracerRed]
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: BF14BulletRifle127x55
+  name: bullet (12.7x55)
+  parent: BF14BaseBulletRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 50
+        Structural: 5
+  - type: StaminaDamageOnCollide
+    damage: 10 # ~10 hits to stun
+
+- type: entity
+  id: BF14BulletRifle127x55Duplex
+  name: bullet (12.7x55 duplex)
+  parent: BF14BulletRifle127x55
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 60
+  - type: StaminaDamageOnCollide
+    damage: 14 # ~8 hits to stun
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletRifle127x55DuplexSubmunition
+    distanceDelay: 1
+    submunitionDelay: 0
+    submunitionCount: 2
+    spreadAngle: 2
+    velocityMultiplier: 1.0
+
+- type: entity
+  id: BF14BulletRifle127x55DuplexSubmunition
+  name: bullet (12.7x55 duplex)
+  parent: BF14BulletRifle127x55
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30 # x2 = 60
+  - type: StaminaDamageOnCollide
+    damage: 7 # ~15 hits to stun, x2 = ~8
+  - type: ArmorPiercing
+    piercingThickness: 2
+
+- type: entity
+  id: BF14BulletRifle408CT
+  name: bullet (.408 CT)
+  parent: BF14BaseBulletRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 60
+        Piercing: 80
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.7
+        Structural: 0.7
+        Piercing: 0.7
+    deleteOnCollide: true
+  - type: StaminaDamageOnCollide
+    damage: 35 # ~3 hits to stun
+  - type: ArmorPiercing
+    piercingThickness: 4
+
+- type: entity
+  id: BF14BulletRifle5x114
+  name: bullet (14.5x114mm)
+  parent: BF14BaseBulletRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 90
+        Piercing: 120
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.6
+        Structural: 0.6
+        Piercing: 0.6
+    deleteOnCollide: true
+  - type: StaminaDamageOnCollide
+    damage: 45 # ~3 hits to stun
+  - type: ArmorPiercing
+    piercingThickness: 5
+
+- type: entity
+  id: BF14BulletRifle473x33
+  name: bullet (4.73x33)
+  parent: BF14BaseBulletIntermediate
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 22
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.25
+        Piercing: 0.25
