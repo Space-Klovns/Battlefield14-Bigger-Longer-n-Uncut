@@ -341,6 +341,22 @@ public sealed partial class KsPredictedSpawnSystem : KsSharedPredictedSpawnSyste
 
     public override bool IsKeptLocally(EntityUid uid) => _keptQuery.HasComponent(uid);
 
+    /// <summary>
+    ///     Whether <paramref name="uid"/> is what this client shows of a spawn: its own kept copy, or a networked entity
+    ///         that is not the hidden server copy of one. Not a re-predicted throwaway, nor the hidden copy. For
+    ///         client-only effects that follow a spawn (a tracer), so each is drawn once, after the copy the player sees.
+    /// </summary>
+    public bool IsShownHere(EntityUid uid)
+    {
+        if (IsKeptLocally(uid))
+            return true;
+
+        if (IsClientSide(uid))
+            return false;
+
+        return !TryComp<KsPredictedSpawnComponent>(uid, out var predictedSpawnComponent) || !IsHiddenHere((uid, predictedSpawnComponent));
+    }
+
     public override void PredictedQueueDelDeferrable(EntityUid uid)
     {
         if (GameTiming.ApplyingState && _keptQuery.TryComp(uid, out var keptComponent))
