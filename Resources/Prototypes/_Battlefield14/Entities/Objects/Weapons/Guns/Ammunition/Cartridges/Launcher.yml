@@ -1,0 +1,21 @@
+- type: entity
+  id: BF14CartridgeSMAWHEDM
+  name: "SMAW cartridge (HEDM)"
+  parent: BF14BaseCartridgeLauncher
+  description: "High explosive dual mode, explodes on contact in a small area to blast open walls and such. This item can be stored on your auxillary suit storage slot."
+  components:
+  - type: Item
+    size: Large
+  - type: Tag
+    tags:
+    - BF14CartridgeLauncher
+    - BF14CartridgeSMAW
+  - type: CartridgeAmmo
+    proto: BF14BulletRocket83mmHEDMArmingDistance
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Launcher/SMAW.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals

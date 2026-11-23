@@ -53,3 +53,9 @@
 
 - type: Tag
   id: Machete
+
+- type: Tag
+  id: BF14CartridgeSMAW
+
+- type: Tag
+  id: BF14CartridgeLauncher

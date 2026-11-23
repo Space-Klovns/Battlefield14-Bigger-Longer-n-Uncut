@@ -29,3 +29,31 @@
     radius: 3
     color: orange
     energy: 0.5
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14Bullet43x30mmThermobaricArmingDistance
+  name: 43x30mm thermobaric grenade
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: Projectile
+    damage:
+      types:
+        Structural: 50
+        Blunt: 40
+    deleteOnCollide: true
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14Bullet43x30mmThermobaric
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: StaminaDamageOnCollide
+    damage: 20

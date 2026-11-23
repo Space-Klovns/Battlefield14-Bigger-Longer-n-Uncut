@@ -118,3 +118,158 @@
     proto: BF14Bullet40x46mmMPAPERS
     count: 20
     spread: 10
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14Bullet40x46mmHEDP
+  name: 40x46mm HEDP grenade
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 150
+        Piercing: 40
+    deleteOnCollide: true
+  - type: BF14HeFragProjectile
+    fillPrototype: BF14Bullet40x46mmHEDPFragment
+    capacity: 20
+    randomAngle: true
+    minVelocity: 8
+    maxVelocity: 15
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 30
+    intensitySlope: 5
+    maxIntensity: 5
+    maxTileBreak: 1
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 3
+    color: orange
+    energy: 0.5
+
+- type: entity
+  id: BF14Bullet40x46mmFrag
+  name: 40x46mm fragmentation grenade
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 40
+        Blunt: 40
+    deleteOnCollide: true
+  - type: BF14HeFragProjectile
+    fillPrototype: BF14Bullet40x46mmFragFragment
+    capacity: 60
+    randomAngle: true
+    minVelocity: 8
+    maxVelocity: 15
+  - type: ExplodeOnTrigger
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 3
+    color: orange
+    energy: 0.5
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14Bullet40x46mmHEArmingDistance
+  name: 40x46mm HE grenade
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: Projectile
+    damage:
+      types:
+        Structural: 50
+        Blunt: 40
+    deleteOnCollide: false
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14Bullet40x46mmHE
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: StaminaDamageOnCollide
+    damage: 20
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14Bullet40x46mmHEDPArmingDistance
+  name: 40x46mm HEDP grenade
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: Projectile
+    damage:
+      types:
+        Structural: 50
+        Blunt: 40
+    deleteOnCollide: false
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14Bullet40x46mmHEDP
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: StaminaDamageOnCollide
+    damage: 20
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14Bullet40x46mmFragArmingDistance
+  name: 40x46mm fragmentation grenade
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: Projectile
+    damage:
+      types:
+        Structural: 50
+        Blunt: 40
+    deleteOnCollide: false
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14Bullet40x46mmFrag
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: StaminaDamageOnCollide
+    damage: 20
