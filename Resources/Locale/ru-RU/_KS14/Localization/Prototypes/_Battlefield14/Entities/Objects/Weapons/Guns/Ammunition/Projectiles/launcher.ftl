@@ -28,3 +28,14 @@ ent-BF14BulletRocketM72ThermobaricArmingDistance = зажигательная р
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\launcher.yml
 ent-BF14BulletRocketRPG26ThermobaricArmingDistance = термобарическая ракета 72,5 мм
     .desc = { ent-BaseBullet.desc }
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\launcher.yml
+ent-BF14PelletCarlGustavASM401 = флешетта ASM401
+    .desc = { ent-BaseBullet.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\launcher.yml
+ent-BF14BulletRocket83mmNEArmingDistance = снаряд Novel Explosive 83 мм
+    .desc = { ent-BaseBullet.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\launcher.yml
+ent-BF14BulletRocket83mmNE = снаряд Novel Explosive 83 мм
+    .desc = { ent-BaseBulletTrigger.desc }

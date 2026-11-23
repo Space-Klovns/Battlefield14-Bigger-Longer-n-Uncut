@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "license": "Custom",
+  "copyright": "Made by WillyBillyGilly for the Battlefield 14 project, do not relicense, edit, or reuse without permission; taken from Battlefield14 (https://github.com/PunishedJoe/Battlefield14) at d24a6e8c2f5d995e6bdd0a2571e406923e53f883",
+  "size": {
+    "x": 48,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon-MP5A4"
+    },
+    {
+      "name": "icon-MP5A5"
+    },
+    {
+      "name": "icon-MP5SD5"
+    },
+    {
+      "name": "icon-MP5SD6"
+    },
+    {
+      "name": "icon-MP510"
+    },
+    {
+      "name": "base"
+    },
+    {
+      "name": "bolt-open"
+    },
+    {
+      "name": "mag-0"
+    },
+    {
+      "name": "mag-10-0"
+    },
+    {
+      "name": "front-base"
+    },
+    {
+      "name": "front-flashlight"
+    },
+    {
+      "name": "front-SD"
+    },
+    {
+      "name": "stock-full"
+    },
+    {
+      "name": "stock-collapsing"
+    },
+    {
+      "name": "flashlight-overlay"
+    },
+    {
+      "name": "A4-equipped-SUITSTORAGE",
+      "directions": 4
+    },
+    {
+      "name": "A4-equipped-BACKPACK",
+      "directions": 4
+    },
+    {
+      "name": "A5-equipped-SUITSTORAGE",
+      "directions": 4
+    },
+    {
+      "name": "A5-equipped-BACKPACK",
+      "directions": 4
+    },
+    {
+      "name": "SD5-equipped-SUITSTORAGE",
+      "directions": 4
+    },
+    {
+      "name": "SD5-equipped-BACKPACK",
+      "directions": 4
+    },
+    {
+      "name": "SD6-equipped-SUITSTORAGE",
+      "directions": 4
+    },
+    {
+      "name": "SD6-equipped-BACKPACK",
+      "directions": 4
+    }
+  ]
+}

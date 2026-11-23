@@ -10,3 +10,88 @@
         Piercing: 35
   - type: StaminaDamageOnCollide
     damage: 10 # 10 hits to stun
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14BulletPistol9x18
+  name: bullet (9x18 Makarov)
+  parent: BF14BaseBulletPistol
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 21
+
+- type: entity
+  id: BF14BulletPistol9x19
+  name: bullet (9x19 Parabellum)
+  parent: BF14BaseBulletPistol
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+
+- type: entity
+  id: BF14BulletPistol10x25
+  name: bullet (10x25mm Auto)
+  parent: BF14BaseBulletPistol
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+  - type: StaminaDamageOnCollide
+    damage: 7 # ~15 hits to stun
+  - type: KsProjectileFalloff # BF14-BLU: was ProjectileDamageFalloff
+    fullDamageRange: 6
+    minDamageRange: 10
+    minMultiplier: 0.6
+
+- type: entity
+  id: BF14BulletPistol762x25
+  name: bullet (7.62x25mm Tokarev)
+  parent: BF14BaseBulletPistol
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+  - type: StaminaDamageOnCollide
+    damage: 9 # ~11 hits to stun
+
+- type: entity
+  id: BF14BulletPistol45ACP
+  name: bullet (.45 ACP)
+  parent: BF14BaseBulletPistol
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+  - type: StaminaDamageOnCollide
+    damage: 9 # ~11 hits to stun
+  - type: KsProjectileFalloff # BF14-BLU: was ProjectileDamageFalloff
+    fullDamageRange: 6
+    minDamageRange: 10
+    minMultiplier: 0.6
+
+- type: entity
+  id: BF14BulletPistol50AE
+  name: bullet (.50 Action Express)
+  parent: BF14BaseBulletPistol
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 50
+        Structural: 20
+  - type: StaminaDamageOnCollide
+    damage: 10 # 10 hits to stun

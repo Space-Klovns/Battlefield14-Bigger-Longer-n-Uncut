@@ -7,3 +7,142 @@
   - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-sup-04.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-sup-05.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-sup-06.ogg"
+
+# BF14-BLU: ported from Battlefield14
+
+- type: soundCollection
+  id: BF14DeagleGunshots # Deagle, .50 AE
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/Deagle/fire1.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Deagle/fire2.ogg"
+
+- type: soundCollection
+  id: BF14Glock17Gunshots # Glock17, 9x19mm
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/Glock17/fire1.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Glock17/fire2.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Glock17/fire3.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Glock17/fire4.ogg"
+
+- type: soundCollection
+  id: BF14M1911Gunshots # M1911, .45 ACP
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/1911/fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/1911/fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/1911/fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/1911/fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/1911/fire-05.ogg"
+
+- type: soundCollection
+  id: BF14PPShGunshots # PPSH-41, 7.62x25mm
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/PPSh/fire1.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/PPSh/fire2.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/PPSh/fire3.ogg"
+
+- type: soundCollection
+  id: BF14PMGunshots # PM/APS, 9x18mm
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/PM/fire1.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/PM/fire2.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/PM/fire3.ogg"
+
+- type: soundCollection
+  id: BF14AK545Gunshots # AK-74's/12's, 5.45x39 - Used by 5.45 AK weapons
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_545_39_fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_545_39_fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_545_39_fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_545_39_fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_545_39_fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_545_39_fire-06.ogg"
+
+- type: soundCollection
+  id: BF14GalilGunshotsSUPP # 5.56x45 - Used by M4A1 SUPP.
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/Galil/uc_galil_fire-sup-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Galil/uc_galil_fire-sup-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Galil/uc_galil_fire-sup-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Galil/uc_galil_fire-sup-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Galil/uc_galil_fire-sup-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Galil/uc_galil_fire-sup-06.ogg"
+
+- type: soundCollection
+  id: BF14MP5Gunshots # MP5 - Used for MP5
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/uc_mp5_fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/uc_mp5_fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/uc_mp5_fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/uc_mp5_fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/uc_mp5_fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/uc_mp5_fire-06.ogg"
+
+- type: soundCollection
+  id: BF14MP5GunshotsSUPP # MP5 - Used for MP5SD
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/fire-sup-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/fire-sup-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/fire-sup-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/fire-sup-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/fire-sup-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP5/fire-sup-06.ogg"
+
+- type: soundCollection
+  id: BF14UZIGunshots # UZI - Used for PP-19 Vityaz
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/UZI/uc_uzi_fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/UZI/uc_uzi_fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/UZI/uc_uzi_fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/UZI/uc_uzi_fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/UZI/uc_uzi_fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/UZI/uc_uzi_fire-06.ogg"
+
+- type: soundCollection
+  id: BF14USP45Gunshots # USP - Used for USP45's
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-06.ogg"
+
+- type: soundCollection
+  id: BF14USP9Gunshots # USP - Used for USP9's
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-9-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-9-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-9-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-9-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-9-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/USP/fire-9-06.ogg"
+
+- type: soundCollection
+  id: BF14SPAS12Gunshots # SPAS-12 - Used for SPAS-12
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/SPAS12/uc_spas12_fire-06.ogg"
+
+- type: soundCollection
+  id: BF14M870Gunshots # M870 - Used for M870
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/M870/uc_r870_fire-06.ogg"
+
+- type: soundCollection
+  id: BF14M9BerettaGunshots # M9 Beretta - used for M9 Beretta
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/Beretta/fire-06.ogg"

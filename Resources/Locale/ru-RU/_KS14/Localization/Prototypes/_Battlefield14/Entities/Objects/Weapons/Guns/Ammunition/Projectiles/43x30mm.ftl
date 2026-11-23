@@ -4,3 +4,14 @@ ent-BF14Bullet43x30mmThermobaric = термобарическая граната
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\43x30mm.yml
 ent-BF14Bullet43x30mmThermobaricArmingDistance = термобарическая граната 43x30 мм
     .desc = { ent-BaseBullet.desc }
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\43x30mm.yml
+ent-BF14Bullet43x30mmHEFrag = осколочно-фугасная граната 43x30 мм
+    .desc = { ent-BaseBulletTrigger.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\43x30mm.yml
+ent-BF14Bullet43x30mmFragFragment = осколок 43x30 мм
+    .desc = { ent-BaseBulletTrigger.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\43x30mm.yml
+ent-BF14Bullet43x30mmHEFragArmingDistance = осколочно-фугасная граната 43x30 мм
+    .desc = { ent-BaseBullet.desc }
