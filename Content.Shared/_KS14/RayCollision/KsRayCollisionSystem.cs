@@ -86,6 +86,12 @@ public sealed partial class KsRayCollisionSystem : EntitySystem
     private readonly HashSet<EntityUid> _startOverlaps = new();
 
     /// <summary>
+    ///     The entities to look ahead of this step, gathered before any is: a collision handler may spawn more of them (a
+    ///         round that bursts into fragments where it hits), and the query can't be added to while it is gone through.
+    /// </summary>
+    private readonly List<Entity<KsRayCollisionComponent, PhysicsComponent, FixturesComponent, TransformComponent>> _checking = new();
+
+    /// <summary>
     ///     The entity being swept, its body and fixture, for <see cref="_isIgnored"/>: one delegate for every cast, not one a cast.
     /// </summary>
     private Entity<KsRayCollisionComponent, PhysicsComponent>? _sweeping;
@@ -152,9 +158,21 @@ public sealed partial class KsRayCollisionSystem : EntitySystem
         var curTick = _gameTiming.CurTick;
         var rePredicting = !_gameTiming.IsFirstTimePredicted; // never on the server
 
+        _checking.Clear();
         var enumerator = EntityQueryEnumerator<KsRayCollisionComponent, PhysicsComponent, FixturesComponent, TransformComponent>();
         while (enumerator.MoveNext(out var uid, out var rayCollisionComponent, out var physicsComponent, out var fixturesComponent, out var transformComponent))
         {
+            _checking.Add((uid, rayCollisionComponent, physicsComponent, fixturesComponent, transformComponent));
+        }
+
+        foreach (var entity in _checking)
+        {
+            var (uid, rayCollisionComponent, _, fixturesComponent, _) = entity;
+
+            // Taken out of the running by what an entity before it in this step collided with.
+            if (rayCollisionComponent.LifeStage > ComponentLifeStage.Running || TerminatingOrDeleted(uid))
+                continue;
+
             if (rePredicting)
             {
                 // A kept copy is not put back for this tick, and physics does not move it on it: nothing to look ahead of.
@@ -166,9 +184,6 @@ public sealed partial class KsRayCollisionSystem : EntitySystem
             }
 
             ForgetLeftBehind((uid, rayCollisionComponent, fixturesComponent), curTick);
-
-            Entity<KsRayCollisionComponent, PhysicsComponent, FixturesComponent, TransformComponent> entity =
-                (uid, rayCollisionComponent, physicsComponent, fixturesComponent, transformComponent);
 
             for (var hits = 0; hits < MaxHitsPerStep; hits++)
             {
