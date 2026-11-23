@@ -1,0 +1,1106 @@
+- type: entity
+  name: M14
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponRifleUSM14
+  description: The M14 was kindof a flop, it tried to be an infantry rifle, a machinegun, and a sniper all at once. It was meh at the first and decent enough at the third to stick around with national guard or police armouries and some designated marksmen in the proper army.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/M14.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/M14.rsi
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -40
+  - type: Gun
+    fireRate: 12.5 # 750 RPM
+    minAngle: 20
+    maxAngle: 60
+    angleIncrease: 4
+    angleDecay: 80
+    projectileSpeed: 50
+    soundGunshot:
+      collection: BF14M14Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_rack.ogg
+      params:
+        volume: -5
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_chforward.ogg
+      params:
+        volume: -5
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_chback.ogg
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleM14
+        insertSound:
+          path:  /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_magin.ogg
+          params:
+            volume: -6
+        ejectSound:
+          path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_magout.ogg
+          params:
+            volume: -6
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleM14
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: SCAR-L
+  parent: BF14WeaponRifleUSM16A3
+  id: BF14WeaponRifleBESCARL
+  description: "Meant to replace the M4A1 in US service, but lost the bid and was overshadowed by the SCAR-H. Still sees service in belgium. Takes STANAG magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/SCAR.rsi
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/SCAR.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: holosight
+      - state: mag-h-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/SCAR.rsi
+  - type: Gun
+    projectileSpeed: 45
+    soundGunshot:
+      collection: BF14SCARLGunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/rack.ogg
+      params:
+        volume: -2
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/boltcatch.ogg
+      params:
+        volume: -5
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/chpull.ogg
+      params:
+        volume: -5
+  - type: MagazineVisuals
+    magState: mag-l
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: eotech
+
+- type: entity
+  name: SCAR-H
+  parent: BaseWeaponRifle
+  id: BF14WeaponRifleBESCARH
+  description: "The big brother of the SCAR-L, not entirely replacing the M4A1 but select units can choose to take a few. Takes SCAR-H pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/SCAR.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: holosight
+      - state: mag-h-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/SCAR.rsi
+  - type: GunWieldBonus
+    minAngle: -48
+    maxAngle: -25
+  - type: Gun
+    fireRate: 10 # 600 RPM
+    minAngle: 50
+    maxAngle: 50
+    angleIncrease: 4
+    angleDecay: 80
+    projectileSpeed: 45
+    soundGunshot:
+      collection: BF14SCARHGunshots
+      params:
+        volume: -5
+        variation: 0.125
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/rack.ogg
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/boltcatch.ogg
+      params:
+        volume: -5
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/chpull.ogg
+      params:
+        volume: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleSCARH
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/SCAR/magin-762.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/SCAR/magout-762.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleSCARH
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: MagazineVisuals
+    magState: mag-h
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: eotech
+
+- type: entity
+  name: FN FAL
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponRifleBEFAL
+  description: "The right arm of the free world, would've fired an intermediate cartridge and been the standard service rifle of NATO if it weren't for America, and maybe Germany. Takes FAL pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/FAL.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: furniture-wood
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/FAL.rsi
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: GunWieldBonus
+    minAngle: -50
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 0
+    maxAngle: 50 # 25
+    angleIncrease: 4
+    angleDecay: 80
+    fireRate: 10.8 # 650 RPM
+    projectileSpeed: 50
+    soundGunshot:
+      collection: BF14FALGunshots
+      params:
+        volume: -5
+        variation: 0.125
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/FAL/uc_fal_rack.ogg
+      params:
+        volume: -5
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_chforward.ogg
+      params:
+        volume: -5
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_chback.ogg
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleFAL
+        insertSound:
+          path:  /Audio/_Battlefield14/Weapons/Guns/FAL/uc_fal_magin.ogg
+          params:
+            volume: -6
+        ejectSound:
+          path: /Audio/_Battlefield14/Weapons/Guns/FAL/uc_fal_magout.ogg
+          params:
+            volume: -6
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleFAL
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: FAL PARA
+  parent: BF14WeaponRifleBEFAL
+  id: BF14WeaponRifleBEFALPara
+  description: "A cut down FAL with a ~16 inch barrel and folding stock, for paratroopers. Takes FAL pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/FAL.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: furniture-para
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/FALPara.rsi
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/FALPara.rsi
+    shape:
+    - 0,0,3,2
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/FAL.rsi
+    state: icon-para
+
+- type: entity
+  name: G27K
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponRifleDEG27K
+  description: A full auto 417 with a factory short barrel for dirty work up close.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G27K.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G27K.rsi
+  - type: Item
+    shape:
+    - 0,0,5,2
+  - type: GunWieldBonus
+    minAngle: -50
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 0
+    maxAngle: 50 # 25
+    angleIncrease: 4
+    angleDecay: 80
+    fireRate: 10 # 600 RPM
+    projectileSpeed: 50
+    soundGunshot:
+      collection: BF14M14Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+    selectedMode: FullAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_rack.ogg
+      params:
+        volume: -5
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_chforward.ogg
+      params:
+        volume: -5
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_chback.ogg
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleG28
+        insertSound:
+          path:  /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_magin.ogg
+          params:
+            volume: -6
+        ejectSound:
+          path: /Audio/_Battlefield14/Weapons/Guns/M14/uc_m14_magout.ogg
+          params:
+            volume: -6
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleHK417
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: G3A3
+  parent: BaseWeaponRifle
+  id: BF14WeaponRifleDEG3A3
+  description: "Derived from the spanish CETME rifle, think of this weapon as the MP5's older brother who does steroids. Was used by west germany post WW2 until it was replaced by the G36 after reunification. Takes G3 pattern magazines."
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3A3.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3.rsi
+    state: icon-G3A3
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: furniture-G3A3
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3A3.rsi
+  - type: GunWieldBonus
+    minAngle: -50
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 0
+    maxAngle: 50 # 25
+    angleIncrease: 4
+    angleDecay: 80
+    projectileSpeed: 50
+    fireRate: 10 # 600 RPM
+    soundGunshot:
+      collection: BF14G3Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+  - type: ChamberMagazineAmmoProvider
+    autoOpenBoltOnEmpty: false
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/G3/rack.ogg
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/G3/chslap.ogg
+      params:
+        volume: -5
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/G3/chback.ogg
+      params:
+        volume: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleG3
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/G3/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/G3/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleG3
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: G3A4
+  parent: BF14WeaponRifleDEG3A3
+  id: BF14WeaponRifleDEG3A4
+  description: "A G3 variant with a collapsable stock and darker furniture. A neat package but you won't be stuffing it in your bag. Takes G3 pattern magazines."
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3A4.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3A4.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3A4.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3A4.rsi
+
+- type: entity
+  name: G3A3ZF
+  parent: BF14WeaponRifleDEG3A3
+  id: BF14WeaponRifleDEG3A3ZF
+  description: "A G3A3 with a ZF1 scope mounted. Used by sharpshooters and soldiers alike. At least 60 years ago. Takes G3 pattern magazines."
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3A3ZF.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3.rsi
+    state: icon-G3A3ZF
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: furniture-G3A3
+      - state: ZF
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G3A3ZF.rsi
+  - type: Gun
+    angleIncrease: 4
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.5
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics31.rsi
+      state: ZF1
+
+- type: entity
+  name: G36K
+  parent: BF14WeaponRifleUSM16A3
+  id: BF14WeaponRifleDEG36K
+  description: "Plastic fantastic, or plastich fantastich if you're german.. or deutsch. Takes G36 pattern magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36K.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36K.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36K.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: holosight
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36K.rsi
+  - type: GunWieldBonus
+    minAngle: -47
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 3
+    maxAngle: 50 # 20
+    angleIncrease: 2
+    angleDecay: 80
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+    projectileSpeed: 45
+    soundGunshot:
+      collection: BF14SCARLGunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/rack.ogg
+      params:
+        volume: -2
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/boltcatch.ogg
+      params:
+        volume: -5
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/SCAR/chpull.ogg
+      params:
+        volume: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleG36
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleG36
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle556x45
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle556x45
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: eotech
+
+- type: entity
+  name: G36
+  parent: BF14WeaponRifleDEG36K
+  id: BF14WeaponRifleDEG36
+  description: "Plastic fantastic, or plastich fantastich if you're german.. or deutsch. Takes G36 pattern magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36.rsi
+  - type: Gun
+    angleIncrease: 2.5
+    projectileSpeed: 50
+    soundGunshot:
+      collection: BF14SCARLGunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.35
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics31.rsi
+      state: hensoldt
+
+- type: entity
+  name: G36C
+  parent: BF14WeaponRifleDEG36K
+  id: BF14WeaponRifleDEG36C
+  description: "Plastic fantastic, or plastich fantastich if you're german.. or deutsch. Takes G36 pattern magazines."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36C.rsi
+    size: Large
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36C.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36C.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: holosight
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36C.rsi
+  - type: Gun
+    projectileSpeed: 40 # Shorter barrel
+
+- type: entity
+  name: G36C SUPP.
+  parent: BF14WeaponRifleDEG36C
+  id: BF14WeaponRifleDEG36CSupp
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36C.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: stripes
+      - state: supp
+        offset: 0.22, 0
+      - state: holosight
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/G36C.rsi
+  - type: Gun
+    soundGunshot:
+      collection: BF14GalilGunshotsSUPP
+      params:
+        volume: -12
+        variation: 0.125
+
+- type: entity
+  name: Lee–Enfield No. 1 Mk III
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponRifleGBLeeEnfield
+  description: Objectively the best bolt-action rifle of both world wars. Chambered in .303 british, or 7.7x56mmR if you really like metric.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/leeenfield.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/leeenfield.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: Gun
+    fireRate: 1
+    projectileSpeed: 55
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/heavy_rifle_1.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleLeeEnfield
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        whitelistFailPopup: gun-magazine-whitelist-fail
+        swap: false
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleLeeEnfield
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle303British
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle303British
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    canRack: false
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: UseDelay
+    delay: 0.2
+
+- type: entity
+  name: L1A1
+  parent: BF14WeaponRifleBEFAL
+  id: BF14WeaponRifleGBL1A1
+  description: "The commonwealth variation of the FN FAL, removing the full auto capability and manufactured using imperial measurements instead of metric, meaning it requires its own proprietary magazines. Takes L1A1 pattern magazines."
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/L1A1.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/FAL.rsi
+    state: icon-black
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/FAL.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: furniture-black
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/L1A1.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ChamberMagazineAmmoProvider
+    autoOpenBoltOnEmpty: false
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleL1A1
+        insertSound:
+          path:  /Audio/_Battlefield14/Weapons/Guns/FAL/uc_fal_magin.ogg
+          params:
+            volume: -6
+        ejectSound:
+          path: /Audio/_Battlefield14/Weapons/Guns/FAL/uc_fal_magout.ogg
+          params:
+            volume: -6
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleL1A1
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+
+- type: entity
+  name: SKS Simonov
+  parent: [BaseWeaponShotgun, BaseGunWieldable]
+  id: BF14WeaponRifleRUSKS
+  description: A old self loading rifle designed and adapted right after world war 2. It was replaced not too long after with the AK-47.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/sks.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/sks.rsi
+  - type: GunWieldBonus
+    minAngle: -29
+    maxAngle: -27
+  - type: Gun
+    minAngle: 31
+    maxAngle: 40
+    angleIncrease: 2
+    angleDecay: 20
+    availableModes:
+    - SemiAuto
+    selectedMode: SemiAuto
+    fireRate: 5
+    projectileSpeed: 55
+    soundGunshot:
+      collection: BF14SKSGunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: BallisticAmmoProvider
+    autoCycle: true
+    whitelist:
+      tags:
+      - BF14CartridgeRifle762x39
+    capacity: 10
+    proto: BF14CartridgeRifle762x39
+    soundInsert:
+      collection: BF14M870ShellIn
+      params:
+        volume: -5
+  - type: Appearance
+
+- type: entity
+  name: OP-SKS Simonov
+  parent: BF14WeaponRifleRUSKS
+  id: BF14WeaponRifleRUOPSKS
+  description: A SKS with a scope mount made for the civilian hunter market.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/opsks.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/opsks.rsi
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.90
+    sprintModifier: 0.90
+
+- type: entity
+  name: AS-VAL
+  parent: BaseWeaponRifle
+  id: BF14WeaponRifleRUASVAL
+  description: "The special spetznaz psh psh psh YOU'RE FUCKING DEAD rifle. Takes AS-VAL pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/ASVAL.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/ASVAL.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -47
+    maxAngle: -30
+  - type: Gun
+    minAngle: 50 # 3
+    maxAngle: 50 # 20
+    angleIncrease: 3
+    angleDecay: 80
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+    fireRate: 13.3 # 800 RPM
+    projectileSpeed: 45 # subsonic
+    soundGunshot:
+      collection: BF14M16GunshotsSUPP # Looks weird, but these sound more pew pew than the galil (used by M4A1 SUPP) and this is an ASVAL
+      params:
+        volume: -13
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/AK_GENERIC/rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleASVALShort
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleASVAL
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle9x39
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle9x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: SR-3M
+  parent: BF14WeaponRifleRUASVAL
+  id: BF14WeaponRifleRUSR3M
+  description: "Essentially a chopped down AS-VAL without a suppressor for special forces and concealed carry. Takes AS-VAL pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/SR3M.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/SR3M.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: Gun
+    projectileSpeed: 40 # short barrel
+    soundGunshot:
+      collection: BF14AK762Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/AK_GENERIC/rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleASVAL
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleASVAL
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle9x39
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle9x39
+
+- type: entity
+  parent: BF14WeaponRifleRUSR3M
+  id: BF14WeaponRifleRUSR3MShort
+  suffix: 20 round magazine
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleASVALShort
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/AK_545/uc_ak_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleASVAL
+        whitelistFailPopup: gun-magazine-whitelist-fail
+
+- type: entity
+  name: ShAK-12
+  parent: BaseWeaponRifle
+  id: BF14WeaponRifleRUASH12
+  description: "Used to be known as the ASh-12, this weapon was designed to provide the maximum firepower for close quarters combat, and provides it with the monsterous 12.7x55 round. Takes ASH-12 pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/ASH12.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/ASH12.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -47
+    maxAngle: -25
+  - type: Gun
+    minAngle: 50 # 3
+    maxAngle: 50 # 25
+    angleIncrease: 4
+    angleDecay: 80
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+    fireRate: 8.3 # 500 RPM
+    projectileSpeed: 50
+    soundGunshot:
+      collection: BF14FALGunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/FAL/uc_fal_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleASH12
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/FAL/uc_fal_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/FAL/uc_fal_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleASH12
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle127x55
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle127x55
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: ShAK-12 SUPP.
+  parent: BF14WeaponRifleRUASH12
+  id: BF14WeaponRifleRUASH12Suppressed
+  description: "Used to be known as the ASh-12, this weapon was designed to provide the maximum firepower for close quarters combat, and provides it with the monsterous 12.7x55 round. The suppressor is not for any stealth purpose, but to give you the mercy of not burning your eyes out as your skull gets a new canoe shape. Takes ASH-12 pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/ASH12.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: supp
+        offset: 0.19, 0
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    soundGunshot:
+      collection: BF14GalilGunshotsSUPP
+      params:
+        volume: -8
+        variation: 0.125

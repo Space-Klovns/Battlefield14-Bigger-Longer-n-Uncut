@@ -65,3 +65,14 @@ ent-BF14WeaponSubmachinegunRUPPsh41 = ППШ-41
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SMGs\submachineguns.yml
 ent-BF14WeaponSubmachinegunRUVlad = «Владистокьёв»
     .desc = Пара труб, наспех собранных в «рабочее» оружие. Несмотря на... сомнительное качество, оказаться на другом конце ствола не хочется. Это оружие можно хранить во вспомогательном слоте хранения скафандра.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SMGs\submachineguns.yml
+ent-BF14WeaponSubmachinegunDEMP7 = MP7
+    .desc = Компактное, лёгкое и бронебойное PDW — оружие самообороны. Дорогое, но вы получаете то, за что платите, если умеете им пользоваться. Это оружие можно хранить во вспомогательном слоте хранения скафандра.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SMGs\submachineguns.yml
+ent-BF14WeaponSubmachinegunBEP90 = P90
+    .desc = Компактное, лёгкое и бронебойное PDW — оружие самообороны. Дорогое, но вы получаете то, за что платите, если умеете им пользоваться. Это оружие можно хранить во вспомогательном слоте хранения скафандра.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SMGs\submachineguns.yml
+ent-BF14WeaponSubmachinegunRUSR2MP = СР-2МП
+    .desc = Создан вместе с СР-1МП под новый бронебойный патрон 9x21. Это оружие можно хранить во вспомогательном слоте хранения скафандра.

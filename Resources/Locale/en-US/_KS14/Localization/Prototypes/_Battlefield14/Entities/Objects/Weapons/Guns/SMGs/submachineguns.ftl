@@ -65,3 +65,14 @@ ent-BF14WeaponSubmachinegunRUPPsh41 = PPSh-41
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SMGs\submachineguns.yml
 ent-BF14WeaponSubmachinegunRUVlad = Vladistokyov
     .desc = A couple pipes slapped together into a "working" firearm. Despite it's.. lackluster craftsmanship, you don't want to be on the wrong end of this piece. This weapon can be stored on your auxillary suit storage slot.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SMGs\submachineguns.yml
+ent-BF14WeaponSubmachinegunDEMP7 = MP7
+    .desc = A compact, lightweight, and armour penetrating PDW, or Personal Defence Weapon. It's expensive, but you get what you pay for, if you use it right. This weapon can be stored on your auxillary suit storage slot.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SMGs\submachineguns.yml
+ent-BF14WeaponSubmachinegunBEP90 = P90
+    .desc = A compact, lightweight, and armour penetrating PDW, or Personal Defence Weapon. It's expensive, but you get what you pay for, if you use it right. This weapon can be stored on your auxillary suit storage slot.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SMGs\submachineguns.yml
+ent-BF14WeaponSubmachinegunRUSR2MP = SR2MP
+    .desc = Designed alongside the SR1MP to use the new armour penetrating 9x21 round. This weapon can be stored on your auxillary suit storage slot.

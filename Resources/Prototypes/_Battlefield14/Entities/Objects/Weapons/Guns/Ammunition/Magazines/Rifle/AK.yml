@@ -1,0 +1,263 @@
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineRifleAK74
+  name: "AK-74 magazine"
+  description: "Classic rock-and-lock magazine in 5.45, for 74 pattern rifles. Has an AK-74 pattern locking system. Feeds 5.45x39mm."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleAK74
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle545x39
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle545x39
+    capacity: 30
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/AK74.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14MagazineRifleAK74
+  id: BF14MagazineRifleAK74TracerGreen
+  name: "AK-74 magazine (tracer)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle545x39TracerGreen
+
+- type: entity
+  parent: BF14MagazineRifleAK74
+  id: BF14MagazineRifleAK74Black
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/AK74black.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleAK74Black
+  id: BF14MagazineRifleAK74BlackTracerGreen
+  name: "AK-74 magazine (tracer)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle545x39TracerGreen
+
+- type: entity
+  parent: BF14MagazineRifleAK74
+  id: BF14MagazineRifleAK12
+  name: "AK-12 magazine"
+  description: "A modernised '74 pattern rifle magazine, with handy features like a 45 degree cutout for use as a monopod while prone, and windows to see your remaining ammo. Has an AK-74 pattern locking system. Feeds 5.45x39mm."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/AK12.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14MagazineRifleAK12
+  id: BF14MagazineRifleAK12TracerGreen
+  name: "AK-12 magazine (tracer)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle545x39TracerGreen
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle545x39
+    capacity: 30
+
+- type: entity
+  parent: BF14MagazineRifleAK74
+  id: BF14MagazineRifleRPK74
+  name: "RPK-74 magazine"
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 45
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/RPK74.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleRPK74
+  id: BF14MagazineRifleRPK74TracerGreen
+  name: "RPK-74 magazine (tracer)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle545x39TracerGreen
+
+- type: entity
+  parent: BF14MagazineRifleRPK74
+  id: BF14MagazineRifleRPK74Black
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/RPK74black.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleRPK74TracerGreen
+  id: BF14MagazineRifleRPK74BlackTracerGreen
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/RPK74black.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleAK74
+  id: BF14MagazineRifleAK74blackdrum
+  name: "AK-74 pattern 75 round drum magazine"
+  description: "75 rounds for your 74. Has an AK-74 pattern locking system. Feeds 5.45x39mm."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleAK74
+  - type: Item
+    size: Normal
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle545x39
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle545x39
+    capacity: 75
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/AK74blackdrum.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleAK74blackdrum
+  id: BF14MagazineRifleAK74blackdrumTracerGreen
+  name: "AK-74 pattern 75 round drum magazine (tracer)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle545x39TracerGreen
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle545x39
+    capacity: 75
+
+- type: entity
+  parent: BF14BaseMagazineRifle
+  id: BF14MagazineRifleAKM
+  name: "AKM magazine"
+  description: "Classic banana mag, just not yellow. Has an AKM pattern locking system. Feeds 7.62x39."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleAKM
+      - BF14Magazine
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x39
+    mayTransfer: true
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x39
+    capacity: 30
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/AKM.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: BF14MagazineRifleAKM
+  id: BF14MagazineRifleAK103
+  name: "AK-103 magazine"
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleAKM
+      - BF14Magazine
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/AKMblack.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleAKM
+  id: BF14MagazineRifleAK203
+  name: "AK-203 magazine"
+  description: "Classic banana mag. Has an AKM pattern locking system. Feeds 7.62x39."
+  components:
+  - type: Tag
+    tags:
+      - BF14MagazineRifleAKM
+      - BF14Magazine
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/AK203.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleAKM
+  id: BF14MagazineRifleRPK
+  name: "RPK magazine"
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 45
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/RPK.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BF14MagazineRifleRPK
+  id: BF14MagazineRifleRPKTracerGreen
+  name: "RPK magazine (tracer)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x39TracerGreen
