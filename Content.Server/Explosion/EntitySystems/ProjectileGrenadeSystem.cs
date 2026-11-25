@@ -46,7 +46,7 @@ public sealed partial class ProjectileGrenadeSystem : EntitySystem
     /// </summary>
     private void OnFragTrigger(Entity<ProjectileGrenadeComponent> entity, ref TriggerEvent args)
     {
-        if (args.Key != entity.Comp.TriggerKey)
+        if (args.Key != null /* BF14-BLU: a keyless trigger sets off every effect, as everywhere else */ && args.Key != entity.Comp.TriggerKey)
             return;
 
         FragmentIntoProjectiles(entity.Owner, entity.Comp);

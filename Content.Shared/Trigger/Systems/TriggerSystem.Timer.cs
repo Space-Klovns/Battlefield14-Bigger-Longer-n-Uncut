@@ -156,6 +156,8 @@ public sealed partial class TriggerSystem
         }
     }
 
+    private readonly List<Entity<TimerTriggerComponent>> _dueTimers = new(); // BF14-BLU: added
+
     private void UpdateTimer()
     {
         var curTime = _timing.CurTime;
@@ -169,6 +171,16 @@ public sealed partial class TriggerSystem
             }
 
             if (timer.NextTrigger <= curTime)
+                _dueTimers.Add((uid, timer)); // BF14-BLU: set off after the query, see below
+        }
+
+        // BF14-BLU start: a timer's effects can spawn something whose own timer starts on spawn, which adds an
+        // ActiveTimerTrigger and breaks the query mid-enumeration (BF14's mines and lit rags do)
+        foreach (var (uid, timer) in _dueTimers)
+        {
+            if (TerminatingOrDeleted(uid) || !HasComp<ActiveTimerTriggerComponent>(uid))
+                continue;
+        // BF14-BLU end
             {
                 var user = TerminatingOrDeleted(timer.User) ? null : timer.User;
                 Trigger(uid, user, timer.KeyOut);
@@ -178,5 +190,7 @@ public sealed partial class TriggerSystem
                     _appearance.SetData(uid, TriggerVisuals.VisualState, TriggerVisualState.Unprimed, appearance);
             }
         }
+
+        _dueTimers.Clear(); // BF14-BLU: added
     }
 }
