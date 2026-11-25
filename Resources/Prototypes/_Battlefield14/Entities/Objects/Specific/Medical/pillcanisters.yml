@@ -33,3 +33,39 @@
       reagents:
       - ReagentId: Ethylredoxrazine
         Quantity: 10
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  name: pill
+  suffix: Meralyne 7.5u
+  parent: Pill
+  id: BF14PillMeralyne
+  components:
+  - type: Pill
+    pillType: 7
+  - type: Sprite
+    state: pill8
+  - type: Label
+    currentLabel: meralyne 7.5u
+  - type: Solution # BF14-BLU: was SolutionContainerManager, as upstream pills now are
+    solution:
+      reagents:
+      - ReagentId: BF14Meralyne
+        Quantity: 7.5
+
+- type: entity
+  name: pill canister
+  parent: PillCanister
+  id: BF14PillCanisterMeralyne
+  suffix: Meralyne 7.5u, 15
+  components:
+  - type: Label
+    currentLabel: meralyne 7.5u
+  - type: StorageFill
+    contents:
+    - id: BF14PillMeralyne
+      amount: 15
+  - type: Storage
+    grid:
+    - 0,0,4,2 # BF14-BLU: BF14's PillCanister grid, which holds its 15 pills

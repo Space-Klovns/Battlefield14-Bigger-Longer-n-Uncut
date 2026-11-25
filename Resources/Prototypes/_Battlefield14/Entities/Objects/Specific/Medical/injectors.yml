@@ -1,0 +1,134 @@
+- type: entity
+  parent: BaseItem
+  name: autoinjector
+  description: A mechanical, single use syringe.
+  id: BF14AutoInjectorBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: injector
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: Item
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+  - type: ExaminableSolution
+    solution: pen
+  - type: Injector # BF14-BLU: was Hypospray
+    solutionName: pen
+    ignoreClosed: false
+    currentTransferAmount: 15
+    activeModeProtoId: HyposprayInjectMode
+    allowedModes:
+    - HyposprayInjectMode
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: injector_e
+  - type: UseDelay
+    delay: 0.2
+  - type: Appearance
+  - type: TrashOnSolutionEmpty
+    solution: pen
+
+- type: entity
+  parent: BF14AutoInjectorBase
+  id: BF14AutoInjectorBrute
+  suffix: Brute mix
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 7.5
+        - ReagentId: BF14Meralyne
+          Quantity: 7.5
+
+- type: entity
+  parent: BF14AutoInjectorBase
+  id: BF14AutoInjectorBurn
+  suffix: Burn mix
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Kelotane
+          Quantity: 7.5
+        - ReagentId: Dermaline
+          Quantity: 7.5
+
+- type: entity
+  parent: BF14AutoInjectorBase
+  id: BF14AutoInjectorMultispectrum
+  suffix: Multi-spectrum
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Tricordrazine
+          Quantity: 5
+        - ReagentId: Bicaridine
+          Quantity: 5
+        - ReagentId: Kelotane
+          Quantity: 5
+
+- type: entity
+  parent: BF14AutoInjectorBase
+  id: BF14AutoInjectorEmergency
+  suffix: Emergency mix
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Dexalin
+          Quantity: 5
+        - ReagentId: Inaprovaline
+          Quantity: 5
+        - ReagentId: Saline
+          Quantity: 5
+
+- type: entity
+  parent: BF14AutoInjectorBase
+  id: BF14AutoInjectorStormZ
+  suffix: Storm-Z mix
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 5
+        - ReagentId: BF14Meralyne
+          Quantity: 5
+        - ReagentId: Ephedrine
+          Quantity: 5
+
+- type: entity
+  parent: BF14AutoInjectorBase
+  id: BF14AutoInjectorCombatStabilisation
+  suffix: combat stabilisation
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Biofoam
+          Quantity: 5
+        - ReagentId: Inaprovaline
+          Quantity: 5
+        - ReagentId: Saline # Painkiller
+          Quantity: 5

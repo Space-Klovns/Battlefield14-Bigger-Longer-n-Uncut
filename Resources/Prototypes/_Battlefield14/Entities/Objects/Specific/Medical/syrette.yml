@@ -1,0 +1,223 @@
+- type: entity
+  name: syrette
+  parent: BaseItem
+  description: A miniature single use syringe.
+  id: BF14SyretteBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: syrette
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: Item
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+  - type: ExaminableSolution
+    solution: pen
+  - type: Injector # BF14-BLU: was Hypospray
+    solutionName: pen
+    ignoreClosed: false
+    currentTransferAmount: 10
+    activeModeProtoId: HyposprayInjectMode
+    allowedModes:
+    - HyposprayInjectMode
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: syrette_e
+  - type: UseDelay
+    delay: 0.2
+  - type: Appearance
+  - type: Tag
+    tags:
+    - BF14Syrette
+  - type: TrashOnSolutionEmpty
+    solution: pen
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteBicaridine
+  suffix: Bicaridine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteKelotane
+  suffix: Kelotane
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Kelotane
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteTricordrazine
+  suffix: Tricordrazine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Tricordrazine
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteInaprovaline
+  suffix: Inaprovaline
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 10
+        reagents:
+        - ReagentId: Inaprovaline
+          Quantity: 6
+        - ReagentId: Iron
+          Quantity: 4
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteDexalin
+  suffix: Dexalin
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Dexalin
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteMeralyne
+  suffix: Meralyne
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: BF14Meralyne
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteDermaline
+  suffix: Dermaline
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Dermaline
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteSaline
+  suffix: Saline
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Saline
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteEpinephrine
+  suffix: Epinephrine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Epinephrine
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteHypervene
+  suffix: Hypervene
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 3
+        reagents:
+        - ReagentId: BF14Hypervene
+          Quantity: 3 # 15u purge
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyrettePhalanximine
+  suffix: Phalanximine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Phalanximine
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteArithrazine
+  suffix: Arithrazine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Arithrazine
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteFentanyl
+  suffix: Fentanyl
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Fentanyl
+          Quantity: 5
+
+- type: entity
+  parent: BF14SyretteBase
+  id: BF14SyretteNanoblood
+  suffix: Nanoblood
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: BF14Nanoblood
+          Quantity: 5
