@@ -1,0 +1,47 @@
+- type: entity
+  id: BF14SupplyBoxAmmoUS
+  parent: BaseItem
+  name: ammo box
+  description: Here, take your ammo.
+  suffix: American
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/ammoboxus.rsi
+    state: icon
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,2,2
+  - type: Storage
+    grid:
+    - 0,0,5,3
+    maxItemSize: Normal
+    defaultStorageOrientation: Vertical
+    whitelist: # BF14
+      tags:
+        - BoxCardboard
+      components:
+        - BallisticAmmoProvider
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0
+
+- type: entity
+  id: BF14SupplyBoxAmmoRU
+  parent: BF14SupplyBoxAmmoUS
+  name: ammo bag
+  description: Blyaaddd amunitchki blyaaaaaat.
+  suffix: Russian
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/ammobagru.rsi
+    state: icon

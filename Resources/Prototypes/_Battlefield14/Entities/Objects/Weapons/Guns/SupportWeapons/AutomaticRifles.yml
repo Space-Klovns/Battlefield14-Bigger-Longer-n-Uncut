@@ -354,3 +354,144 @@
       - state: ironsight-ak74
       - state: mag-rpk-0
         map: ["enum.GunVisualLayers.Mag"]
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  name: M27-IAR
+  parent: BF14WeaponRifleUSM16A3
+  id: BF14WeaponRifleUSM27IAR
+  description: "The Marine corps own 416, intended to replace the M16A4 and the M249. Takes STANAG pattern magazines. Takes M7 pattern bayonets."
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M27-IAR.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M27IAR
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip-HK
+      - state: longcog
+      - state: stock-adjustable-HK
+      - state: rifle-length-barrel-quadrail
+      - state: railcover
+      - state: muzzle-comp
+        offset: 0.19,0
+      - map: ["barrelAttachment"]
+        offset: 0.84 , 0.09 # 27, 3
+      - state: foregrip
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M27-IAR.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleSTANAGTracerRed
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/M16/uc_m16_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleSTANAG
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle556x45TracerRed
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle556x45
+      attachment_barrel:
+        name: Barrel attachment
+        whitelist:
+          tags:
+            - BF14BayonetM7
+            - BF14BayonetM9
+  - type: GunWieldBonus
+    minAngle: -42
+    maxAngle: -42
+  - type: Gun
+    minAngle: 50 # 8
+    maxAngle: 50 # 8
+    angleIncrease: 1
+    angleDecay: 20
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    selectedMode: FullAuto
+    projectileSpeed: 50 # twenty inch barrel
+    soundGunshot:
+      collection: BF14M16Gunshots
+      params:
+        volume: -5
+        variation: 0.125
+  - type: Appearance
+  - type: ClothingSpeedModifier # this thing is heavier than the M16, plus otherwise it would be objectively better than the M16
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: HeldSpeedModifier
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.35
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      attachment_barrel: !type:ContainerSlot
+  - type: ESAttachableGun
+    slots:
+    - name: es-gun-attachments-slot-name-barrel # BF14-BLU: was plain text
+      containerId: attachment_barrel
+      whitelist:
+        tags:
+        - BF14BayonetM7
+  - type: ActivatableUI
+    key: enum.ESAttachableGunUiKey.Key
+    verbOnly: true
+    verbText: es-gun-attachments-verb-text
+  - type: UserInterface
+    interfaces:
+      enum.ESAttachableGunUiKey.Key:
+        type: ESGunAttachmentBui
+  - type: ESItemMapper
+    mappings:
+      barrelAttachment:
+      - containerId: attachment_barrel
+        state: bayonet-m7
+        whitelist:
+          tags:
+          - BF14BayonetM7
+      - containerId: attachment_barrel
+        state: bayonet-m9
+        whitelist:
+          tags:
+          - BF14BayonetM9
+
+- type: entity
+  name: RPK-16
+  parent: BF14WeaponRifleUSM27IAR
+  id: BF14WeaponRifleUSRPK16
+  description: "At some point, American civilians became obsessed with having their own M27-IAR, and with the proliferation of technically not full auto triggers shortly before the war; there was an explosion of 'RPK-16' configurations for the AR15, obviously reminiscent of the soviet RPK-74. Takes STANAG pattern magazines. Takes M7 pattern bayonets."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: grip-HK
+      - state: longcog
+      - state: stock-adjustable
+      - state: rifle-length-barrel-M27
+      - map: ["barrelAttachment"]
+        offset: 0.718 , 0.09 # 23, 3
+      - state: foregrip
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]

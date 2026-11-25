@@ -162,3 +162,759 @@
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  name: M38 DMR
+  parent: BF14WeaponRifleUSM16A3
+  id: BF14WeaponRifleUSM38
+  description: "A HK416 in DMR configuration. Takes STANAG magazines."
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M27-IAR.rsi
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: LPVO
+      - state: grip-HK
+      - state: stock-adjustable-HK
+      - state: rifle-length-barrel-quadrail
+      - state: foregrip
+      - state: railcover
+      - state: supp-sopmod
+        offset: 0.20, 0.03
+      - state: mag-30-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/iconstates.rsi
+    state: icon-full-M27IAR
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/M27-IAR.rsi
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -30
+  - type: Gun
+    projectileSpeed: 60
+    damageModifier: 1.5
+    minAngle: 19 # wielded = 0
+    maxAngle: 50 # wielded = 20
+    angleIncrease: 3.5
+    angleDecay: 16
+    availableModes:
+    - SemiAuto
+    selectedMode: SemiAuto
+    fireRate: 4
+    soundGunshot:
+      collection: BF14GalilGunshotsSUPP
+      params:
+        volume: -12
+        variation: 0.125
+        maxDistance: 15 # BF14-BLU: was Mono's range
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.90
+    sprintModifier: 0.90
+
+- type: entity
+  name: M200 Intervention
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponSniperUSIntervention
+  description: A modern classic, with a green wooden stock and bolt-action. Chambered in .408 CT.
+  components:
+  - type: Item # Controls inhand sprites
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SV98.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/Intervention.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/Intervention.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SV98.rsi
+  - type: Gun
+    fireRate: 0.5
+    projectileSpeed: 60 # it's a sniper
+    damageModifier: 1.5
+    soundGunshot:
+      path: /Audio/_Harmony/Weapons/Guns/Gunshots/hristov_fire_alt.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineSniperIntervention
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineSniperIntervention
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle408CT
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle408CT
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    canRack: false
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: acog
+  - type: UseDelay
+    delay: 0.5
+
+- type: entity
+  name: M40A1
+  parent: [BaseWeaponSniper, BaseGunWieldable]
+  id: BF14WeaponSniperUSM40A1
+  description: A modified civilian hunting rifle, equipped with high specifications for military or police (or maybe military police) snipers.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/M40.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/M40.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: Gun
+    fireRate: 1
+    projectileSpeed: 55 # it's a sniper
+    damageModifier: 2.5
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: BallisticAmmoProvider
+    capacity: 5
+    proto: BF14CartridgeRifle762x51
+    whitelist:
+      tags:
+      - BF14CartridgeRifle762x51
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+#  - type: ChamberMagazineAmmoProvider # doesn't work with BallisticAmmoProvider :(
+#    autoCycle: false
+#    canRack: false
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: acog
+
+- type: entity
+  name: M40A5
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponSniperUSM40A5
+  description: A modified civilian hunting rifle, equipped with high specifications for military or police (or maybe military police) snipers.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/M40.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/M40.rsi
+  - type: GunRequiresWield
+  - type: Gun
+    fireRate: 0.5
+    projectileSpeed: 55 # it's a sniper
+    damageModifier: 2.5
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineSniperM40A5
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineSniperM40A5
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    canRack: false
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: Appearance
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: acog
+
+- type: entity
+  name: G22A2
+  parent: BF14WeaponSniperGBAWM
+  id: BF14WeaponSniperDEG22A2
+
+- type: entity
+  name: AWM
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponSniperGBAWM
+  description: Arctic Warfare Magnum, chambered in .300 win mag, made by 3 guys in a shed.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/AWM.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/AWM.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: Gun
+    fireRate: 0.5
+    projectileSpeed: 55 # it's a sniper
+    damageModifier: 1.5
+    soundGunshot:
+      collection: BF14AWMGunshots
+      params:
+        volume: -5
+        variation: 0.125
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineSniperAWM
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/AWM/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/AWM/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineSniperAWM
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle300WM
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle300WM
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    canRack: false
+    soundBoltClosed: /Audio/_Battlefield14/Weapons/Guns/AWM/boltforward.ogg
+    soundBoltOpened: /Audio/_Battlefield14/Weapons/Guns/AWM/boltback.ogg
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.90
+    sprintModifier: 0.90
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: acog
+  - type: UseDelay
+    delay: 0.2
+
+- type: entity
+  name: AWP
+  parent: BF14WeaponSniperGBAWM
+  id: BF14WeaponSniperGBAWP
+  description: Arctic Warfare Police, chambered in 7.62x51mm, made by 3 guys in a shed.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/AWP.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/AWP.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineSniperAWP
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/AWM/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/AWM/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineSniperAWP
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x51
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x51
+  - type: Gun
+    damageModifier: 1.5
+    soundGunshot:
+      collection: BF14AWPGunshots
+      params:
+        volume: -5
+        variation: 0.125
+
+- type: entity
+  name: SV-98
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponSniperRUSV98
+  description: A modern classic, with a green wooden stock and bolt-action. Chambered in 7.62x54mmR.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SV98.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SV98.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: Gun
+    fireRate: 0.5
+    projectileSpeed: 55 # it's a sniper
+    damageModifier: 2.5
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/heavy_rifle_1.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleSV98
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleSV98
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x54r
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x54r
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    canRack: false
+    soundBoltClosed: /Audio/_Battlefield14/Weapons/Guns/AWM/boltforward.ogg
+    soundBoltOpened: /Audio/_Battlefield14/Weapons/Guns/AWM/boltback.ogg
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.90
+    sprintModifier: 0.90
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: svd
+  - type: UseDelay
+    delay: 0.2
+
+- type: entity
+  name: SVD
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponSniperRUSVD
+  description: The first true designated marksman rifle, as with any soviet bloc weapon it has of course had a world tour. Reccomended firing cadence is once per second.
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVD.rsi
+    shape:
+    - 0,0,4,2
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVD.rsi
+    state: icon-svds
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVD.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: stock-svd
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVD.rsi
+  - type: GunRequiresWield
+  - type: GunWieldBonus # needed so min angle doesn't go negative
+    minAngle: 0
+    maxAngle: 0
+  - type: Gun
+    fireRate: 3
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 6.5
+    angleDecay: 13
+    projectileSpeed: 50
+    damageModifier: 1.5
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineSniperSVD
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineSniperSVD
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x54r
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x54r
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: svd
+
+- type: entity
+  name: SVDS
+  parent: BF14WeaponSniperRUSVD
+  id: BF14WeaponSniperRUSVDS
+  description: The first true designated marksman rifle, as with any soviet bloc weapon it has of course had a world tour. Reccomended firing cadence is once per second.
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVDS.rsi
+    shape:
+    - 0,0,4,2
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVD.rsi
+    state: icon-svds
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVD.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: stock-svds
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVDS.rsi
+
+- type: entity
+  name: VPO-215
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponSniperRUVPO215
+  description: A russian civilian market hunting rifle chambered in .366 TKM. Classified as a shotgun under russian law due to its partial rifling.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/vpo215.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/vpo215.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: Gun
+    fireRate: 0.5
+    projectileSpeed: 55 # it's a sniper
+    damageModifier: 2 # shitty rifle
+    soundGunshot:
+      collection: BF14VPO215Gunshots
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleVPO215
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleVPO215
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle366
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle366
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    canRack: false
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.90
+    sprintModifier: 0.90
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: svd
+  - type: UseDelay
+    delay: 0.2
+
+- type: entity
+  name: magpul Mosin-Nagant
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponSniperRUMagpulMosin
+  description: A Mosin-Nagant with aftermarket magpul furniture made to improve ergonomics and allow the use of detachable magazines.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/magpulmosin.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/magpulmosin.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: Gun
+    fireRate: 0.5
+    projectileSpeed: 55 # it's a sniper
+    damageModifier: 1.75 # old gun + larger mag size compared to the SV-98
+    soundGunshot:
+      collection: BF14MP18Gunshots
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineRifleMagpulMosin
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineRifleMagpullMosin
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x54r
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x54r
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    canRack: false
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 10
+    pvsIncrease: 0.8
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.90
+    sprintModifier: 0.90
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: KsWieldedCrosshair
+    crosshair:
+      sprite: _Battlefield14/Interface/MousePointer/optics.rsi
+      state: svd
+  - type: UseDelay
+    delay: 0.2
+
+- type: entity
+  name: SVD obrez
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: BF14WeaponSniperRUSVDObrez
+  description: "What have you done to her? This weapon can be stored on your auxillary suit storage slot."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVDobrez.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Snipers/SVDobrez.rsi
+    slots:
+    - Back
+    - suitStorage
+    - SUITSTORAGE2
+    clothingVisuals:
+      suitstorage2:
+      - state: equipped-BACKPACK
+  - type: Item
+    size: Large
+  - type: GunWieldBonus
+    minAngle: -15
+    maxAngle: -30
+  - type: Gun
+    fireRate: 3
+    minAngle: 20
+    maxAngle: 60
+    angleIncrease: 6.5
+    angleDecay: 15
+    projectileSpeed: 40
+    damageModifier: 1.5
+    soundGunshot:
+      path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazineSniperSVD
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazineSniperSVD
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgeRifle762x54r
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgeRifle762x54r
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

@@ -21,3 +21,12 @@ ent-BF14WeaponShotgunRUMP133 = MP-133
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Shotguns\tubefed.yml
 ent-BF14WeaponShotgunRUKS23M = KS-23M
     .desc = After a batch of shoddy 23mm anti aircraft barrels, Ivan thought to himself to recycle the barrels into 4 gauge shotguns. Used for riot control and obliteration by internal/special police units with specialised ammunition.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Shotguns\tubefed.yml
+ent-BF14WeaponShotgunUSM590 = M590
+    .desc = A popular civilian hunting shotgun, chopped down to breach doors more handily. Direct combat use ill-advised. Takes M7 pattern bayonets. This weapon can be stored on your auxillary suit storage slot.
+    .suffix = Breaching
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Shotguns\tubefed.yml
+ent-BF14WeaponShotgunUSM590Buckshot =
+    .desc = { ent-BF14WeaponShotgunUSM590.desc }
+    .suffix = Buckshot

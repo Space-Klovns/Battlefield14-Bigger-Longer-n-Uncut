@@ -1,0 +1,80 @@
+#FIRST GENERATION PLATES
+# Durathread
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateLight
+  name: kevlar insert # BF14
+  description: A lightweight protective kevlar insert, made to protect against pistol-class threats. # BF14
+  suffix: Light
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_light.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_light.rsi
+    size: Normal
+  - type: ArmorPlateItem
+    maxDurability: 60 # BF14
+    walkSpeedModifier: 1 # BF14
+    sprintSpeedModifier: 1 # BF14
+    staminaDamageMultiplier: 0.3 # BF14
+    absorptionRatios:
+      Piercing: 1
+      Structural: 1 # BF14
+  - type: Damageable
+  - type: Injurable # BF14-BLU: the damage container moved here from Damageable
+    damageContainer: StructuralInorganic # BF14
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60 #BF14
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior #BF14
+        sound:
+          path: /Audio/_Battlefield14/Effects/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+
+# Ceramic
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateMedium
+  name: ceramic plate
+  description: Ceramic armour absorbs impacts by using ceramic tiles that the bullet breaks on impact instead of you, uncountable soldiers depend on this kind of plate to save their life. # BF14
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/ArmorPlate/armor_medium.rsi
+    state: icon
+  - type: Item
+    sprite: _Mono/Clothing/ArmorPlate/armor_medium.rsi
+    size: Normal
+  - type: ArmorPlateItem
+    maxDurability: 120 # BF14
+    walkSpeedModifier: 0.98 # BF14
+    sprintSpeedModifier: 0.98 # BF14
+    staminaDamageMultiplier: 0.15 # BF14
+    absorptionRatios:
+      Piercing: 1
+      Structural: 1 # BF14
+  - type: Damageable
+  - type: Injurable # BF14-BLU: the damage container moved here from Damageable
+    damageContainer: StructuralInorganic # BF14
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 120 #BF14
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior #BF14
+        sound:
+          path: /Audio/_Battlefield14/Effects/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125

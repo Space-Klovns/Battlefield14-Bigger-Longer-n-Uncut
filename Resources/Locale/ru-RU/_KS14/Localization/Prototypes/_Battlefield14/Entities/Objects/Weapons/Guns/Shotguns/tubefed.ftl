@@ -21,3 +21,12 @@ ent-BF14WeaponShotgunRUMP133 = МР-133
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Shotguns\tubefed.yml
 ent-BF14WeaponShotgunRUKS23M = КС-23М
     .desc = Получив партию бракованных 23-мм зенитных стволов, Иван решил переделать их в дробовики 4 калибра. Применяется внутренними и специальными полицейскими подразделениями для разгона беспорядков и уничтожения — со специальными боеприпасами.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Shotguns\tubefed.yml
+ent-BF14WeaponShotgunUSM590 = M590
+    .desc = Популярное гражданское охотничье ружьё, укороченное, чтобы ловчее выбивать двери. В бою пользоваться не советуем. Принимает штык-ножи M7. Это оружие можно носить в дополнительном слоте хранения костюма.
+    .suffix = Для вскрытия дверей
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Shotguns\tubefed.yml
+ent-BF14WeaponShotgunUSM590Buckshot =
+    .desc = { ent-BF14WeaponShotgunUSM590.desc }
+    .suffix = Картечь

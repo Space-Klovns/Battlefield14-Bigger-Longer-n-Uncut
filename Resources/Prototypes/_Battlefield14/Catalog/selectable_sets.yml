@@ -1,0 +1,59 @@
+- type: thiefBackpackSet
+  id: BF14SetMapTaurus
+  name: bf14-set-map-taurus-name # BF14-BLU: was plain text
+  description: bf14-set-map-taurus-desc # BF14-BLU: was plain text
+  sprite:
+    sprite: _Battlefield14/Objects/Misc/maps.rsi
+    state: taurus
+  content:
+  - BF14MapTaurus
+
+- type: thiefBackpackSet
+  id: BF14SetMapSpringfield
+  name: bf14-set-map-springfield-name # BF14-BLU: was plain text
+  description: bf14-set-map-springfield-desc # BF14-BLU: was plain text
+  sprite:
+    sprite: _Battlefield14/Objects/Misc/maps.rsi
+    state: springfield
+  content:
+  - BF14MapSpringfield
+
+- type: thiefBackpackSet
+  id: BF14SetMapInterchange
+  name: bf14-set-map-interchange-name # BF14-BLU: was plain text
+  description: bf14-set-map-interchange-desc # BF14-BLU: was plain text
+  sprite:
+    sprite: _Battlefield14/Objects/Misc/maps.rsi
+    state: interchange
+  content:
+  - BF14MapInterchange
+
+- type: thiefBackpackSet
+  id: BF14SetMapCustoms
+  name: bf14-set-map-customs-name # BF14-BLU: was plain text
+  description: bf14-set-map-customs-desc # BF14-BLU: was plain text
+  sprite:
+    sprite: _Battlefield14/Objects/Misc/maps.rsi
+    state: customs
+  content:
+  - BF14MapCustoms
+
+- type: thiefBackpackSet
+  id: BF14SetMapBengalsk
+  name: bf14-set-map-bengalsk-name # BF14-BLU: was plain text
+  description: bf14-set-map-bengalsk-desc # BF14-BLU: was plain text
+  sprite:
+    sprite: _Battlefield14/Objects/Misc/maps.rsi
+    state: bengalsk
+  content:
+  - BF14MapBengalsk
+
+- type: thiefBackpackSet
+  id: BF14SetMapCedarCreek
+  name: bf14-set-map-cedar-creek-name # BF14-BLU: was plain text
+  description: bf14-set-map-cedar-creek-desc # BF14-BLU: was plain text
+  sprite:
+    sprite: _Battlefield14/Objects/Misc/maps.rsi
+    state: cedarcreek
+  content:
+  - BF14MapCedarCreek

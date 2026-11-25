@@ -63,3 +63,6 @@ ent-BF14WeaponRifleUSRandomM4 =
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\ar15.yml
 ent-BF14WeaponRifleUSXM16E1Patriot = XM16E1 «Патриот»
     .desc = Единственный в своём роде укороченный XM16E1 со сдвоенным барабанным магазином. Очевидно, крайне неудобный и непрактичный, но держа его, чувствуешь себя важной птицей. Принимает магазины STANAG.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\ar15.yml
+ent-BF14WeaponRifleUSXM16E1Gold = XM16E1 (золотая)
+    .desc = Единственная в своём роде позолоченная XM16E1, задуманная в подарок Кеннеди; увы, его убили раньше, чем её успели вручить. Серийный номер 050000. Из неё не стреляли. Принимает магазины STANAG.

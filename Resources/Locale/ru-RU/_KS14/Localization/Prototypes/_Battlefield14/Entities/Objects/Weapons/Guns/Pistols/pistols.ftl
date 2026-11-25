@@ -73,3 +73,11 @@ ent-BF14WeaponPistolBEFiveSeven = Five-seveN
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
 ent-BF14WeaponPistolRUSR1MP = СР-1МП
     .desc = Создан в ЦНИИТочМаш вместе с СР-2 «Вереск» под патрон 9x21 мм. Можете погуглить.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
+ent-BF14WeaponPistolM9 = M9 Beretta
+    .desc = Переусложнённый молоток для палаточных колышков.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Pistols\pistols.yml
+ent-BF14WeaponPistolITM9Supp =
+    .desc = { ent-BF14WeaponPistolM9.desc }
+    .suffix = С ГЛУШ.
