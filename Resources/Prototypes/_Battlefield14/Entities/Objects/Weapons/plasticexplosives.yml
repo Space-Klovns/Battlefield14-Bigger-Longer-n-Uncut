@@ -1,0 +1,87 @@
+- type: entity
+  name: thermite charge
+  description: When you mix fuel, metal oxide, and metal powder in just the right way, you sure as hell aren't making pancakes.
+  parent: SeismicCharge
+  id: BF14ThermiteCharge
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Charges/thermite.rsi
+    state: icon
+    layers:
+    - state: icon
+      map: ["base"]
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TriggerOnStuck
+    keyOut: stuck
+  - type: ToggleTriggerCondition # BF14-BLU: was canToggleStartOnStick
+    keys:
+    - stuck
+    enabled: true
+    toggleVerb: toggle-trigger-condition-stick-verb
+    toggleOn: toggle-trigger-condition-stick-on
+    toggleOff: toggle-trigger-condition-stick-off
+  - type: TimerTrigger
+    keysIn:
+    - use
+    - stuck
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 10
+    delayOptions: [ 10, 15, 20]
+    beepSound:
+      path: /Audio/Effects/refill.ogg
+    initialBeepDelay: 0
+#  - type: TriggerOnSignal
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 200
+    intensitySlope: 10
+    maxIntensity: 150
+    maxTileBreak: 2
+  - type: Tag
+    tags:
+      - BF14BreachingCharge
+
+- type: entity
+  name: floor charge
+  description: "A big explosive used to breach holes in roofs to access the juicy contents below. It is ARMED, get the hell back!"
+  id: BF14FloorCharge
+  suffix: Armed, Placed
+  components:
+  - type: Sprite
+    drawdepth: Items
+    sprite: _Civ14/Objects/grenade.rsi
+    state: plastic-explosive2
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14Thermobaric
+    totalIntensity: 300
+    intensitySlope: 25
+    maxIntensity: 60
+  - type: TriggerOnSpawn # BF14-BLU: was ActiveTimerTrigger, a timer running from spawn
+    keyOut: spawn
+  - type: TimerTrigger
+    keysIn:
+    - spawn
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 5
+  - type: EmitSoundOnSpawn
+    sound: 
+      path: /Audio/Effects/minibombcountdown.ogg
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Anchorable
+  - type: Physics
+    bodyType: Static
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+          - LowImpassable

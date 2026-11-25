@@ -69,3 +69,915 @@
     radius: 1
     color: orange
     energy: 0.2
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  parent: GrenadeBase
+  id: BF14GrenadeBaseOffensive
+  description: "Has a random timer between 3-5 seconds."
+  abstract: true
+  components:
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 3.5
+  - type: RandomTimerTrigger
+    min: 3
+    max: 5
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    maxIntensity: 10
+    intensitySlope: 4
+    totalIntensity: 100
+    canCreateVacuum: false
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger2.ogg"
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+
+- type: entity
+  parent: GrenadeBase
+  id: BF14GrenadeBaseDefensive
+  description: "Has a random timer between 3-5 seconds. Produces shrapnel."
+  abstract: true
+  components:
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 3.5
+  - type: RandomTimerTrigger
+    min: 3
+    max: 5
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: ProjectileGrenade
+    fillPrototype: BF14BulletGrenadeM67Fragment
+    capacity: 60
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    totalIntensity: 30
+    intensitySlope: 4
+    maxIntensity: 6
+    maxTileBreak: 0
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger2.ogg"
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+
+- type: entity
+  parent: GrenadeBase
+  id: BF14GrenadeBaseSmoke
+  description: "Smoke lasts 30 seconds."
+  abstract: true
+  components:
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 2.5
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: SmokeOnTrigger
+    duration: 30
+    spreadAmount: 15
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/smoke10s.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14SmokeGrenadeSFX
+
+- type: entity
+  parent: GrenadeBase
+  id: BF14GrenadeBaseFlashbang
+  description: "Has a random timer between 2-4 seconds."
+  abstract: true
+  components:
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 2
+  - type: RandomTimerTrigger
+    min: 2
+    max: 4
+  - type: Tag
+    tags:
+      - BF14Grenade
+      - GrenadeFlashBang
+  - type: FlashOnTrigger
+    range: 5
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger2.ogg"
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/flashbang.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FlashGrenadeSFX
+
+- type: entity
+  name: M67 grenade
+  description: "The classic GI hand grenade post vietnam. Has a random timer between 3-5 seconds. Produces shrapnel."
+  parent: BF14GrenadeBaseDefensive
+  id: BF14DefensiveGrenadeUSM67
+  components:
+  - type: Sprite
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/m67.rsi
+  - type: Icon
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/m67.rsi
+    state: base
+
+- type: entity
+  name: MK21 stackable offensive grenade
+  description: "USMC standard issue blast grenade. Has a random timer between 3-5 seconds. You can stack another grenade onto this one."
+  parent: BF14GrenadeBaseOffensive
+  id: BF14OffensiveGrenadeUSMK21
+  components:
+  - type: Tag
+    tags:
+      - BF14Grenade
+      - BF14OffensiveGrenadeUSMK21
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/MK21.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/MK21.rsi
+    state: base
+  - type: Material
+  - type: Construction
+    graph: BF14MK21StackTwo
+    node: start
+    deconstructionTarget: start
+
+- type: entity
+  name: double stacked MK21 hand grenade
+  description: "two MK21 blast grenades stacked together. Has a random timer between 3-5 seconds. You can stack another grenade onto this one."
+  parent: BF14OffensiveGrenadeUSMK21
+  id: BF14OffensiveGrenadeUSMK21StackTwo
+  components:
+  - type: Item
+    size: Normal
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 3.5
+  - type: RandomTimerTrigger
+    min: 3
+    max: 5
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/MK21StackTwo.rsi
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DemolitionCharge
+    maxIntensity: 12.5
+    intensitySlope: 8
+    totalIntensity: 135
+    canCreateVacuum: true
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger2.ogg"
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+  - type: Construction
+    graph: BF14MK21StackTwo
+    node: MK21Unstack
+    deconstructionTarget: MK21Unstack
+
+- type: entity
+  name: MK21 offensive grenade Sword
+  description: "You crazy son of a bitch. Has a random timer between 3-5 seconds. You can stack another grenade onto this one."
+  parent: BF14OffensiveGrenadeUSMK21
+  id: BF14OffensiveGrenadeUSMK21Sword
+  components:
+  - type: Item
+    size: Large
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 3.5
+  - type: RandomTimerTrigger
+    min: 3
+    max: 5
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/MK21sword.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.5
+    damage:
+      types:
+        Blunt: 35
+    soundHit:
+      collection: MetalThud
+    bluntStaminaDamageFactor: 1.25
+#    heavyRateModifier: 1.25
+#    heavyDamageBaseModifier: 1.2
+#    heavyStaminaCost: 1.5
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 10
+#    staminaCost: 65
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    maxIntensity: 500
+    intensitySlope: 5
+    totalIntensity: 1000
+    canCreateVacuum: true
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger2.ogg"
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+
+- type: entity
+  name: MK3A2 offensive grenade
+  description: "An outdated blast grenade, replaced by the M111 due to having its body partially containing asbestos, because of course it did. Has a random timer between 3-5 seconds."
+  parent: BF14GrenadeBaseOffensive
+  id: BF14OffensiveGrenadeUSMK3A2
+  components:
+  - type: Sprite
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/mk3a2.rsi
+  - type: Icon
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/mk3a2.rsi
+    state: base
+
+- type: entity
+  name: M111 offensive grenade
+  description: "A blast overpressure grenade designed to replace what was basically the same thing from 1968, but without the asbestos body, because everything from then had asbestos in it. Has a random timer between 3-5 seconds."
+  parent: BF14GrenadeBaseOffensive
+  id: BF14OffensiveGrenadeUSM111
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/M111.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/M111.rsi
+    state: base
+
+- type: entity
+  name: M33A1 offensive impact grenade
+  description: "An early iteration of the M67 hand grenade with an impact fuse. Activate to pull the pin, arming the contact fuze, activate again to disarm. Will bounce off walls. Produces shrapnel. Useless without gravity."
+  parent: BaseItem
+  id: BF14ImpactGrenadeUSM33A1
+  components:
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: Sprite
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/m67.rsi
+    layers:
+    - state: icon
+    - state: primed
+      visible: false
+      map: ["enum.ToggleableVisuals.Layer"]
+  - type: Appearance
+  - type: AnimationPlayer
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      path: /Audio/_Battlefield14/Weapons/Grenades/trigger2.ogg
+    soundDeactivate:
+      path: /Audio/_Battlefield14/Weapons/Grenades/disable1.ogg
+  - type: Damageable
+    damageModifierSet: BF14Grenade
+  - type: Injurable # BF14-BLU: the damage container moved here from Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: ComponentToggler
+    components:
+    - type: DamageOnLand
+      damage:
+        types:
+          Blunt: 60
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    totalIntensity: 30
+    intensitySlope: 4
+    maxIntensity: 6
+    maxTileBreak: 0
+    canCreateVacuum: false
+  - type: ContainerContainer # BF14-BLU: declared, so it does not gain one on spawn
+    containers:
+      cluster-payload: !type:Container
+  - type: ProjectileGrenade
+    triggerKey: trigger # BF14-BLU: set off by Destructible's trigger key, not a timer
+    fillPrototype: BF14BulletGrenadeF1Fragment
+    capacity: 60
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+
+- type: entity
+  name: M18 smoke grenade
+  description: "A simple grey smoke grenade, canned smoke for your convenience. At least, you think it’s canned smoke, you’re not entirely sure how these things actually work. Smoke lasts 30 seconds."
+  parent: BF14GrenadeBaseSmoke
+  id: BF14SmokeGrenadeUSM18
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/M18.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/M18.rsi
+    state: base
+
+- type: entity
+  name: M84 flashbang
+  description: "Think fast. Has a random timer between 2-4 seconds."
+  parent: BF14GrenadeBaseFlashbang
+  id: BF14FlashbangGrenadeUSM84
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/M84.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/M84.rsi
+    state: base
+
+- type: entity
+  name: M58 CS gas grenade
+  description: "Dispenses irritating CS gas for non-lethal incapacitation and dispersion of riots. Smoke lasts 30 seconds."
+  parent: GrenadeBase
+  id: BF14SmokeCSGrenadeUSM58
+  components:
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 2.5
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/M58.rsi
+  - type: SmokeOnTrigger
+    duration: 30
+    spreadAmount: 15
+    solution:
+      reagents:
+      - ReagentId: BF14CSGas
+        Quantity: 50
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/smoke10s.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14SmokeGrenadeSFX
+
+- type: entity
+  name: M34 white phosphorus smoke grenade
+  description: "Willy Pete, a war criminal to rival Cuban Pete. Smoke lasts 30 seconds."
+  parent: GrenadeBase
+  id: BF14SmokeWhitePhosphorusGrenadeUSM34
+  suffix: WAR CRIME
+  components:
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 3
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/M34.rsi
+  - type: SmokeOnTrigger
+    duration: 30
+    spreadAmount: 6
+    solution:
+      reagents:
+      - ReagentId: BF14WhitePhosphorus
+        Quantity: 50
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/smoke10s.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14SmokeGrenadeSFX
+
+- type: entity
+  name: DM51 defensive grenade
+  description: "A DM51 grenade with the frag sleeve installed. Has a random timer between 3-5 seconds. Produces shrapnel."
+  parent: BF14GrenadeBaseDefensive
+  id: BF14DefensiveGrenadeDEDM51
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/DM51frag.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/DM51frag.rsi
+    state: base
+
+- type: entity
+  name: DM51 offensive grenade
+  description: "Bundeswehr standard issue blast grenade, frag sleeve removed. Has a random timer between 3-5 seconds."
+  parent: BF14GrenadeBaseOffensive
+  id: BF14OffensiveGrenadeDEDM51
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/DM51.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/DM51.rsi
+    state: base
+
+- type: entity
+  name: DM45 smoke grenade
+  parent: BF14SmokeGrenadeUSM18
+  id: BF14SmokeGrenadeDEDM45
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/DM45.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/DM45.rsi
+    state: base
+
+- type: entity
+  name: RGD-5 grenade
+  description: "An undying classic from the soviet union. Has a random timer between 3-5 seconds."
+  parent: BF14GrenadeBaseOffensive
+  id: BF14OffensiveGrenadeRURGD5
+  components:
+  - type: Sprite
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/rgd5.rsi
+  - type: Icon
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/rgd5.rsi
+    state: base
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+
+- type: entity
+  name: RG-60TB thermobaric grenade
+  description: "A modern russian grenade with a thermobaric payload. Has a random timer between 3-5 seconds."
+  parent: BF14OffensiveGrenadeRURGD5
+  id: BF14OffensiveGrenadeRURG60TB
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/RG60TB.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/RG60TB.rsi
+    state: base
+  - type: Explosive
+    explosionType: BF14Thermobaric
+    maxIntensity: 10
+    intensitySlope: 4
+    totalIntensity: 100
+    canCreateVacuum: false
+
+- type: entity
+  name: F-1 grenade
+  description: "An undying classic from the soviet union. Has a random timer between 3-5 seconds. Produces shrapnel."
+  parent: BF14GrenadeBaseDefensive
+  id: BF14DefensiveGrenadeRUF1
+  components:
+  - type: Sprite
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/f1.rsi
+  - type: Icon
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/f1.rsi
+    state: base
+  - type: ProjectileGrenade
+    fillPrototype: BF14BulletGrenadeF1Fragment
+    capacity: 60
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+
+- type: entity
+  name: RGO offensive impact grenade
+  description: "What does this even stand for? Russian Grenade something? oh well, pull the pin, chuck it, and it blows up. Activate to pull the pin, arming the contact fuze, activate again to disarm. Will bounce off walls. Useless without gravity."
+  parent: BaseItem
+  id: BF14ImpactGrenadeRURGO
+  components:
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/rgo.rsi
+    layers:
+    - state: icon
+    - state: primed
+      visible: false
+      map: ["enum.ToggleableVisuals.Layer"]
+  - type: Appearance
+  - type: AnimationPlayer
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      path: /Audio/_Battlefield14/Weapons/Grenades/trigger2.ogg
+    soundDeactivate:
+      path: /Audio/_Battlefield14/Weapons/Grenades/disable1.ogg
+  - type: Damageable
+    damageModifierSet: BF14Grenade
+  - type: Injurable # BF14-BLU: the damage container moved here from Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: ComponentToggler
+    components:
+    - type: DamageOnLand
+      damage:
+        types:
+          Blunt: 60
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    maxIntensity: 10
+    intensitySlope: 2
+    totalIntensity: 30
+    canCreateVacuum: false
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+
+- type: entity
+  name: RGN defensive impact grenade
+  description: "What does this even stand for? Russian Grenade something? oh well, pull the pin, chuck it, and it blows up. Activate to pull the pin, arming the contact fuze, activate again to disarm. Will bounce off walls. Produces shrapnel. Useless without gravity."
+  parent: BF14ImpactGrenadeRURGO
+  id: BF14ImpactGrenadeRURGN
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/rgn.rsi
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: ProjectileGrenade
+    triggerKey: trigger # BF14-BLU: set off by Destructible's trigger key, not a timer
+    fillPrototype: BF14BulletGrenadeF1Fragment
+    capacity: 45
+
+- type: entity
+  name: RG-60TBO1 thermobaric grenade
+  description: "A modern russian grenade with a thermobaric payload, upgraded with a shrapnel casing and impact fuze. Activate to pull the pin, arming the contact fuze, activate again to disarm. Will bounce off walls. Produces shrapnel. Useless without gravity."
+  parent: BF14ImpactGrenadeRURGN
+  id: BF14ImpactGrenadeRURG60TBO1
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/RG60TBO1.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/RG60TBO1.rsi
+    state: base
+  - type: Explosive
+    explosionType: BF14Thermobaric
+    maxIntensity: 8
+    intensitySlope: 4
+    totalIntensity: 90
+    canCreateVacuum: false
+
+- type: entity
+  name: RDG-2 smoke grenade
+  description: "A simple grey smoke grenade, canned smoke for your convenience. At least, you think it’s canned smoke, you’re not entirely sure how these things actually work. Smoke lasts 30 seconds."
+  parent: BF14GrenadeBaseSmoke
+  id: BF14SmokeGrenadeRURDG
+  components:
+  - type: Sprite
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/rdg2.rsi
+  - type: Icon
+    sprite: _WorldAblaze1968/Objects/Weapons/Explosives/rdg2.rsi
+    state: base
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger3.ogg"
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/smoke10s.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14SmokeGrenadeSFX
+
+- type: entity
+  name: zarya flashbang
+  description: "Think fast. Has a random timer between 2-4 seconds."
+  parent: BF14GrenadeBaseFlashbang
+  id: BF14FlashbangGrenadeRUZarya
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/zarya.rsi
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Grenades/zarya.rsi
+    state: base
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/flashbang.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FlashGrenadeSFX
+
+- type: entity
+  name: K-51 CS gas grenade
+  description: "These little things earned their reputation in Grozny, being thrown into buildings to bring out militiamen. Smoke lasts 30 seconds."
+  parent: GrenadeBase
+  id: BF14SmokeCSGrenadeRUK51
+  components:
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 2.5
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/K51.rsi
+  - type: SmokeOnTrigger
+    duration: 30
+    spreadAmount: 15
+    solution:
+      reagents:
+      - ReagentId: BF14CSGas
+        Quantity: 50
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/smoke10s.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14SmokeGrenadeSFX
+
+- type: entity
+  name: K-52 sarin gas grenade
+  description: "A horrible, horrible thing, may God forgive you if you wish to use this against your fellow man. Smoke lasts 30 seconds."
+  parent: GrenadeBase
+  id: BF14SmokeSarinGrenadeRUK52
+  suffix: WAR CRIME
+  components:
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 2.5
+  - type: Tag
+    tags:
+      - BF14Grenade
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/K51.rsi
+  - type: SmokeOnTrigger
+    duration: 30
+    spreadAmount: 10
+    solution:
+      reagents:
+      - ReagentId: BF14Sarin
+        Quantity: 50
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/smoke10s.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14SmokeGrenadeSFX
+
+- type: entity
+  name: improvised soft drink grenade
+  description: "A russian fuse stuffed into a plastic soft drink bottle full of ball bearings. Has a random timer between 3-5 seconds. Produces shrapnel."
+  parent: BF14GrenadeBaseDefensive
+  id: BF14DefensiveGrenadeINDFanta
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Grenades/fanta.rsi
+  - type: ProjectileGrenade
+    fillPrototype: BF14BulletGrenadeBallBearing
+    capacity: 60
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    totalIntensity: 10
+    intensitySlope: 4
+    maxIntensity: 4
+    maxTileBreak: 0
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Battlefield14/Weapons/Grenades/trigger1.ogg"
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Battlefield14/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Battlefield14/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14FragGrenadeSFX
+
+- type: entity
+  name: molotov cocktail
+  description: A russian fuse stuffed into a plastic soft drink bottle full of ball bearings.
+  parent: BaseItem
+  id: BF14FlameGrenadeINDMolotov
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Bombs/pyrogelbomb.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: Spillable
+    solution: drink
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Vodka
+          Quantity: 100
+  - type: Damageable
+  - type: Injurable # BF14-BLU: the damage container moved here from Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpillBehavior { }
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          BrokenBottle:
+            min: 1
+            max: 1
+          BF14RagItemLit:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 100
+  - type: StaticPrice
+    price: 16

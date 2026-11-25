@@ -32,3 +32,6 @@ ent-BF14Bullet40x46mmHEDPArmingDistance = граната 40x46 мм HEDP
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
 ent-BF14Bullet40x46mmFragArmingDistance = осколочная граната 40x46 мм
     .desc = { ent-BaseBullet.desc }
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
+ent-BF14Bullet40x46mmChemicalSmokeInfantry = 40x46 мм граната с газом CS
+    .desc = { ent-BaseBulletTrigger.desc }

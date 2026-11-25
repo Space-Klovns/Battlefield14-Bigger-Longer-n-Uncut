@@ -132,3 +132,182 @@
           Quantity: 5
         - ReagentId: Saline # Painkiller
           Quantity: 5
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  parent: BF14SyretteCappedBase
+  id: BF14AutoInjectorCappedBase
+  name: autoinjector
+  description: "A mechanical, single use syringe. This one has a cap on it. Use in hand to remove cap."
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: injector
+    - state: cap_red
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14SyretteCapRed
+    - id: BF14SyretteInaprovaline
+    sound:
+      path: /Audio/Items/Handcuffs/rope_breakout.ogg
+      params:
+        variation: 0.125
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BF14SyretteCapBase
+  id: BF14AutoInjectorCapBase
+  name: autoinjector cap
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: cap_red
+
+- type: entity
+  parent: BF14AutoInjectorCapBase
+  id: BF14AutoinjectorCapRed
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: cap_red
+
+- type: entity
+  parent: BF14AutoInjectorCapBase
+  id: BF14AutoinjectorCapBlue
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: cap_blue
+
+- type: entity
+  parent: BF14AutoInjectorCapBase
+  id: BF14AutoinjectorCapGreen
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: cap_green
+
+- type: entity
+  parent: BF14AutoInjectorCapBase
+  id: BF14AutoinjectorCapYellow
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: cap_yellow
+
+- type: entity
+  parent: BF14AutoInjectorCappedBase
+  id: BF14AutoInjectorBruteCapped
+  suffix: Brute mix, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: injector
+    - state: cap_red
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14AutoinjectorCapRed
+    - id: BF14AutoInjectorBrute
+  - type: Label
+    currentLabel: brute mix
+
+- type: entity
+  parent: BF14AutoInjectorCappedBase
+  id: BF14AutoInjectorBurnCapped
+  suffix: Burn mix, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: injector
+    - state: cap_yellow
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14AutoinjectorCapYellow
+    - id: BF14AutoInjectorBurn
+  - type: Label
+    currentLabel: burn mix
+
+- type: entity
+  parent: BF14AutoInjectorCappedBase
+  id: BF14AutoInjectorMultispectrumCapped
+  suffix: Multi-spectrum, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: injector
+    - state: cap_blue
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14AutoinjectorCapBlue
+    - id: BF14AutoInjectorMultispectrum
+  - type: Label
+    currentLabel: multi-spectrum
+
+- type: entity
+  parent: BF14AutoInjectorCappedBase
+  id: BF14AutoInjectorEmergencyCapped
+  suffix: Emergency mix, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: injector
+    - state: cap_blue
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14AutoinjectorCapBlue
+    - id: BF14AutoInjectorEmergency
+  - type: Label
+    currentLabel: emergency mix
+
+- type: entity
+  parent: BF14AutoInjectorCappedBase
+  id: BF14AutoInjectorStormZCapped
+  suffix: Storm-Z mix, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: injector
+    - state: cap_red
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14AutoinjectorCapRed
+    - id: BF14AutoInjectorStormZ
+  - type: Label
+    currentLabel: storm-Z mix
+
+- type: entity
+  parent: BF14AutoInjectorCappedBase
+  id: BF14AutoInjectorCombatStabilisationCapped
+  suffix: combat stabilisation, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/injector.rsi
+    layers:
+    - state: injector
+    - state: cap_red
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14AutoinjectorCapRed
+    - id: BF14AutoInjectorCombatStabilisation
+  - type: Label
+    currentLabel: combat stabilisation

@@ -27,3 +27,6 @@ ent-BF14ShellBox4GaugeBarricade = коробка патронов (4 калиб�
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Boxes\shotgun.yml
 ent-BF14ShellBox410Bore = пачка патронов (.410, картечь)
     .desc = { ent-BaseItem.desc }
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Boxes\shotgun.yml
+ent-BF14ShellBox4GaugeFlashbang = коробка патронов для дробовика (4 калибр, «Звезда»)
+    .desc = { ent-BaseAmmoProvider.desc }

@@ -71,3 +71,30 @@ ent-BF14SyretteFentanyl =
 ent-BF14SyretteNanoblood =
     .desc = { ent-BF14SyretteBase.desc }
     .suffix = Nanoblood
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteCappedBase = syrette
+    .desc = A miniature single use syringe. This one has a cap on it. Use in hand to remove cap.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteCapBase = syrette cap
+    .desc = { "" }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteInaprovalineCapped =
+    .desc = { ent-BF14SyretteCappedBase.desc }
+    .suffix = Inaprovaline, capped
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteMeralyneCapped =
+    .desc = { ent-BF14SyretteCappedBase.desc }
+    .suffix = Meralyne, capped
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteDermalineCapped =
+    .desc = { ent-BF14SyretteCappedBase.desc }
+    .suffix = Dermaline, capped
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteEpinephrineCapped =
+    .desc = { ent-BF14SyretteCappedBase.desc }
+    .suffix = Epinephrine, capped

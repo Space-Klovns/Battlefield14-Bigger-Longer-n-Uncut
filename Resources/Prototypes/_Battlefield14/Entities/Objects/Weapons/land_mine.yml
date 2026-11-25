@@ -1,0 +1,63 @@
+- type: entity
+  name: PFM-1
+  description: "An anti-personnel land mine, placed in batches by mortars or other scattering systems. It is ARMED. Use a multitool to link it to a device. Self destructs after 40 hours."
+  parent: BaseLandMine
+  id: BF14LandMinePFM1
+  suffix: Armed, Placed
+  components:
+  - type: Sprite
+    drawdepth: Items
+    sprite: _Battlefield14/Objects/Weapons/Landmines/PFM1.rsi
+    layers: # BF14-BLU: replaces BaseLandMine's landmine layers, which this RSI lacks
+    - state: base
+  - type: Physics
+    bodyType: Dynamic
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    maxIntensity: 5
+    intensitySlope: 3
+    totalIntensity: 25
+    canCreateVacuum: false
+  - type: StepTrigger
+    requiredTriggeredSpeed: 2.5 # lets you crawl but not walk over it
+    stepOn: false
+  - type: TriggerOnSignal
+  - type: DeviceLinkSink
+    ports:
+      - Trigger
+  - type: TriggerOnSpawn # BF14-BLU: was ActiveTimerTrigger, a timer running from spawn
+    keyOut: spawn
+  - type: TimerTrigger
+    keysIn:
+    - spawn
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 144000
+
+- type: entity
+  parent: BaseItem
+  id: BF14LandMinePFM1Item
+  name: PFM-1
+  description: "An anti-personnel land mine, placed in batches by mortars or other scattering systems. It is disarmed."
+  suffix: Disarmed, Decomposes
+  components:
+  - type: Sprite
+    drawdepth: Items
+    sprite: _Battlefield14/Objects/Weapons/Landmines/PFM1.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: SpawnAfterInteract
+    prototype: BF14LandMinePFM1
+    doAfter: 3
+    removeOnInteract: true
+  - type: TriggerOnSpawn # BF14-BLU: was ActiveTimerTrigger, a timer running from spawn
+    keyOut: spawn
+  - type: TimerTrigger
+    keysIn:
+    - spawn
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 1.5
+  - type: SpawnOnTrigger
+    proto: BF14LandMinePFM1
+  - type: DeleteOnTrigger

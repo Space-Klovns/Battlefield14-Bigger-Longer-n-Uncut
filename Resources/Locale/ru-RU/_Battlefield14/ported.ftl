@@ -8,3 +8,4 @@ stack-bf14-advanced-trauma-kit = продвинутый набор от трав
 stack-bf14-dressing = раневая повязка
 stack-bf14-gauze = марля
 stack-bf14-ointment = мазь
+construction-graph-tag-bf14-mk21-grenade = граната MK21

@@ -31,3 +31,30 @@ ent-BF14BulletVOG25HEFragArmingDistance = ВОГ-25
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
 ent-BF14ArtilleryMarkerVOG25HEFrag = артудар ВОГ-25 40 мм, осколочно-фугасный
     .desc = { "" }
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14BulletVOG25ChemicalSmoke = ГРД-40 «Гвоздь»
+    .desc = { ent-BaseBulletTrigger.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14BulletVOG25ChemicalSmokeArmingDistance = ГРД-40 «Гвоздь»
+    .desc = { ent-BaseBullet.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14ArtilleryMarkerVOG25ChemicalSmoke = разрыв ГРД-40 40 мм с газом CS
+    .desc = { "" }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14BulletVOG25Flashbang = ВГ-40СЗ
+    .desc = { ent-BaseBulletTrigger.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14BulletVOG25FlashbangArmingDistance = ВГ-40СЗ
+    .desc = { ent-BaseBullet.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14ArtilleryMarkerVOG25Flashbang = разрыв ВГ-40СЗ 40 мм, светошумовой
+    .desc = { "" }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\vog25.yml
+ent-BF14BulletVOG25IlluminationPara = ВГ-40ОП, осветительный на парашюте
+    .desc = { ent-BaseBullet.desc }

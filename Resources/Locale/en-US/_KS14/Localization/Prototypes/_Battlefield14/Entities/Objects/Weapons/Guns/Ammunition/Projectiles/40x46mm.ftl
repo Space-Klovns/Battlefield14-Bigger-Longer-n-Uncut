@@ -32,3 +32,6 @@ ent-BF14Bullet40x46mmHEDPArmingDistance = 40x46mm HEDP grenade
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
 ent-BF14Bullet40x46mmFragArmingDistance = 40x46mm fragmentation grenade
     .desc = If you can see this you're probably dead!
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Projectiles\40x46mm.yml
+ent-BF14Bullet40x46mmChemicalSmokeInfantry = 40x46mm CS gas shell
+    .desc = If you can see this you're probably dead!

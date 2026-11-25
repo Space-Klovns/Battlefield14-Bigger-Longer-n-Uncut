@@ -245,3 +245,11 @@
     proto: BF14PelletShotgun12Gauge
     count: 5
     spread: 7
+
+- type: entity
+  id: BF14CartridgeShotgun4GaugeFlashbang
+  name: shotgun shell (4 gauge zvesza)
+  parent: BF14BaseShellShotgun4Gauge
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet40mmGrenadeFlash # lol

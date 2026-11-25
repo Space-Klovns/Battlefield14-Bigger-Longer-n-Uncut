@@ -8,3 +8,4 @@ stack-bf14-advanced-trauma-kit = advanced trauma kit
 stack-bf14-dressing = wound dressing
 stack-bf14-gauze = gauze
 stack-bf14-ointment = ointment
+construction-graph-tag-bf14-mk21-grenade = MK21 grenade

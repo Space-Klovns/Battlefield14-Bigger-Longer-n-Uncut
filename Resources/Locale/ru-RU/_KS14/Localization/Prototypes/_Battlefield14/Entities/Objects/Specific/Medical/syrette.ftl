@@ -71,3 +71,30 @@ ent-BF14SyretteFentanyl =
 ent-BF14SyretteNanoblood =
     .desc = { ent-BF14SyretteBase.desc }
     .suffix = Нанокровь
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteCappedBase = шприц-тюбик
+    .desc = Миниатюрный одноразовый шприц. На этом надет колпачок. Используйте в руке, чтобы снять колпачок.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteCapBase = колпачок шприц-тюбика
+    .desc = { ent-BaseItem.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteInaprovalineCapped =
+    .desc = { ent-BF14SyretteCappedBase.desc }
+    .suffix = Инапровалин, с колпачком
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteMeralyneCapped =
+    .desc = { ent-BF14SyretteCappedBase.desc }
+    .suffix = Мералин, с колпачком
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteDermalineCapped =
+    .desc = { ent-BF14SyretteCappedBase.desc }
+    .suffix = Дермалин, с колпачком
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Specific\Medical\syrette.yml
+ent-BF14SyretteEpinephrineCapped =
+    .desc = { ent-BF14SyretteCappedBase.desc }
+    .suffix = Эпинефрин, с колпачком

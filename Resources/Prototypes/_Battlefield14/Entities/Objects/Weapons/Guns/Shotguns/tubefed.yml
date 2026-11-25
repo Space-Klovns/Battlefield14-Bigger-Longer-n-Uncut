@@ -4,6 +4,9 @@
   id: BF14WeaponShotgunUSM870
   description: A popular civilian hunting shotgun, adapted for military use with a heatshield, pistol grip stock, and handy sling.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     size: Large
     sprite: _Battlefield14/Objects/Weapons/Guns/Shotguns/M870.rsi
@@ -43,6 +46,9 @@
   id: BF14WeaponShotgunUSM1014
   description: A popular civilian hunting shotgun, adapted for military use with a heatshield, pistol grip stock, and handy sling.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     size: Large
     sprite: _Battlefield14/Objects/Weapons/Guns/Shotguns/M1014.rsi
@@ -80,6 +86,9 @@
   id: BF14WeaponShotgunUSSPAS12
   description: Special Purpose Automatic Shotgun; tried to rebrand into a Sporting purpose (automatic shotgun) to get around the assault weapons ban, which didn't work. # Comes with a handy claw for firing one handed
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     sprite: _Battlefield14/Objects/Weapons/Guns/Shotguns/spas12.rsi
   - type: Sprite
@@ -123,6 +132,9 @@
   id: BF14WeaponShotgunRURMB93
   description: A russian made pump-action shotgun. The RMB-93 is quite a unique piece of equipment with its barrel being placed bellow the magazine tube and its pumping action reversed.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     sprite: _Battlefield14/Objects/Weapons/Guns/Shotguns/rmb93.rsi
   - type: Sprite
@@ -161,6 +173,9 @@
   id: BF14WeaponShotgunRUMP133
   description: A russian made pump-action shotgun, used by russians for hunting.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     sprite: _Battlefield14/Objects/Weapons/Guns/Shotguns/mp133.rsi
   - type: Sprite
@@ -199,6 +214,9 @@
   id: BF14WeaponShotgunRUKS23M
   description: After a batch of shoddy 23mm anti aircraft barrels, Ivan thought to himself to recycle the barrels into 4 gauge shotguns. Used for riot control and obliteration by internal/special police units with specialised ammunition.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     size: Large
     shape:

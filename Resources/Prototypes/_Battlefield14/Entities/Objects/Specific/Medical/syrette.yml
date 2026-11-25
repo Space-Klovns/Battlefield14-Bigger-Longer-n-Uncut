@@ -221,3 +221,160 @@
         reagents:
         - ReagentId: BF14Nanoblood
           Quantity: 5
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  parent: BaseItem
+  id: BF14SyretteCappedBase
+  abstract: true
+  name: syrette
+  description: "A miniature single use syringe. This one has a cap on it. Use in hand to remove cap."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: syrette
+    - state: cap_red
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14SyretteCapRed
+    - id: BF14SyretteInaprovaline
+    sound:
+      path: /Audio/Items/Handcuffs/rope_breakout.ogg
+      params:
+        variation: 0.125
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - BF14Syrette
+
+- type: entity
+  parent: BaseItem
+  id: BF14SyretteCapBase
+  name: syrette cap
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: cap_red
+  - type: Item
+    size: Tiny
+  - type: SpaceGarbage
+  - type: TriggerOnSpawn # BF14-BLU: was ActiveTimerTrigger, a timer running from spawn
+    keyOut: spawn
+  - type: TimerTrigger
+    keysIn:
+    - spawn
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 30
+  - type: DeleteOnTrigger
+  - type: Tag
+    tags:
+    - Trash
+
+- type: entity
+  parent: BF14SyretteCapBase
+  id: BF14SyretteCapRed
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: cap_red
+
+- type: entity
+  parent: BF14SyretteCapBase
+  id: BF14SyretteCapBlue
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: cap_blue
+
+- type: entity
+  parent: BF14SyretteCapBase
+  id: BF14SyretteCapGreen
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: cap_green
+
+- type: entity
+  parent: BF14SyretteCapBase
+  id: BF14SyretteCapYellow
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: cap_yellow
+
+- type: entity
+  parent: BF14SyretteCappedBase
+  id: BF14SyretteInaprovalineCapped
+  suffix: Inaprovaline, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: syrette
+    - state: cap_blue
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14SyretteCapBlue
+    - id: BF14SyretteInaprovaline
+  - type: Label
+    currentLabel: inaprovaline
+
+- type: entity
+  parent: BF14SyretteCappedBase
+  id: BF14SyretteMeralyneCapped
+  suffix: Meralyne, capped
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14SyretteCapRed
+    - id: BF14SyretteMeralyne
+  - type: Label
+    currentLabel: meralyne
+
+- type: entity
+  parent: BF14SyretteCappedBase
+  id: BF14SyretteDermalineCapped
+  suffix: Dermaline, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: syrette
+    - state: cap_yellow
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14SyretteCapYellow
+    - id: BF14SyretteDermaline
+  - type: Label
+    currentLabel: dermaline
+
+- type: entity
+  parent: BF14SyretteCappedBase
+  id: BF14SyretteEpinephrineCapped
+  suffix: Epinephrine, capped
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/syrette.rsi
+    layers:
+    - state: syrette
+    - state: cap_yellow
+  - type: SpawnItemsOnUse
+    items:
+    - id: BF14SyretteCapYellow
+    - id: BF14SyretteEpinephrine
+  - type: Label
+    currentLabel: epinephrine

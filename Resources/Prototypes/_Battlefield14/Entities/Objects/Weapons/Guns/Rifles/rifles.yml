@@ -818,6 +818,9 @@
   id: BF14WeaponRifleRUSKS
   description: A old self loading rifle designed and adapted right after world war 2. It was replaced not too long after with the AK-47.
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     size: Huge
   - type: Sprite

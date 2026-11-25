@@ -40,3 +40,6 @@ ent-BF14CartridgeShotgun4GaugeBarricade = патрон для дробовика
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Cartridges\BFshotgun.yml
 ent-BF14CartridgeShotgun410BoreBuckshot = патрон для дробовика (.410, картечь)
     .desc = { ent-BF14BaseShellShotgun410Bore.desc }
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Cartridges\BFshotgun.yml
+ent-BF14CartridgeShotgun4GaugeFlashbang = патрон для дробовика (4 калибр, «Звезда»)
+    .desc = { ent-BaseCartridge.desc }

@@ -1,0 +1,307 @@
+- type: reagent
+  id: BF14GassyGas
+  name: reagent-name-bf14-gassy-gas # BF14-BLU: was plain text
+  group: Toxins
+  desc: reagent-desc-bf14-gassy-gas # BF14-BLU: was plain text
+  physicalDesc: reagent-physical-desc-irritating
+  flavor: bitter
+  color: "#09ff00"
+  boilingPoint: 583.15 # BF14-BLU: 310 -> 583.15, Kelvin
+  meltingPoint: 368.15 # BF14-BLU: 95 -> 368.15, Kelvin
+  metabolisms:
+    Bloodstream: # BF14-BLU: was Narcotic
+      metabolismRate: 0.15
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        probability: 0.15
+        messages:
+        - generic-reagent-effect-burning-eyes
+        - generic-reagent-effect-burning-eyes-a-bit
+        - generic-reagent-effect-tearing-up
+        - norepinephricacid-effect-eyes-itch
+        - norepinephricacid-effect-eye-pain
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        probability: 0.08
+        messages:
+        - norepinephricacid-effect-vision-fade
+        - norepinephricacid-effect-vision-fail
+        - norepinephricacid-effect-eye-disconnect
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14GassyGas
+          min: 3
+      - !type:Drunk
+        boozePower: 4
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14GassyGas
+          min: 2
+      - !type:MovementSpeedModifier # BF14-BLU: was MovespeedModifier
+        walkSpeedModifier: 0.7
+        sprintSpeedModifier: 0.6
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14GassyGas
+          min: 2
+      - !type:Vomit # BF14-BLU: was ChemVomit
+        probability: 0.4
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14GassyGas
+          min: 1.5
+      - !type:ModifyStatusEffect # BF14-BLU: was GenericStatusEffect
+        effectProto: StatusEffectStutter
+        probability: 0.5
+      - !type:ModifyStatusEffect # BF14-BLU: was GenericStatusEffect
+        effectProto: StatusEffectBlindness
+        probability: 0.4
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14GassyGas
+          min: 0.5
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.3
+      - !type:Emote
+        emote: Gasp
+        showInChat: true
+        probability: 0.15
+      - !type:ModifyParalysis # BF14-BLU: was Paralyze
+        probability: 0.2
+        time: 0.5
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14GassyGas
+          min: 2
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        ignoreResistances: false
+        damage:
+          types:
+            Caustic: 3
+      - !type:Emote
+        emote: Scream
+        probability: 0.15
+
+- type: reagent
+  id: BF14Sarin
+  name: reagent-name-sarin
+  group: Toxins
+  desc: reagent-desc-sarin
+  physicalDesc: reagent-physical-desc-powdery
+  flavor: salty
+  color: "#ff8239"
+  boilingPoint: 528.15 # BF14-BLU: 255 -> 528.15, Kelvin
+  meltingPoint: 309.15 # BF14-BLU: 36 -> 309.15, Kelvin
+  metabolisms:
+    Bloodstream: # BF14-BLU: was Narcotic
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 2
+            Poison: 1
+      - !type:MovementSpeedModifier # BF14-BLU: was MovespeedModifier
+        walkSpeedModifier: 0.75
+        sprintSpeedModifier: 0.75
+      - !type:ModifyStatusEffect # BF14-BLU: was GenericStatusEffect
+        effectProto: StatusEffectStutter
+        probability: 0.3
+      - !type:Jitter
+        probability: 0.4
+      - !type:ModifyParalysis # BF14-BLU: was Paralyze
+        probability: 0.5
+        time: 4
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14Sarin
+          min: 1.5
+      - !type:PopupMessage
+        type: Local
+        probability: 0.05
+        messages:
+        - generic-reagent-effect-burning-eyes
+        - generic-reagent-effect-burning-eyes-a-bit
+        - generic-reagent-effect-tearing-up
+      - !type:PopupMessage
+        type: Local
+        visualType: MediumCaution
+        probability: 0.02
+        messages:
+        - norepinephricacid-effect-eye-pain
+        - norepinephricacid-effect-vision-fade
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14Sarin
+          min: 5
+      - !type:ModifyStatusEffect # BF14-BLU: was GenericStatusEffect
+        effectProto: StatusEffectBlindness
+        probability: 0.3
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14Sarin
+          min: 1.75
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        ignoreResistances: false
+        damage:
+          types:
+            Caustic: 1
+        # conditions:
+        # - !type:HasComponentOnEquipmentCondition
+        #   components:
+        #   - type: PressureProtection
+        #   invert: true
+
+- type: reagent
+  id: BF14CSGas
+  name: reagent-name-cs-gas
+  group: Toxins
+  desc: reagent-desc-cs-gas
+  physicalDesc: reagent-physical-desc-irritating
+  flavor: bitter
+  color: "#ffcc99"
+  boilingPoint: 583.15 # BF14-BLU: 310 -> 583.15, Kelvin
+  meltingPoint: 368.15 # BF14-BLU: 95 -> 368.15, Kelvin
+  metabolisms:
+    Bloodstream: # BF14-BLU: was Narcotic
+      metabolismRate: 0.15
+      effects:
+#      - !type:HealthChange
+#        damage:
+#          types:
+#            Poison: 1.5
+#            Heat: 0.5
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        probability: 0.15
+        messages:
+        - generic-reagent-effect-burning-eyes
+        - generic-reagent-effect-burning-eyes-a-bit
+        - generic-reagent-effect-tearing-up
+        - norepinephricacid-effect-eyes-itch
+        - norepinephricacid-effect-eye-pain
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        probability: 0.08
+        messages:
+        - norepinephricacid-effect-vision-fade
+        - norepinephricacid-effect-vision-fail
+        - norepinephricacid-effect-eye-disconnect
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14CSGas
+          min: 3
+      - !type:Drunk
+        boozePower: 4
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14CSGas
+          min: 2
+      - !type:MovementSpeedModifier # BF14-BLU: was MovespeedModifier
+        walkSpeedModifier: 0.6
+        sprintSpeedModifier: 0.5
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14CSGas
+          min: 2
+      - !type:Vomit # BF14-BLU: was ChemVomit
+        probability: 0.25
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14CSGas
+          min: 1.5
+      - !type:Jitter
+        probability: 0.6
+      - !type:ModifyStatusEffect # BF14-BLU: was GenericStatusEffect
+        effectProto: StatusEffectStutter
+        probability: 0.5
+      - !type:ModifyStatusEffect # BF14-BLU: was GenericStatusEffect
+        effectProto: StatusEffectBlindness
+        probability: 0.4
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14CSGas
+          min: 0.5
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.2
+      - !type:Emote
+        emote: Gasp
+        showInChat: true
+        probability: 0.15
+      - !type:Emote
+        emote: Scream
+        probability: 0.05
+      - !type:ModifyParalysis # BF14-BLU: was Paralyze
+        probability: 0.3
+        time: 2
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BF14CSGas
+          min: 2
+
+- type: reagent
+  id: BF14WhitePhosphorus
+  name: reagent-name-white-phosphorus
+  parent: BasePyrotechnic
+  desc: reagent-desc-white-phosphorus
+  physicalDesc: reagent-physical-desc-chalky
+  flavor: bitter
+  color: "#ffffff"
+#  flammability: 2 # BF14-BLU: removed, KS14 reagents have no flammability
+  tileReactions:
+  - !type:FlammableTileReaction {}
+  metabolisms:
+    Bloodstream: # BF14-BLU: was Poison
+      metabolismRate: 0.2
+      effects:
+      - !type:Flammable # BF14-BLU: was FlammableReaction
+        multiplier: 0.4
+      - !type:HealthChange
+        conditions:
+        damage:
+          types:
+            Heat: 1
+            Caustic: 1
+            Poison: 1
+      - !type:AdjustTemperature
+        amount: 6000
+      - !type:Ignite
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:Flammable # BF14-BLU: was FlammableReaction
+        multiplier: 1
+      - !type:Ignite
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        ignoreResistances: false
+        damage:
+          types:
+            Heat: 2.5
+            Caustic: 2.5
+      - !type:Emote
+        emote: Scream
+        probability: 0.3

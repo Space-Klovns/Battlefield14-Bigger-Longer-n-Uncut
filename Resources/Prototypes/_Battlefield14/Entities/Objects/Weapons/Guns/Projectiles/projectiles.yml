@@ -1,0 +1,22 @@
+- type: entity
+  id: Bullet40mmGrenadeFlash
+  name: flash grenade
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+  - type: FlashOnTrigger
+    range: 7
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: TriggerOnSpawn # BF14-BLU: was ActiveTimerTrigger, a timer running from spawn
+    keyOut: spawn
+  - type: TimerTrigger
+    keysIn:
+    - spawn
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 0.3
+  - type: DeleteOnTrigger

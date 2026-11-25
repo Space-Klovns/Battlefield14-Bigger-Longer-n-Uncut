@@ -4,6 +4,9 @@
   id: BF14WeaponShotgunUS1887Short
   description: "An outdated lever-action shotgun. A cut down barrel and stock, and enlarged lever allows one handed racking This weapon can be stored on your auxillary suit storage slot."
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Item
     size: Large
     shape:

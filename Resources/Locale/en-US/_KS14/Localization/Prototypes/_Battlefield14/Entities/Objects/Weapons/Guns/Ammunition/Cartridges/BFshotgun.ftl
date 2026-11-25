@@ -40,3 +40,6 @@ ent-BF14CartridgeShotgun4GaugeBarricade = shotgun shell (4 gauge barricade)
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Cartridges\BFshotgun.yml
 ent-BF14CartridgeShotgun410BoreBuckshot = shotgun shell (.410 bore buckshot)
     .desc = { ent-BF14BaseShellShotgun410Bore.desc }
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Ammunition\Cartridges\BFshotgun.yml
+ent-BF14CartridgeShotgun4GaugeFlashbang = shotgun shell (4 gauge zvesza)
+    .desc = A beefy 23mm shell with a brass case.

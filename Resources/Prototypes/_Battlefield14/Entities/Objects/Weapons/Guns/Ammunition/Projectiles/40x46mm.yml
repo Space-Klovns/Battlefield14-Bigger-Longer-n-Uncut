@@ -273,3 +273,34 @@
     deleteOnRemove: true
   - type: StaminaDamageOnCollide
     damage: 20
+
+- type: entity
+  id: BF14Bullet40x46mmChemicalSmokeInfantry
+  name: 40x46mm CS gas shell
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 80
+        Blunt: 40
+    deleteOnCollide: true
+  - type: SmokeOnTrigger
+    duration: 40
+    spreadAmount: 20
+    smokePrototype: Smoke
+    solution:
+      reagents:
+      - ReagentId: BF14CSGas
+        Quantity: 50
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 3
+    color: gray
+    energy: 0.5

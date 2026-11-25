@@ -1,0 +1,73 @@
+- type: entity
+  parent: BaseItem
+  id: BF14JustFuckingDirt
+  name: dirt
+  description: i guess you could toss it at someone?
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/materials.rsi
+    layers:
+    - state: ash
+      color: "#635231"
+  - type: Tag
+    tags:
+    - BF14SandbagFillable
+
+- type: entity
+  parent: [BaseItem, RecyclableItemClothSmall]
+  name: lit rag
+  id: BF14RagItemLit
+  description: It's on fire!.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/rag.rsi
+    layers:
+    - state: fire
+      sprite: Effects/fire.rsi
+    - state: rag
+  - type: Appearance
+  - type: Item
+    size: Small
+    sprite: Objects/Specific/Janitorial/rag.rsi
+  - type: PointLight
+    enabled: true
+    netsync: false
+    radius: 1.5
+    color: orange
+  - type: IgnitionSource
+    ignited: true
+  - type: TriggerOnSpawn # BF14-BLU: was ActiveTimerTrigger, a timer running from spawn
+    keyOut: spawn
+  - type: TimerTrigger
+    keysIn:
+    - spawn
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 5
+  - type: DeleteOnTrigger
+
+- type: entity
+  name: ship repair kit
+  description: It's like a medkit, but for space ships.
+  parent: BaseStorageItem
+  id: BF14ShipRepairKit
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/firstaidkits.rsi
+    state: surgerykit
+  - type: Storage
+    maxItemSize: Normal
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,3,2
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1 # BF14
+    sprite: _Battlefield14/Objects/Specific/Medical/firstaidkits.rsi
+    heldPrefix: surgery
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 150
+  - type: Tag
+    tags:
+    - Medkit
