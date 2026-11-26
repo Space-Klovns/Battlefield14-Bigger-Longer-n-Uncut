@@ -126,3 +126,316 @@
     color: "#FF8080"
     radius: 15.0
     energy: 9.0
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletVOG25ThermobaricArmingDistance
+  name: VG-40TB
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: vg40-spent
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Blunt: 40
+    deleteOnCollide: false
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletVOG25Thermobaric
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: StaminaDamageOnCollide
+    damage: 20
+
+- type: entity
+  id: BF14BulletVOG25HEFrag
+  name: VOG-25
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Piercing: 40
+    deleteOnCollide: true
+  - type: BF14HeFragProjectile
+    fillPrototype: BF14Bullet43x30mmFragFragment
+    capacity: 15
+    randomAngle: true
+    minVelocity: 8
+    maxVelocity: 15
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    totalIntensity: 20
+    intensitySlope: 3
+    maxIntensity: 2
+    maxTileBreak: 0
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: base-spent
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 3
+    color: orange
+    energy: 0.5
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletVOG25HEFragArmingDistance
+  name: VOG-25
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: base-spent
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Blunt: 40
+    deleteOnCollide: false
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletVOG25HEFrag
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: StaminaDamageOnCollide
+    damage: 20
+
+- type: entity
+  id: BF14ArtilleryMarkerVOG25HEFrag
+  name: artillery strike VOG-25 40mm HE-Frag
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: base-spent
+  - type: TriggerOnSpawn
+  - type: DeleteOnTrigger
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    totalIntensity: 20
+    intensitySlope: 3
+    maxIntensity: 2
+    maxTileBreak: 0
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: ProjectileGrenade
+    triggerKey: trigger
+    fillPrototype: BF14Bullet43x30mmFragFragment
+    capacity: 15
+    randomAngle: true
+    minVelocity: 8
+    maxVelocity: 15
+
+- type: entity
+  id: BF14BulletVOG25ChemicalSmoke
+  name: "GRD-40 'Gvozd'"
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Blunt: 40
+    deleteOnCollide: true
+  - type: SmokeOnTrigger
+    duration: 30
+    spreadAmount: 20
+    smokePrototype: Smoke
+    solution:
+      reagents:
+      - ReagentId: BF14CSGas
+        Quantity: 50
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: gvozd-spent
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 3
+    color: gray
+    energy: 0.5
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletVOG25ChemicalSmokeArmingDistance
+  name: "GRD-40 'Gvozd'"
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: gvozd-spent
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Blunt: 40
+    deleteOnCollide: false
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletVOG25ChemicalSmoke
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: StaminaDamageOnCollide
+    damage: 20
+
+- type: entity
+  id: BF14ArtilleryMarkerVOG25ChemicalSmoke
+  name: artillery strike GRD-40 40mm CS-Gas
+  components:
+  - type: Sprite
+    sprite: /Textures/Objects/Fun/goldbikehorn.rsi
+    visible: false
+    state: icon
+  - type: TriggerOnSpawn
+  - type: TimedDespawn
+    lifetime: 30
+  - type: SmokeOnTrigger
+    keysIn:
+    - trigger
+    duration: 30
+    spreadAmount: 20
+    solution:
+      reagents:
+      - ReagentId: BF14CSGas
+        Quantity: 50
+  - type: EmitSoundOnTrigger
+    keysIn:
+    - trigger
+    sound: /Audio/Items/smoke_grenade_smoke.ogg
+    positional: true
+
+- type: entity
+  id: BF14BulletVOG25Flashbang
+  name: VG-40SZ
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Piercing: 40
+    deleteOnCollide: true
+  - type: FlashOnTrigger
+    range: 5
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/flashbang.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: vg40-spent
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 3
+    color: orange
+    energy: 0.5
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletVOG25FlashbangArmingDistance
+  name: VG-40SZ
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: vg40-spent
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Blunt: 40
+    deleteOnCollide: false
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletVOG25Flashbang
+    distanceDelay: 5
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: StaminaDamageOnCollide
+    damage: 20
+
+- type: entity
+  id: BF14ArtilleryMarkerVOG25Flashbang
+  name: artillery strike VG-40SZ 40mm Flashbang
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: vg40-spent
+  - type: TriggerOnSpawn
+  - type: DeleteOnTrigger
+  - type: FlashOnTrigger
+    range: 5
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: EmitSoundOnTrigger # BF14-BLU: was SoundOnTrigger
+    sound: /Audio/_Battlefield14/Weapons/Grenades/flashbang.ogg
+    positional: true # BF14-BLU: was removeOnTrigger, played where it went off
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletVOG25IlluminationPara
+  name: VG-40OP paraflare
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/vog25.rsi
+    layers:
+    - state: paraflare-spent
+  - type: Projectile
+    damage:
+      types:
+        Structural: 15
+        Blunt: 40
+  - type: TriggerOnSpawn # BF14-BLU: was ActiveTimerTrigger, a timer running from spawn
+    keyOut: spawn
+  - type: TimerTrigger
+    keysIn:
+    - spawn
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 0.4
+  - type: SpawnOnTrigger
+    proto: BF14ArtilleryMarker2B14Flare
+  - type: DeleteOnTrigger

@@ -1,3 +1,6 @@
+bf14-names-ar15-police-dataset-1 = AR-15 police carbine
+bf14-names-ar15-police-dataset-2 = RO933 police carbine
+bf14-names-ar15-police-dataset-3 = patrol rifle
 bf14-names-smersh-dataset-1 = smersh belt rig
 bf14-names-smersh-dataset-2 = smerch belt rig
 stack-bf14-advanced-burn-kit = advanced burn kit
@@ -5,3 +8,4 @@ stack-bf14-advanced-trauma-kit = advanced trauma kit
 stack-bf14-dressing = wound dressing
 stack-bf14-gauze = gauze
 stack-bf14-ointment = ointment
+construction-graph-tag-bf14-mk21-grenade = MK21 grenade

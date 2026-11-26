@@ -117,3 +117,139 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 1
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14CartridgeShotgun12GaugeBuckshot
+  name: shotgun shell (12 gauge buckshot)
+  parent: BF14BaseShellShotgun12Gauge
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BF14PelletShotgun12GaugeSpread
+
+- type: entity
+  id: BF14PelletShotgun12GaugeSpread
+  categories: [ HideSpawnMenu ]
+  parent: BF14PelletShotgun12Gauge
+  components:
+  - type: ProjectileSpread
+    proto: BF14PelletShotgun12Gauge
+    count: 10
+    spread: 7
+
+- type: entity
+  id: BF14CartridgeShotgun12GaugeSlug
+  name: shotgun shell (12 gauge slug)
+  parent: BF14BaseShellShotgun12Gauge
+  components:
+  - type: Sprite
+    layers:
+      - state: slug
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BF14SlugShotgun12Gauge
+  - type: SpentAmmoVisuals
+    state: "slug"
+
+- type: entity
+  id: BF14CartridgeShotgun12GaugeFlechette
+  name: shotgun shell (12 gauge flechette)
+  parent: BF14BaseShellShotgun12Gauge
+  components:
+  - type: Sprite
+    layers:
+      - state: dart
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BF14FlechetteShotgun12GaugeSpread
+  - type: SpentAmmoVisuals
+    state: "dart"
+
+- type: entity
+  id: BF14FlechetteShotgun12GaugeSpread
+  categories: [ HideSpawnMenu ]
+  parent: BF14FlechetteShotgun12Gauge
+  components:
+  - type: ProjectileSpread
+    proto: BF14FlechetteShotgun12Gauge
+    count: 10
+    spread: 5
+
+- type: entity
+  id: BF14CartridgeShotgun4GaugeShrap10
+  name: shotgun shell (4 gauge shrap-10)
+  parent: BF14BaseShellShotgun4Gauge
+  components:
+  - type: CartridgeAmmo
+    proto: BF14PelletShotgun4GaugeShrap10Spread
+
+- type: entity
+  id: BF14PelletShotgun4GaugeShrap10Spread
+  categories: [ HideSpawnMenu ]
+  parent: BF14PelletShotgun4Gauge
+  components:
+  - type: ProjectileSpread
+    proto: BF14PelletShotgun4Gauge
+    count: 8
+    spread: 7
+
+- type: entity
+  id: BF14CartridgeShotgun4GaugeShrap25
+  name: shotgun shell (4 gauge shrap-25)
+  parent: BF14BaseShellShotgun4Gauge
+  components:
+  - type: CartridgeAmmo
+    proto: BF14PelletShotgun4GaugeShrap25Spread
+
+- type: entity
+  id: BF14PelletShotgun4GaugeShrap25Spread
+  categories: [ HideSpawnMenu ]
+  parent: BF14PelletShotgun4Gauge
+  components:
+  - type: ProjectileSpread
+    proto: BF14PelletShotgun4Gauge
+    count: 8
+    spread: 5
+
+- type: entity
+  id: BF14CartridgeShotgun4GaugeBarricade
+  name: shotgun shell (4 gauge barricade)
+  parent: BF14BaseShellShotgun4Gauge
+  components:
+  - type: CartridgeAmmo
+    proto: BF14SlugShotgun4Gauge
+
+- type: entity
+  id: BF14CartridgeShotgun410BoreBuckshot
+  name: shotgun shell (.410 bore buckshot)
+  parent: BF14BaseShellShotgun410Bore
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BF14PelletShotgun410BoreSpread
+
+- type: entity
+  id: BF14PelletShotgun410BoreSpread
+  categories: [ HideSpawnMenu ]
+  parent: BF14PelletShotgun12Gauge
+  components:
+  - type: ProjectileSpread
+    proto: BF14PelletShotgun12Gauge
+    count: 5
+    spread: 7
+
+- type: entity
+  id: BF14CartridgeShotgun4GaugeFlashbang
+  name: shotgun shell (4 gauge zvesza)
+  parent: BF14BaseShellShotgun4Gauge
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet40mmGrenadeFlash # lol

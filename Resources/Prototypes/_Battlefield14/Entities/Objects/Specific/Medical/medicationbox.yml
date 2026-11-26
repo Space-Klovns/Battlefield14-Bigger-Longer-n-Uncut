@@ -189,3 +189,309 @@
     contents:
     - id: BF14BlisterPackHyronalin
       amount: 2
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14MedicationBoxPillsMeralyne
+  parent: BF14MedicationBoxBase
+  name: pill box
+  suffix: Meralyne
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_maroon
+    - state: overlay_pills_maroon
+  - type: Label
+    currentLabel: meralyne
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackMeralyne
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesBicaridine
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Bicaridine
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_red
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: bicaridine
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteBicaridine
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesKelotane
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Kelotane
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_yellow
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: kelotane
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteKelotane
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesTricordrazine
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Tricordrazine
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_lightblue
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: tricordrazine
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteTricordrazine
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesInaprovaline
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Inaprovaline
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_purple
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: inaprovaline
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteInaprovaline
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesDexalin
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Dexalin
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_blue
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: dexalin
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteDexalin
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesMeralyne
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Meralyne
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_maroon
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: meralyne
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteMeralyne
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesDermaline
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Dermaline
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_dirtyyellow
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: dermaline
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteDermaline
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesEpinephrine
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Epinephrine
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_white
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: epinephrine
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteEpinephrine
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesSaline
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Saline
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_blue
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: saline
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteSaline
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesHypervene
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Hypervene
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_lightyellow
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: hypervene
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteHypervene
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesPhalanximine
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Phalanximine
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_green
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: phalanximine
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyrettePhalanximine
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesArithrazine
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Arithrazine
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_yellow
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: arithrazine
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteArithrazine
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesFentanyl
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Fentanyl
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_maroon
+    - state: overlay_ampuole_red
+  - type: Label
+    currentLabel: fentanyl | DO NOT APPLY MORE THAN ONE DOSE
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteFentanyl
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxSyrettesNanoblood
+  parent: BF14MedicationBoxBase
+  name: syrette box
+  suffix: Nanoblood
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_maroon
+    - state: overlay_ampuole
+  - type: Label
+    currentLabel: nanoblood | DO NOT APPLY MORE THAN ONE DOSE
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteNanoblood
+      amount: 2
+
+- type: entity
+  id: BF14MedicationBoxComboInaprovalineDexalin
+  parent: BF14MedicationBoxBase
+  name: blister pack box
+  suffix: Inaprovaline + Dexalin
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Specific/Medical/medicationbox.rsi
+    layers:
+    - state: base
+    - state: overlay_stripe_purple
+    - state: overlay_pills_blue
+  - type: Label
+    currentLabel: inaprovaline + dexalin
+  - type: StorageFill
+    contents:
+    - id: BF14BlisterPackSyretteInaprovaline
+    - id: BF14BlisterPackDexalin

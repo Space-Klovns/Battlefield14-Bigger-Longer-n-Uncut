@@ -4,6 +4,8 @@
   name: grille
   description: A flimsy framework of iron rods.
   components:
+    - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+      thickness: 3
     - type: MeleeSound
       soundGroups:
         Brute:

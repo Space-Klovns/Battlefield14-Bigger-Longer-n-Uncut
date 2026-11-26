@@ -1,0 +1,840 @@
+- type: entity
+  name: desert eagle
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolILDeagle
+  description: The deagle, a well known and very impractical handgun. Chambered in the large .50 Action express it packs a punch.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/deagle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 5
+    maxAngle: 15
+    angleIncrease: 5
+    angleDecay: 6
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14DeagleGunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/chamber.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolDeagle
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolDeagle
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol50AE
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol50AE
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: silver desert eagle
+  parent: BF14WeaponPistolILDeagle
+  id: BF14WeaponPistolILDeagleSilver
+  description: The deagle, a well known and very impractical handgun. Chambered in the large .50 Action express it packs a punch. This one has a silver finish.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/silverdeagle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  name: golden deagle
+  parent: BF14WeaponPistolILDeagle
+  id: BF14WeaponPistolILDeagleGold
+  description: The deagle, a well known and very impractical handgun. Chambered in the large .50 Action express it packs a punch. This one has been plated in gold, because why not?
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/golddeagle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  name: Mk 27
+  parent: BF14WeaponPistolATGlock19
+  id: BF14WeaponPistolUSMK27
+  description: "The US military designation for the Glock-19 pistol, mostly issued to MARSOC and SEALs. Takes Glock-17 pattern magazines."
+
+- type: entity
+  name: M1911
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolUSM1911
+  description: The legendary M1911. Adopted by the US Army in March 29, 1911.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/m1911.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14M1911Gunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/1911/slidedrop.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolM1911
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/1911/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/1911/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolM1911
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol45ACP
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol45ACP
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: Hi-Power
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolUSHiPower
+  description: One of Browning's popular pistols, developed after the 1911, serving in World War II and practically every conflict after.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/hipower.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14M9BerettaGunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Beretta/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Beretta/slidepull.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Beretta/sliderel.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolHiPower
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Beretta/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Beretta/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - BF14MagazinePistolHiPower
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol9x19
+        priority: 1
+        whitelist:
+          tags:
+          - BF14CartridgePistol9x19
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: USP45
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolDEUSP45
+  description: "The Universal Self Loading Pistol, as the name is the acronym of. Chambered in .45 ACP. Takes USP45 pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/USP.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14USP45Gunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/USP/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/USP/slidepull.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/USP/slidedrop.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolUSP45
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/USP/magin1.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/USP/magout1.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolUSP45
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol45ACP
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol45ACP
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: USP9
+  parent: BF14WeaponPistolDEUSP45
+  id: BF14WeaponPistolDEUSP9
+  description: "The Universal Self Loading Pistol, as the name is the acronym of. Chambered in 9x19mm. Takes USP9 pattern magazines."
+  components:
+  - type: Gun
+    soundGunshot:
+      collection: BF14USP9Gunshots
+      params:
+        volume: -3
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolUSP9
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/USP/magin1.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/USP/magout1.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolUSP9
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol9x19
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol9x19
+
+- type: entity
+  name: P8A1
+  parent: BF14WeaponPistolDEUSP9
+  id: BF14WeaponPistolDEP8A1
+  suffix: USP9
+
+- type: entity
+  name: USP match
+  parent: BF14WeaponPistolDEUSP9
+  id: BF14WeaponPistolDEUSPMatch
+  description: "A competition version of the USP9, with an aggressive compensator. Often paired with a stun baton. Takes USP9 pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/USPmatch.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 1
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolUSP9
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolUSP9
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol9x19
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol9x19
+
+- type: entity
+  name: Glock 17
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolATGlock17
+  description: "The Glock 17 pistol, the media called it a \"ghost gun\" due to its high use of polymers, which led to people thinking you could get it through metal detectors without getting discovered. Takes Glock-17 pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/glock17.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14Glock17Gunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/chamber.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolGlock17
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolGlock17
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol9x19
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol9x19
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: Glock 19
+  parent: BF14WeaponPistolATGlock17
+  id: BF14WeaponPistolATGlock19
+  description: "A compact Glock pistol designed for military or police use, frequently used by civilians for concealed carry purposes. Takes Glock-17 pattern magazines."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/glock19.rsi
+
+- type: entity
+  name: Glock-20
+  parent: BF14WeaponPistolATGlock17
+  id: BF14WeaponPistolATGlock20
+  description: "Made to take advantage of the 10mm Auto market in law enforcement and security roles. Takes Glock-20 pattern magazines."
+  components:
+  - type: Gun
+    angleIncrease: 3
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolGlock20
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolGlock20
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol10x25
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol10x25
+
+- type: entity
+  name: TT-33 Tokarev
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolRUTT33
+  description: The soviet copy of the legendary M1911, made to be cheaper and crappier in every way. Its the most effective when shot at a slight downward angle at point blank range.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/tt33.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14M1911Gunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/chamber.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolTT33
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolTT33
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol762x25
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol762x25
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: APS Stechkin
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolRUAPS
+  description: A select-fire pistol designed for vehicle crews.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/aps.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 20
+    angleIncrease: 3
+    angleDecay: 10
+    fireRate: 6.5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      collection: BF14PMGunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/chamber.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolAPS
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolAPS
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol9x18
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol9x18
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: PM Makarov
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolRUPM
+  description: A cheap and simple pistol made to replace the TT-33 Tokarev.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/pm.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14PMGunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/chamber.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolPM
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolPM
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol9x18
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol9x18
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: MP443 'grok' # Grach
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolMP443
+  description: Is this true? #The rook (Corvus frugilegus) is a member of the family Corvidae in the passerine order of- wait a minute.. # RUMP443
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/MP443.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14M9BerettaGunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/chamber.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolMP443
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolMP443
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePistol9x19
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePistol9x19
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  name: Five-seveN
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolBEFiveSeven
+  description: Designed alongside the P90 PDW, firing what are basically miniature rifle rounds.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/FiveSeven.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14M9BerettaGunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/chamber.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolFiveSeven
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolFiveSeven
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePDW57x28
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePDW57x28
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: SR1MP
+  parent: BaseWeaponPistol
+  id: BF14WeaponPistolRUSR1MP
+  description: Designed alongside the SR-2 Veresk by TsNIITochMash to use the 9x21mm cartridge. You can google that.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/SR1MP.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 0
+    maxAngle: 15
+    angleIncrease: 2
+    angleDecay: 10
+    fireRate: 5
+    projectileSpeed: 30
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: BF14M9BerettaGunshots
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/rack.ogg
+      params:
+        volume: -1
+    soundBoltOpened:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/lock.ogg
+      params:
+        volume: -1
+    soundBoltClosed:
+      path: /Audio/_Battlefield14/Weapons/Guns/Glock17/chamber.ogg
+      params:
+        volume: -1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BF14MagazinePistolSR1MP
+        insertSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magin.ogg
+        ejectSound: /Audio/_Battlefield14/Weapons/Guns/Glock17/magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BF14MagazinePistolSR1MP
+      gun_chamber:
+        name: Chamber
+        startingItem: BF14CartridgePDW9x21
+        priority: 1
+        whitelist:
+          tags:
+            - BF14CartridgePDW9x21
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

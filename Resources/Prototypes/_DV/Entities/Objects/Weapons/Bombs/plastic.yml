@@ -1,0 +1,46 @@
+- type: entity
+  name: breaching charge
+  description: A precision shaped charge for blowing holes through walls without too much extra hole #A breaching explosive for security officers to break through walls.
+  parent: SeismicCharge
+  id: BF14BreachingCharge
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Charges/breaching.rsi # BF14 _DV/Objects/Weapons/Bombs/breaching.rsi
+    state: icon
+    layers:
+    - state: icon
+      map: ["base"]
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TriggerOnStuck
+    keyOut: stuck
+  - type: ToggleTriggerCondition # BF14-BLU: was canToggleStartOnStick
+    keys:
+    - stuck
+    enabled: true
+    toggleVerb: toggle-trigger-condition-stick-verb
+    toggleOn: toggle-trigger-condition-stick-on
+    toggleOff: toggle-trigger-condition-stick-off
+  - type: TimerTrigger
+    keysIn:
+    - use
+    - stuck
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 5 # BF14 10 > 5
+    delayOptions: [5, 10, 15, 20] # BF14 reduced delay by 5 seconds
+    beepSound:
+      path: /Audio/Effects/Cargo/buzz_two.ogg
+      params:
+        volume: -6
+    initialBeepDelay: 0
+  - type: TriggerOnSignal # BF14
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 18.5 #BF14 (18.5) # mono (400) | 400 was WAY too fucking high holy shit I don't think you have any idea
+    intensitySlope: 800 # BF14 50 > 200 | 1x1 explosion (still hits what's directly next to it because of their bounding box or something
+    maxIntensity: 150 # mono
+    maxTileBreak: 0 # BF14
+#BF14    canCreateVacuum: false # mono
+  - type: Tag
+    tags:
+      - BF14BreachingCharge

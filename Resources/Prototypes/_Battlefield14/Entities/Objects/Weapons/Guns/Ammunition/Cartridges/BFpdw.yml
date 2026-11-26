@@ -1,0 +1,53 @@
+- type: entity
+  id: BF14CartridgePDW46x30
+  name: cartridge (4.6x30mm)
+  parent: BF14BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPDWBF46x30
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePDW46x30
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+
+- type: entity
+  id: BF14CartridgePDW57x28
+  name: cartridge (5.7x28mm)
+  parent: BF14BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPDWBF57x28
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePDW57x28
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/5.7x28.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+
+- type: entity
+  id: BF14CartridgePDW9x21
+  name: cartridge (9x21mm)
+  parent: BF14BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BF14BulletPDWBF9x21
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14CartridgePDW9x21
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Casings/pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance

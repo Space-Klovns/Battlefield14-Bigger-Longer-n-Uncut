@@ -22,7 +22,8 @@ public sealed partial class TriggerSystem
 
         if (ourFixtureId != entity.Comp.FixtureID ||
             entity.Comp.IgnoreOtherNonHard && !otherFixture.Hard ||
-            entity.Comp.MaxTriggers is <= 0)
+            entity.Comp.MaxTriggers is <= 0 ||
+            _whitelist.IsWhitelistPass(entity.Comp.Blacklist, otherUid) /* BF14-BLU: added */)
         {
             return false;
         }

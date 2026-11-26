@@ -1,0 +1,94 @@
+- type: reagent
+  id: Biofoam
+  name: reagent-name-biofoam
+  group: Medicine
+  desc: reagent-desc-biofoam
+  physicalDesc: reagent-physical-desc-thick
+  flavor: chalky # BF14-BLU: BF14 has no powdery flavor
+  color: "#edd9c0"
+  worksOnTheDead: true
+  metabolisms:
+    Bloodstream: # BF14-BLU: was Medicine
+      metabolismRate: 1
+      effects:
+      - !type:AdjustReagent
+        reagent: BiofoamRemnants
+        amount: 0.75
+      - !type:EvenHealthChange
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: Biofoam
+          max: 10.5
+        damage:
+          Brute: -10
+          Burn: -10
+          Airloss: -10
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: Biofoam
+          min: 10.5
+        damage:
+          types:
+            Blunt: 4
+            Asphyxiation: 4
+            Poison: 4
+      - !type:ModifyBleed # BF14-BLU: was ModifyBleedAmount
+        amount: -3
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: Biofoam
+          max: 10.5
+        visualType: Medium
+        messages: ["biofoam-effect-organrepair", "biofoam-effect-bodyrepair"]
+        type: Local
+        probability: 0.2
+      - !type:Jitter
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: Biofoam
+          min: 11
+          max: 12
+        reagent: Biofoam
+        amount: -15
+      - !type:MovementSpeedModifier # BF14-BLU: was MovespeedModifier
+        walkSpeedModifier: 0.75
+        sprintSpeedModifier: 0.75
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: Biofoam
+          min: 10.5
+        visualType: MediumCaution
+        messages: ["reagent-effect-overdose1", "reagent-effect-overdose2", "reagent-effect-overdose3"]
+        type: Local
+        probability: 0.3
+
+- type: reagent
+  id: BiofoamRemnants
+  name: reagent-name-biofoam-remnants
+  group: Medicine
+  desc: reagent-desc-biofoam-remnants
+  physicalDesc: reagent-physical-desc-thick
+  flavor: chalky # BF14-BLU: BF14 has no powdery flavor
+  color: "#edd9c0"
+  worksOnTheDead: true
+  metabolisms:
+    Bloodstream: # BF14-BLU: was Medicine
+      metabolismRate: 0.5
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition # BF14-BLU: was ReagentThreshold
+          reagent: BiofoamRemnants
+          min: 3.5
+        damage:
+          types:
+            Blunt: 2
+            Asphyxiation: 2
+            Poison: 2
+      - !type:MovementSpeedModifier # BF14-BLU: was MovespeedModifier
+        walkSpeedModifier: 0.8
+        sprintSpeedModifier: 0.8

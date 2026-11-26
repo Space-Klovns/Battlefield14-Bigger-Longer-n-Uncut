@@ -113,6 +113,9 @@
   id: BF14WeaponGrenadeLauncherRUGM94
   description: "An odd design, loaded from the top into a magazine tube, and then pumped, like a shotgun. Brings to mind the M90A from Halo™. Has a minimum arming distance of 5 tiles. Takes 43x30mm grenades."
   components:
+  - type: ContainerContainer # BF14-BLU: its ammo container, declared as upstream ammo providers do (UninitializedSaveTest)
+    containers:
+      ballistic-ammo: !type:Container
   - type: Sprite
     sprite: _Battlefield14/Objects/Weapons/Guns/GrenadeLaunchers/GM94.rsi
     layers:
@@ -151,3 +154,37 @@
       params:
         volume: -2
   - type: GunRequiresWield
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  parent: BF14WeaponGrenadeLauncherRUGM94
+  id: BF14WeaponGrenadeLauncherRUGM94HEFrag
+  suffix: HE-Frag
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14Cartridge43x30mmHEFrag
+
+- type: entity
+  parent: BF14WeaponGrenadeLauncherRUGM94
+  id: BF14WeaponGrenadeLauncherRUGM94Thermobaric
+  suffix: Thermobaric
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14Cartridge43x30mmThermobaric
+
+- type: entity
+  parent: BF14WeaponGrenadeLauncherRUGM94
+  id: BF14WeaponGrenadeLauncherRUGM94ChemicalSmoke
+  suffix: CS Gas
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14Cartridge43x30mmChemicalSmoke
+
+- type: entity
+  parent: BF14WeaponGrenadeLauncherRUGM94
+  id: BF14WeaponGrenadeLauncherRUGM94Illumination
+  suffix: Flare
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14Cartridge43x30mmIllumination

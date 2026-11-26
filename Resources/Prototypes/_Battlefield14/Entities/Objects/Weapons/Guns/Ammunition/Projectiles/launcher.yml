@@ -98,3 +98,190 @@
     maxTileBreak: 0
   - type: StaminaDamageOnCollide
     damage: 50
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletRocket83mmHEDMArmingDistance
+  name: 83mm HEDM projectile
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: frag
+  - type: Projectile
+    damage:
+      types:
+        Structural: 100
+        Blunt: 25
+    deleteOnCollide: true
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletRocket83mmHEDM
+    distanceDelay: 6
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: StaminaDamageOnCollide
+    damage: 50
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletRocketM202FLASHArmingDistance
+  name: 66mm incendiary rocket
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: smallfrag
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 20
+    deleteOnCollide: true
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletRocketM202FLASH
+    distanceDelay: 6
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: StaminaDamageOnCollide
+    damage: 40
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletRocketM72ThermobaricArmingDistance
+  name: 66mm incendiary rocket
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: frag
+  - type: Projectile
+    damage:
+      types:
+        Structural: 50
+        Blunt: 25
+    deleteOnCollide: true
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletRocketM72Thermobaric
+    distanceDelay: 6
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: StaminaDamageOnCollide
+    damage: 50
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletRocketRPG26ThermobaricArmingDistance
+  name: 72.5mm thermobaric rocket
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Launcher/RPG7.rsi
+    layers:
+    - state: thermobar-spent
+  - type: Projectile
+    damage:
+      types:
+        Structural: 100
+        Blunt: 25
+    deleteOnCollide: false
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletRocketRPG26Thermobaric
+    distanceDelay: 6
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    deleteOnRemove: true
+  - type: StaminaDamageOnCollide
+    damage: 50
+
+- type: entity
+  id: BF14PelletCarlGustavASM401
+  name: ASM401 flechette
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: sabot
+    scale: 0.7, 0.7
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+        Slash: 8
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.2
+        Piercing: 0.2
+        Slash: 0.2
+  - type: StaminaDamageOnCollide
+    damage: 5 # ~20 hits to stun
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BF14BulletRocket83mmNEArmingDistance
+  name: 83mm Novel Explosive projectile
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: frag
+  - type: Projectile
+    damage:
+      types:
+        Structural: 100
+        Blunt: 25
+    deleteOnCollide: true
+  - type: KsSubmunitionProjectile
+    submunitionPrototype: BF14BulletRocket83mmNE
+    distanceDelay: 6
+    submunitionDelay: 0
+    submunitionCount: 1
+    spreadAngle: 0
+    velocityMultiplier: 1
+  - type: StaminaDamageOnCollide
+    damage: 50
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBulletTrigger
+  id: BF14BulletRocket83mmNE
+  name: 83mm Novel Explosive projectile # anti infantry, explodes on contact and sends fragments everywhere with a wide explosive for killing infantry
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: frag
+  - type: Projectile
+    damage:
+      types:
+        Structural: 100
+        Blunt: 25
+  - type: ExplodeOnTrigger
+  - type: BF14HeFragProjectile
+    fillPrototype: BF14BulletGrenadeM67Fragment
+    capacity: 30
+    randomAngle: true
+    minVelocity: 8
+    maxVelocity: 15
+  - type: Explosive
+    explosionType: BF14Thermobaric
+    totalIntensity: 90
+    intensitySlope: 5
+    maxIntensity: 6
+    maxTileBreak: 0
+  - type: StaminaDamageOnCollide
+    damage: 50

@@ -14,3 +14,22 @@ ent-BF14WeaponGrenadeLauncherUSM79Big = M79 (увеличенный)
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
 ent-BF14WeaponGrenadeLauncherRUGM94 = ГМ-94
     .desc = Странная конструкция: выстрелы заряжаются сверху в трубчатый магазин, а затем досылаются помпой, как у дробовика. Напоминает M90A из Halo™. Минимальная дистанция взведения — 5 тайлов. Стреляет гранатами 43x30 мм.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
+ent-BF14WeaponGrenadeLauncherRUGM94HEFrag =
+    .desc = { ent-BF14WeaponGrenadeLauncherRUGM94.desc }
+    .suffix = Осколочно-фугасный
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
+ent-BF14WeaponGrenadeLauncherRUGM94Thermobaric =
+    .desc = { ent-BF14WeaponGrenadeLauncherRUGM94.desc }
+    .suffix = Термобарический
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
+ent-BF14WeaponGrenadeLauncherRUGM94ChemicalSmoke =
+    .desc = { ent-BF14WeaponGrenadeLauncherRUGM94.desc }
+    .suffix = Газ CS
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
+ent-BF14WeaponGrenadeLauncherRUGM94Illumination =
+    .desc = { ent-BF14WeaponGrenadeLauncherRUGM94.desc }
+    .suffix = Осветительный

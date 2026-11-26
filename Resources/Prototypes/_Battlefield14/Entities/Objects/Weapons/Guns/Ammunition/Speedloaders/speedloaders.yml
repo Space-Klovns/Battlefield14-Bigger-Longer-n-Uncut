@@ -1,0 +1,77 @@
+- type: entity
+  id: BF14SpeedLoader357magnum
+  parent: BaseSpeedLoader45_magnum
+  name: "speed loader (.357 magnum)"
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgePistol357
+    whitelist:
+      tags:
+        - BF14CartridgePistol357
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/45_magnum/45_magnum_speed_loader.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-6
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: base
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+  - type: Tag
+    tags:
+      - BF14SpeedLoader357magnum
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14SpeedLoaderSTANAG
+  parent: BaseSpeedLoaderCap
+  name: "STANAG stripper clip (5.56x45mm)"
+  description: A speedloader for loading STANAG magazines 10 rounds at a time.
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle556x45
+    mayTransfer: true
+    fillDelay: 0.1
+    whitelist:
+      tags:
+        - BF14CartridgeRifle556x45
+    capacity: 10
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Loaders/762x39clip.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: mag-7
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+  - type: Tag
+    tags:
+      - BF14SpeedLoaderSTANAG
+      - BF14Magazine
+
+- type: entity
+  id: BF14SpeedLoaderSKS
+  parent: BF14SpeedLoaderSTANAG
+  name: "SKS stripper clip (7.62x39mm)"
+  description: A speedloader for loading the SKS simonov system.
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeRifle762x39
+    mayTransfer: true
+    fillDelay: 0.1
+    whitelist:
+      tags:
+        - BF14CartridgeRifle762x39
+    capacity: 10
+  - type: Tag
+    tags:
+      - BF14SpeedLoaderSKS
+      - BF14Magazine

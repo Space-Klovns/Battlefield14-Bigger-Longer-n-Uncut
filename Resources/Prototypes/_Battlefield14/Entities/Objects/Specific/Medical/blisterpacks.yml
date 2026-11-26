@@ -362,3 +362,155 @@
     contents:
     - id: PillHyronalin
       amount: 6
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  parent: BF14BaseBlisterPackRed
+  id: BF14BlisterPackMeralyne
+  suffix: Meralyne 7.5u, 6
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14PillMeralyne
+      amount: 6
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteBicaridine
+  suffix: Bicaridine 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteBicaridine
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteKelotane
+  suffix: Kelotane 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteKelotane
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteTricordrazine
+  suffix: Tricordrazine 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteTricordrazine
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteInaprovaline
+  suffix: Inaprovaline 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteInaprovaline
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteDexalin
+  suffix: Dexalin 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteDexalin
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteMeralyne
+  suffix: Meralyne 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteMeralyne
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteDermaline
+  suffix: Dermaline 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteDermaline
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteSaline
+  suffix: Saline 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteSaline
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteEpinephrine
+  suffix: Epinephrine 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteEpinephrine
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteHypervene
+  suffix: Hypervene 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteHypervene
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyrettePhalanximine
+  suffix: Phalanximine 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyrettePhalanximine
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteArithrazine
+  suffix: Arithrazine 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteArithrazine
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteFentanyl
+  suffix: Fentanyl 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteFentanyl
+      amount: 5
+
+- type: entity
+  parent: BF14BlisterPackSyrette
+  id: BF14BlisterPackSyretteNanoblood
+  suffix: Nanoblood 5u, 5
+  components:
+  - type: StorageFill
+    contents:
+    - id: BF14SyretteNanoblood
+      amount: 5

@@ -1,3 +1,6 @@
+bf14-names-ar15-police-dataset-1 = полицейский карабин AR-15
+bf14-names-ar15-police-dataset-2 = полицейский карабин RO933
+bf14-names-ar15-police-dataset-3 = патрульная винтовка
 bf14-names-smersh-dataset-1 = разгрузка «Смерш»
 bf14-names-smersh-dataset-2 = разгрузка «Смерч»
 stack-bf14-advanced-burn-kit = продвинутый набор от ожогов
@@ -5,3 +8,4 @@ stack-bf14-advanced-trauma-kit = продвинутый набор от трав
 stack-bf14-dressing = раневая повязка
 stack-bf14-gauze = марля
 stack-bf14-ointment = мазь
+construction-graph-tag-bf14-mk21-grenade = граната MK21

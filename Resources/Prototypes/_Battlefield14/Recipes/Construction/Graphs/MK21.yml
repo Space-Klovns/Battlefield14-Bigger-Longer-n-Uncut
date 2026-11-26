@@ -1,0 +1,33 @@
+- type: constructionGraph
+  id: BF14MK21StackTwo
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MK21Unstack # BF14-BLU: was MK21Stack, a node BF14 never defined
+          completed:
+            - !type:AdminLog
+              message: "Two MK21 grenades were stacked"
+            - !type:SpawnPrototype
+              prototype: BF14OffensiveGrenadeUSMK21StackTwo
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tag: BF14OffensiveGrenadeUSMK21
+              name: construction-graph-tag-bf14-mk21-grenade # BF14-BLU: KS14's tag steps need a name
+              doAfter: 2
+
+    - node: MK21Unstack
+      entity: BF14OffensiveGrenadeUSMK21StackTwo
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Two MK21 grenades were separated"
+            - !type:SpawnPrototype
+              prototype: BF14OffensiveGrenadeUSMK21
+              amount: 2
+            - !type:DeleteEntity
+          steps:
+            - tool: Prying
+              doAfter: 2

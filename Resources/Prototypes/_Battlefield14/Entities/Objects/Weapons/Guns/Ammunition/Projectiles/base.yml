@@ -21,3 +21,104 @@
     damage: 5 # 20 hits to stun lol
   - type: Ammo
     muzzleFlash: MuzzleFlashEffectSmall
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14BaseTracerRed
+  name: bullet
+  parent: BaseBullet
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    radius: 2
+    color: red
+    energy: 1.6
+  - type: Tracer
+    color: red
+    length: 3
+
+- type: entity
+  id: BF14BaseTracerGreen
+  name: bullet
+  parent: BaseBullet
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    radius: 2
+    color: green
+    energy: 1.6
+  - type: Tracer
+    color: lime
+    length: 3
+
+- type: entity
+  id: BF14BaseBulletPDW
+  name: bullet
+  parent: BaseBullet
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: small
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+      percentilePenetration: # BF14-BLU: was armorPenetration: 0.3
+        Piercing: 0.3
+  - type: KsProjectileFalloff # BF14-BLU: was ProjectileDamageFalloff
+    fullDamageRange: 8
+    minDamageRange: 9.5
+    minMultiplier: 0.85
+  - type: StaminaDamageOnCollide
+    damage: 4 # 25 hits to stun lol
+  - type: ArmorPiercing
+    piercingThickness: 1
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectSmall
+
+- type: entity
+  id: BF14BaseBulletIntermediate
+  name: bullet
+  parent: BaseBullet
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: intermediate
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+#    armorPenetration: 0.1
+  - type: StaminaDamageOnCollide
+    damage: 7 # ~15 hits to stun
+  - type: ArmorPiercing
+    piercingThickness: 2
+
+- type: entity
+  id: BF14BaseBulletRifle
+  name: bullet
+  parent: BaseBullet
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: rifle
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+  - type: StaminaDamageOnCollide
+    damage: 8 # ~13 hits to stun
+  - type: ArmorPiercing
+    piercingThickness: 3

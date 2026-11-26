@@ -1,2 +1,13 @@
 - type: Tag
   id: MonoSuppressor
+
+# BF14-BLU: ported from Battlefield14
+
+- type: Tag
+  id: Cartridge45_magnumFMJ
+
+- type: Tag
+  id: SpeedLoader45_magnumFMJ
+
+- type: Tag
+  id: SurvivalBox

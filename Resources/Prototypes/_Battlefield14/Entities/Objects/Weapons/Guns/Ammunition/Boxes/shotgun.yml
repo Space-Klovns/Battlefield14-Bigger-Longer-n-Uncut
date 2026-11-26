@@ -50,3 +50,122 @@
       steps: 5
       zeroVisible: false
     - type: Appearance
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  name: shotgun shell box (12 gauge buckshot)
+  parent: BF14BaseShellBox12Gauge
+  id: BF14ShellBox12GaugeBuckshot
+  components:
+    - type: BallisticAmmoProvider
+      proto: BF14CartridgeShotgun12GaugeBuckshot
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: lethal
+
+- type: entity
+  name: shotgun shell box (12 gauge slug)
+  parent: BF14BaseShellBox12Gauge
+  id: BF14ShellBox12GaugeSlug
+  components:
+    - type: BallisticAmmoProvider
+      proto: BF14CartridgeShotgun12GaugeSlug
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-alt-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: slug
+
+- type: entity
+  name: shotgun shell box (12 gauge flechette)
+  parent: BF14BaseShellBox12Gauge
+  id: BF14ShellBox12GaugeFlechette
+  components:
+    - type: BallisticAmmoProvider
+      proto: BF14CartridgeShotgun12GaugeFlechette
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: lethal
+
+- type: entity
+  name: shotgun shell box (4 gauge shrap-10)
+  parent: BF14BaseShellBox4Gauge
+  id: BF14ShellBox4GaugeShrap10
+  components:
+    - type: BallisticAmmoProvider
+      proto: BF14CartridgeShotgun4GaugeShrap10
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: lethal
+
+- type: entity
+  name: shotgun shell box (4 gauge shrap-25)
+  parent: BF14BaseShellBox4Gauge
+  id: BF14ShellBox4GaugeShrap25
+  components:
+    - type: BallisticAmmoProvider
+      proto: BF14CartridgeShotgun4GaugeShrap25
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: lethal
+
+- type: entity
+  name: shotgun shell box (4 gauge barricade)
+  parent: BF14BaseShellBox4Gauge
+  id: BF14ShellBox4GaugeBarricade
+  components:
+    - type: BallisticAmmoProvider
+      proto: BF14CartridgeShotgun4GaugeBarricade
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: slug
+
+- type: entity
+  parent: BF14MagazineBox9x19
+  id: BF14ShellBox410Bore
+  name: ammunition pack (.410 bore buckshot)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 20
+    proto: BF14CartridgeShotgun410BoreBuckshot
+    whitelist:
+      tags:
+        - BF14CartridgeShotgun410Bore
+
+- type: entity
+  name: shotgun shell box (4 gauge zvesda)
+  parent: BF14BaseShellBox4Gauge
+  id: BF14ShellBox4GaugeFlashbang
+  components:
+    - type: BallisticAmmoProvider
+      proto: BF14CartridgeShotgun4GaugeFlashbang
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: flare

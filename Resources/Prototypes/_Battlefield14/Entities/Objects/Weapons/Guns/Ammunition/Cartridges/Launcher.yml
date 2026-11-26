@@ -1,0 +1,77 @@
+- type: entity
+  id: BF14CartridgeSMAWHEDM
+  name: "SMAW cartridge (HEDM)"
+  parent: BF14BaseCartridgeLauncher
+  description: "High explosive dual mode, explodes on contact in a small area to blast open walls and such. This item can be stored on your auxillary suit storage slot."
+  components:
+  - type: Item
+    size: Large
+  - type: Tag
+    tags:
+    - BF14CartridgeLauncher
+    - BF14CartridgeSMAW
+  - type: CartridgeAmmo
+    proto: BF14BulletRocket83mmHEDMArmingDistance
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Launcher/SMAW.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14CartridgeSMAWNE
+  name: "SMAW cartridge (SMAW-NE)"
+  parent: BF14BaseCartridgeLauncher
+  description: "Detonates on contact and sends fragments everywhere with a wide explosion for killing infantry. This item can be stored on your auxillary suit storage slot."
+  components:
+  - type: Item
+    size: Large
+  - type: Tag
+    tags:
+    - BF14CartridgeLauncher
+    - BF14CartridgeSMAW
+  - type: CartridgeAmmo
+    proto: BF14BulletRocket83mmNEArmingDistance
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Launcher/SMAW.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: BF14PelletCarlGustavASM401Spread
+  categories: [ HideSpawnMenu ]
+  parent: BF14PelletCarlGustavASM401
+  components:
+  - type: ProjectileSpread
+    proto: BF14PelletCarlGustavASM401
+    count: 25
+    spread: 10
+
+- type: entity
+  id: BF14CartridgePZF3HE
+  name: "Panzerfaust-3 launch tube 'bunkerfaust' (HE)"
+  parent: BF14BaseCartridgeLauncher
+  description: "Detonates on contact and sends fragments everywhere with a wide explosion for killing infantry. This item can be stored on your auxillary suit storage slot."
+  components:
+  - type: Item
+    size: Large
+  - type: Tag
+    tags:
+    - BF14CartridgeLauncher
+    - BF14CartridgePZF3
+  - type: CartridgeAmmo
+    proto: BF14BulletRocket83mmNEArmingDistance
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Ammunition/Magazines/Launcher/Panzerfaust3.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals

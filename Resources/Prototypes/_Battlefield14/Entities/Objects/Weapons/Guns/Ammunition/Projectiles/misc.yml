@@ -1,0 +1,174 @@
+- type: entity
+  id: BF14GassyMissileShrapnel
+  name: gas
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 10
+  - type: StaminaDamageOnCollide
+    damage: 5 # ~20 hits to stun
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: shard
+  - type: TimedDespawn
+    lifetime: 0.2
+  - type: PointLight
+    radius: 1
+    color: "#09ff00"
+    energy: 0.25
+
+- type: entity
+  name: decomissioner projectile
+  id: BF14BulletDecomissioner
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/robloxlaser.rsi
+    layers:
+    - state: robloxlaser
+      shader: unshaded
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Opaque # Mono
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectHeavyLaser
+  - type: StaminaDamageOnCollide
+    damage: 100
+  - type: Projectile
+    impactEffect: BulletImpactEffectRedDisabler
+    damage:
+      types:
+        Radiation: 500000
+      percentilePenetration: # BF14-BLU: was armorPenetration: 1
+        Radiation: 1
+    soundHit:
+      path: /Audio/_Battlefield14/Weapons/Misc/LaserGun_Hit.ogg
+    forceSound: true
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14BulletRiflePulse
+  name: pulse
+  parent: BF14BaseBulletIntermediate
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: pulse
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+        Structural: 3
+  - type: StaminaDamageOnCollide
+    damage: 8 # ~13 hits to stun
+  - type: PointLight
+    radius: 2
+    color: blue
+    energy: 1.6
+  - type: Tracer
+    color: blue
+    length: 3
+
+- type: entity
+  id: BF14GassyMissileProjectile
+  name: gas missile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 10
+    deleteOnCollide: true
+  - type: SmokeOnTrigger
+    duration: 10
+    spreadAmount: 3
+    smokePrototype: BF14SeeThruSmoke
+    solution:
+      reagents:
+      - ReagentId: BF14GassyGas
+        Quantity: 30
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: TimedDespawn
+    lifetime: 10
+  - type: BF14HeFragProjectile
+    fillPrototype: BF14GassyMissileShrapnel
+    capacity: 25
+    randomAngle: true
+    minVelocity: 15
+    maxVelocity: 15
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: BF14GassyGas
+    totalIntensity: 20
+    intensitySlope: 1.5
+    maxIntensity: 5
+    maxTileBreak: 1
+  - type: StaminaDamageOnCollide
+    damage: 40
+  - type: EmitSoundOnSpawn
+    sound: 
+      collection: BF14GassyFartSound
+  - type: PointLight
+    radius: 3
+    color: "#09ff00"
+    energy: 0.5
+
+- type: entity
+  id: BF14GassyCloudProjectile
+  name: gas cloud
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 10
+    deleteOnCollide: true
+  - type: SmokeOnTrigger
+    duration: 40
+    spreadAmount: 20
+    smokePrototype: BF14SeeThruSmoke
+    solution:
+      reagents:
+      - ReagentId: BF14GassyGas
+        Quantity: 50
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Projectiles/ballistic.rsi
+    layers:
+    - state: grenade
+  - type: TimedDespawn
+    lifetime: 10
+  - type: EmitSoundOnSpawn
+    sound: 
+      path: /Audio/_Battlefield14/Misc/gassy/longfart1.ogg
+  - type: PointLight
+    radius: 3
+    color: "#09ff00"
+    energy: 0.5

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "Custom",
+  "copyright": "Made by the WillyBillyGilly and JoeHammad for the BF14 Project. All rights reserved. Do not modify, publish, use, relicense, or edit without permission from JoeHammad or Willy.; taken from Battlefield14 (https://github.com/PunishedJoe/Battlefield14) at d24a6e8c2f5d995e6bdd0a2571e406923e53f883",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "base-spent"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+- type: entity
+  id: BF14Cartridge43x30mmHEFrag
+  name: cartridge (43x30mm HE-Frag)
+  parent: BaseCartridge
+  components:
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14Cartridge43x30mmGrenade
+    - BF14Grenade
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: BF14Bullet43x30mmHEFragArmingDistance
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    layers:
+    - state: frag
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: BF14HandGrenade
+    maxIntensity: 20
+    intensitySlope: 3
+    totalIntensity: 1.5
+  - type: ExplodeOnTrigger
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Injurable # BF14-BLU: the damage container moved here from Damageable
+    damageContainer: Inorganic
+
+- type: entity
+  id: BF14Cartridge43x30mmThermobaric
+  name: cartridge (43x30mm Thermobaric)
+  parent: BF14Cartridge43x30mmHEFrag
+  components:
+  - type: CartridgeAmmo
+    proto: BF14Bullet43x30mmThermobaricArmingDistance
+
+- type: entity
+  id: BF14Cartridge43x30mmChemicalSmoke
+  name: cartridge (43x30mm CS gas)
+  parent: BF14Cartridge43x30mmHEFrag
+  components:
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - Cartridge
+    - BF14Cartridge43x30mmChemicalSmoke
+    - BF14Cartridge43x30mmGrenade
+    - BF14Grenade
+  - type: CartridgeAmmo
+    proto: BF14Bullet43x30mmChemicalSmoke
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    layers:
+    - state: blast
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: BF14Cartridge43x30mmIllumination
+  name: cartridge (43x30mm illumination flare)
+  parent: BF14Cartridge43x30mmHEFrag
+  components:
+  - type: CartridgeAmmo
+    proto: Pellet12_gaugeFlare

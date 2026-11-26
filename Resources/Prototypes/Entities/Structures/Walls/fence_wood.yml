@@ -5,6 +5,8 @@
   description: Wooden piece of fencing. I hope there is babushka's garden behind it.
   abstract: true
   components:
+  - type: ArmorThickness # BF14-BLU: Battlefield14's thickness, for Mono's ArmorPiercing (rounds pass walls this thick or thinner)
+    thickness: 1
   - type: MeleeSound
     soundGroups:
       Brute:

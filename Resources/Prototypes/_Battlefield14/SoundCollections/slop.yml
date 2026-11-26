@@ -1,0 +1,8 @@
+- type: soundCollection
+  id: BF14GassyFartSound
+  files:
+  - "/Audio/_Battlefield14/Misc/gassy/fart1.ogg"
+  - "/Audio/_Battlefield14/Misc/gassy/fart2.ogg"
+  - "/Audio/_Battlefield14/Misc/gassy/fart3.ogg"
+  - "/Audio/_Battlefield14/Misc/gassy/fart4.ogg"
+  - "/Audio/_Battlefield14/Misc/gassy/fart5.ogg"

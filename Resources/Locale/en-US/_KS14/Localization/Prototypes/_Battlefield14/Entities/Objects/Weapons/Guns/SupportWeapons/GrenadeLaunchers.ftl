@@ -14,3 +14,22 @@ ent-BF14WeaponGrenadeLauncherUSM79Big = M79 (Embiggened)
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
 ent-BF14WeaponGrenadeLauncherRUGM94 = GM-94
     .desc = An odd design, loaded from the top into a magazine tube, and then pumped, like a shotgun. Brings to mind the M90A from Halo™. Has a minimum arming distance of 5 tiles. Takes 43x30mm grenades.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
+ent-BF14WeaponGrenadeLauncherRUGM94HEFrag =
+    .desc = { ent-BF14WeaponGrenadeLauncherRUGM94.desc }
+    .suffix = HE-Frag
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
+ent-BF14WeaponGrenadeLauncherRUGM94Thermobaric =
+    .desc = { ent-BF14WeaponGrenadeLauncherRUGM94.desc }
+    .suffix = Thermobaric
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
+ent-BF14WeaponGrenadeLauncherRUGM94ChemicalSmoke =
+    .desc = { ent-BF14WeaponGrenadeLauncherRUGM94.desc }
+    .suffix = CS Gas
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\GrenadeLaunchers.yml
+ent-BF14WeaponGrenadeLauncherRUGM94Illumination =
+    .desc = { ent-BF14WeaponGrenadeLauncherRUGM94.desc }
+    .suffix = Flare

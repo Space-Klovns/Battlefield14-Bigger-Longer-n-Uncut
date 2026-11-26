@@ -34,7 +34,7 @@ public sealed partial class ScatteringGrenadeSystem : SharedScatteringGrenadeSys
     /// </summary>
     private void OnScatteringTrigger(Entity<ScatteringGrenadeComponent> entity, ref TriggerEvent args)
     {
-        if (args.Key != entity.Comp.TriggerKey)
+        if (args.Key != null /* BF14-BLU: a keyless trigger sets off every effect, as everywhere else */ && args.Key != entity.Comp.TriggerKey)
             return;
 
         entity.Comp.IsTriggered = true;
