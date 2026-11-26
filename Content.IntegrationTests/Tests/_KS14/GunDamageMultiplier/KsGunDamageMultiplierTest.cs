@@ -4,10 +4,13 @@ using System.Linq;
 using System.Numerics;
 using Content.IntegrationTests.Tests.Interaction;
 using Content.Shared._KS14.GunDamageMultiplier;
+using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
 using Content.Shared.Projectiles;
 using Robust.Shared.GameObjects;
+using Robust.Shared.Localization;
 using Robust.Shared.Map;
+using Robust.Shared.Utility;
 
 namespace Content.IntegrationTests.Tests._KS14.GunDamageMultiplier;
 
@@ -48,6 +51,59 @@ public sealed class KsGunDamageMultiplierTest : InteractionTest
 
         Assert.That(multiplier, Is.Null, "the Desert Eagle is the control and must have no damage multiplier");
         Assert.That(bulletDamage, Is.EqualTo(prototypeDamage), "a gun with no damage multiplier changed its bullet's damage");
+    }
+
+    [Test]
+    public async Task RegalCondorExamineShowsMultiplier()
+    {
+        var (examineText, multiplierLine) = await ExamineAndExpect(RegalCondor);
+
+        Assert.That(multiplierLine, Is.Not.Null, "the Regal Condor has no damage multiplier at all");
+        Assert.That(examineText, Does.Contain(multiplierLine), "examining the Regal Condor does not show its damage multiplier");
+    }
+
+    /// <summary>
+    ///     Control: a gun without the component shows no multiplier line.
+    /// </summary>
+    [Test]
+    public async Task DesertEagleExamineHasNoMultiplier()
+    {
+        var (examineText, multiplierLine) = await ExamineAndExpect(DesertEagle);
+
+        Assert.That(multiplierLine, Is.Null, "the Desert Eagle is the control and must have no damage multiplier");
+
+        // The words before the number, so the check holds whatever multiplier the line would have shown.
+        var linePrefix = PlainMultiplierLine("|").Split('|')[0];
+        Assert.That(examineText, Does.Not.Contain(linePrefix), "a gun with no damage multiplier shows one on examine");
+    }
+
+    /// <summary>
+    ///     Examines a gun spawned beside the player. Returns the plain examine text, and the multiplier line it
+    ///         should contain if the gun has a multiplier.
+    /// </summary>
+    private async Task<(string ExamineText, string? MultiplierLine)> ExamineAndExpect(string gunPrototype)
+    {
+        var examineText = string.Empty;
+        string? multiplierLine = null;
+
+        await Server.WaitAssertion(() =>
+        {
+            var gun = SEntMan.SpawnEntity(gunPrototype, SEntMan.GetComponent<TransformComponent>(SPlayer).Coordinates);
+
+            if (SEntMan.TryGetComponent<KsGunDamageMultiplierComponent>(gun, out var multiplierComponent))
+                multiplierLine = PlainMultiplierLine($"{multiplierComponent.Multiplier:0.##}");
+
+            examineText = Server.System<ExamineSystemShared>().GetExamineText(gun, SPlayer).ToString();
+        });
+
+        return (examineText, multiplierLine);
+    }
+
+    private string PlainMultiplierLine(string multiplier)
+    {
+        var markup = Server.ResolveDependency<ILocalizationManager>()
+            .GetString("ks-gun-damage-multiplier-examine", ("color", "yellow"), ("multiplier", multiplier));
+        return FormattedMessage.FromMarkupOrThrow(markup).ToString();
     }
 
     /// <summary>

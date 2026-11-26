@@ -198,7 +198,6 @@
     maxAngle: -30
   - type: Gun
     projectileSpeed: 60
-    damageModifier: 1.5
     minAngle: 19 # wielded = 0
     maxAngle: 50 # wielded = 20
     angleIncrease: 3.5
@@ -213,6 +212,8 @@
         volume: -12
         variation: 0.125
         maxDistance: 15 # BF14-BLU: was Mono's range
+  - type: KsGunDamageMultiplier
+    multiplier: 1.5
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 10
@@ -244,12 +245,13 @@
   - type: Gun
     fireRate: 0.5
     projectileSpeed: 60 # it's a sniper
-    damageModifier: 1.5
     soundGunshot:
       path: /Audio/_Harmony/Weapons/Guns/Gunshots/hristov_fire_alt.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 1.5
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -316,12 +318,13 @@
   - type: Gun
     fireRate: 1
     projectileSpeed: 55 # it's a sniper
-    damageModifier: 2.5
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 2.5
   - type: BallisticAmmoProvider
     capacity: 5
     proto: BF14CartridgeRifle762x51
@@ -364,12 +367,13 @@
   - type: Gun
     fireRate: 0.5
     projectileSpeed: 55 # it's a sniper
-    damageModifier: 2.5
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 2.5
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -436,7 +440,6 @@
   - type: Gun
     fireRate: 0.5
     projectileSpeed: 55 # it's a sniper
-    damageModifier: 1.5
     soundGunshot:
       collection: BF14AWMGunshots
       params:
@@ -445,6 +448,8 @@
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 1.5
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -523,13 +528,14 @@
           tags:
             - BF14CartridgeRifle762x51
   - type: Gun
-    damageModifier: 1.5
     soundGunshot:
       collection: BF14AWPGunshots
       params:
         volume: -5
         variation: 0.125
 
+  - type: KsGunDamageMultiplier
+    multiplier: 1.5
 - type: entity
   name: SV-98
   parent: [BaseWeaponRifle, BaseGunWieldable]
@@ -552,12 +558,13 @@
   - type: Gun
     fireRate: 0.5
     projectileSpeed: 55 # it's a sniper
-    damageModifier: 2.5
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/heavy_rifle_1.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 2.5
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -636,12 +643,13 @@
     angleIncrease: 6.5
     angleDecay: 13
     projectileSpeed: 50
-    damageModifier: 1.5
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 1.5
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -729,12 +737,13 @@
   - type: Gun
     fireRate: 0.5
     projectileSpeed: 55 # it's a sniper
-    damageModifier: 2 # shitty rifle
     soundGunshot:
       collection: BF14VPO215Gunshots
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 2 # shitty rifle
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -803,12 +812,13 @@
   - type: Gun
     fireRate: 0.5
     projectileSpeed: 55 # it's a sniper
-    damageModifier: 1.75 # old gun + larger mag size compared to the SV-98
     soundGunshot:
       collection: BF14MP18Gunshots
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 1.75 # old gun + larger mag size compared to the SV-98
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -889,12 +899,13 @@
     angleIncrease: 6.5
     angleDecay: 15
     projectileSpeed: 40
-    damageModifier: 1.5
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/dmr.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: KsGunDamageMultiplier
+    multiplier: 1.5
   - type: ItemSlots
     slots:
       gun_magazine:

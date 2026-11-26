@@ -31,8 +31,8 @@
     sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/MP412REX.rsi
   - type: Clothing
     sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/MP412REX.rsi
-  - type: Gun
-    damageModifier: 2.5
+  - type: KsGunDamageMultiplier
+    multiplier: 2.5
   - type: RevolverAmmoProvider
     proto: BF14CartridgePistol357
     capacity: 6

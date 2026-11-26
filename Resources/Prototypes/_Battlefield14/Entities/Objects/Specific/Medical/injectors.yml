@@ -12,8 +12,9 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: Item
     size: Small
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       pen:
         maxVol: 15
   - type: ExaminableSolution
@@ -40,8 +41,9 @@
   id: BF14AutoInjectorBrute
   suffix: Brute mix
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       pen:
         maxVol: 15
         reagents:
@@ -55,8 +57,9 @@
   id: BF14AutoInjectorBurn
   suffix: Burn mix
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       pen:
         maxVol: 15
         reagents:
@@ -70,8 +73,9 @@
   id: BF14AutoInjectorMultispectrum
   suffix: Multi-spectrum
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       pen:
         maxVol: 15
         reagents:
@@ -87,8 +91,9 @@
   id: BF14AutoInjectorEmergency
   suffix: Emergency mix
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       pen:
         maxVol: 15
         reagents:
@@ -104,8 +109,9 @@
   id: BF14AutoInjectorStormZ
   suffix: Storm-Z mix
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       pen:
         maxVol: 15
         reagents:
@@ -121,8 +127,9 @@
   id: BF14AutoInjectorCombatStabilisation
   suffix: combat stabilisation
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       pen:
         maxVol: 15
         reagents:

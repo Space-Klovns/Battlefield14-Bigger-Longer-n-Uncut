@@ -18,8 +18,9 @@
   - type: Item
     size: Small
     sprite: _Battlefield14/Objects/Specific/Medical/hypo.rsi
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
   - type: RefillableSolution
@@ -62,8 +63,9 @@
   - type: Item
     size: Small
     sprite: _Battlefield14/Objects/Specific/Medical/hypobig.rsi
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
   - type: RefillableSolution
@@ -92,8 +94,9 @@
   name: bicaridine hypospray
   description: Filled with 60u bicaridine.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -107,8 +110,9 @@
   name: kelotane hypospray
   description: Filled with 60u kelotane.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -122,8 +126,9 @@
   name: tricordrazine hypospray
   description: Filled with 60u tricordrazine.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -137,8 +142,9 @@
   name: combat hypospray
   description: Filled with equal parts bicaridine, kelotane, and tricordrazine; or BKT. # tricordrazine, and tramadol; or BKTT.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -156,8 +162,9 @@
   name: dylovene hypospray
   description: Filled with 60u dylovene.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -171,8 +178,9 @@
   name: dexalin hypospray
   description: Filled with 60u dexalin.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -186,8 +194,9 @@
   name: inaprovaline hypospray
   description: Filled with 60u inaprovaline.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -201,8 +210,9 @@
   name: meralyne hypospray
   description: Filled with 60u meralyne.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -216,8 +226,9 @@
   name: dermaline hypospray
   description: Filled with 60u dermaline.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -231,8 +242,9 @@
   name: advanced hypospray
   description: Filled with 30u meralyne and 30u dermaline.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -248,8 +260,9 @@
   name: saline hypospray
   description: Filled with 60u saline.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -263,8 +276,9 @@
   name: nanoblood hypospray
   description: Filled with 60u nanoblood. Heals approx 33% blood volume per injection. DO NOT APPLY MORE THAN ONCE.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -286,8 +300,9 @@
     allowedModes:
     - HyposprayDynamicMode
     - HyposprayInjectMode
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 60
         reagents:
@@ -301,8 +316,9 @@
   name: bicaridine hypospray
   description: Filled with 120u bicaridine.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
         reagents:
@@ -316,8 +332,9 @@
   name: kelotane hypospray
   description: Filled with 120u kelotane.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
         reagents:
@@ -331,8 +348,9 @@
   name: tricordrazine hypospray
   description: Filled with 120u tricordrazine.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
         reagents:
@@ -346,8 +364,9 @@
   name: combat hypospray
   description: Filled with equal parts bicaridine, kelotane, and tricordrazine; or BKT. # tricordrazine, and tramadol; or BKTT.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
         reagents:
@@ -365,8 +384,9 @@
   name: dylovene hypospray
   description: Filled with 120u dylovene.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
         reagents:
@@ -380,8 +400,9 @@
   name: dexalin hypospray
   description: Filled with 120u dexalin.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
         reagents:
@@ -395,8 +416,9 @@
   name: inaprovaline hypospray
   description: Filled with 120u inaprovaline.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
         reagents:
@@ -410,8 +432,9 @@
   name: saline hypospray
   description: Filled with 120u saline.
   components:
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       hypospray:
         maxVol: 120
         reagents:
