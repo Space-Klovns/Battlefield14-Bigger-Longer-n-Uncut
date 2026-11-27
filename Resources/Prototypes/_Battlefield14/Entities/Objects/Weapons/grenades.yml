@@ -947,8 +947,9 @@
         Blunt: 4
   - type: Spillable
     solution: drink
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       drink:
         reagents:
         - ReagentId: Vodka

@@ -37,8 +37,9 @@
     size: Normal
   - type: Extractable
     grindableSolutionName: steamhappy
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       steamhappy:
         reagents:
         - ReagentId: BF14WhitePhosphorus
@@ -80,8 +81,9 @@
     delay: 2.0
   - type: Extractable
     grindableSolutionName: steamhappy
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       steamhappy:
         reagents:
         - ReagentId: BF14WhitePhosphorus
@@ -106,8 +108,9 @@
     size: Normal
   - type: Extractable
     grindableSolutionName: trump
-  - type: SolutionContainerManager
-    solutions:
+  - type: SolutionManager # BF14-BLU: was SolutionContainerManager, whose shim drops the manager
+    solutions: null
+    solutionData:
       trump:
         reagents:
         - ReagentId: BF14WhitePhosphorus

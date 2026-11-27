@@ -1252,12 +1252,13 @@
     selectedMode: SemiAuto
     fireRate: 5
     projectileSpeed: 55 # it's a sniper
-    damageModifier: 2 # less dmg than the sv-98 because it a shitty gun and ment to be shitty
     soundGunshot:
       collection: BF14MP18Gunshots
       params:
         volume: -5
         variation: 0.125
+  - type: KsGunDamageMultiplier
+    multiplier: 2 # less dmg than the sv-98 because it a shitty gun and ment to be shitty
   - type: ItemSlots
     slots:
       gun_chamber:

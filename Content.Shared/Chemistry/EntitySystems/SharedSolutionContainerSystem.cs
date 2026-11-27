@@ -118,10 +118,21 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
         var changedEv = new SolutionChangedEvent(ent);
         RaiseLocalEvent(ent, ref changedEv);
 
-        if (!ContainedQuery.TryComp(ent, out var contained) || !SolutionManagerQuery.TryComp(contained.Container, out var manager))
+        if (ContainedQuery.TryComp(ent, out var contained) && SolutionManagerQuery.TryComp(contained.Container, out var manager))
+        {
+            manager.Solutions[ent.Comp.Id] = ent;
             return;
+        }
 
-        manager.Solutions[ent.Comp.Id] = ent;
+        // KS14 start: a solution made from SolutionManager's solutionData has no prototype, so its SolutionComponent arrives by state,
+        //     after the container insert that would have cached it and before its ContainedSolutionComponent; cache it by the container it's in.
+        if (ContainerSystem.TryGetContainingContainer(ent.Owner, out var container) &&
+            SolutionManagerQuery.TryComp(container.Owner, out var containingManager) &&
+            container.ID == containingManager.Container)
+        {
+            containingManager.Solutions[ent.Comp.Id] = ent;
+        }
+        // KS14 end
     }
 
     /// <summary>
