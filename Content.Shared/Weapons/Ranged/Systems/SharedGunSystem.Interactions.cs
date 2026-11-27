@@ -20,6 +20,11 @@ public abstract partial class SharedGunSystem
                 ("mode", GetLocSelector(component.SelectedMode))));
             args.PushMarkup(Loc.GetString("gun-fire-rate-examine", ("color", FireRateExamineColor),
                 ("fireRate", $"{component.FireRateModified:0.0}")));
+            // BF14-BLU start
+            if (component.DamageModifier != 1f)
+                args.PushMarkup(Loc.GetString("gun-damage-modifier-examine", ("color", FireRateExamineColor),
+                    ("damage", $"{component.DamageModifier:0.##}")));
+            // BF14-BLU end
         }
     }
 

@@ -86,3 +86,14 @@ ent-BF14WeaponRifleRUASH12 = ShAK-12
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\rifles.yml
 ent-BF14WeaponRifleRUASH12Suppressed = ShAK-12 SUPP.
     .desc = Used to be known as the ASh-12, this weapon was designed to provide the maximum firepower for close quarters combat, and provides it with the monsterous 12.7x55 round. The suppressor is not for any stealth purpose, but to give you the mercy of not burning your eyes out as your skull gets a new canoe shape. Takes ASH-12 pattern magazines.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\rifles.yml
+ent-BF14WeaponRifleUSXM8 = M8A1
+    .desc = The 5.56 rifle portion of the OICW, removed and made its own standalone rifle. A spin-off of the G36 series of rifles. Takes G36 pattern magazines.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\rifles.yml
+ent-BF14WeaponRifleUSXM8Tan =
+    .desc = { ent-BF14WeaponRifleUSXM8.desc }
+    .suffix = tan
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\rifles.yml
+ent-BF14WeaponRifleRUMP18 = MP-18
+    .desc = A single-shot break-action hunting rifle made for the russian civilian market. Chambered in 7.62x54mmR.

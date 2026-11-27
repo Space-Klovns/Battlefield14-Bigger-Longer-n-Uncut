@@ -17,3 +17,18 @@ ent-BF14PouchMagsPistolLarge = large pistol magazine pouch
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
 ent-BF14PouchFlares = flare pouch
     .desc = A convenient set of pouches for holding flares and glowsticks for on the go lighting solutions.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
+ent-BF14PouchFirstAid = first aid pouch
+    .desc = { "" }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
+ent-BF14PouchFirstAidSmall = first aid pouch
+    .desc = { "" }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
+ent-BF14PouchMedkit = medkit pouch
+    .desc = { "" }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
+ent-BF14PouchGrenades = grenade pouch
+    .desc = A small pouch for holding a bunch of grenades.

@@ -1,0 +1,47 @@
+- type: entity
+  parent: BaseChemistryBottleFilled
+  id: BF14MeraBicChemistryBottle
+  suffix: MB/MeraBic
+  components:
+  - type: Label
+    currentLabel: "meralyne + bicaridine"
+  - type: Solution # BF14-BLU: was SolutionContainerManager's drink, which upstream holds here now
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: BF14Meralyne
+        Quantity: 15
+      - ReagentId: Bicaridine
+        Quantity: 15
+
+- type: entity
+  parent: BaseChemistryBottleFilled
+  id: BF14KeloDermChemistryBottle
+  suffix: KD/KeloDerm
+  components:
+  - type: Label
+    currentLabel: "kelotane + dermaline"
+  - type: Solution # BF14-BLU: was SolutionContainerManager's drink, which upstream holds here now
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: Dermaline
+        Quantity: 15
+      - ReagentId: Kelotane
+        Quantity: 15
+
+- type: entity
+  parent: BaseChemistryBottleFilled
+  id: BF14MeraDermChemistryBottle
+  suffix: MD/MeraDerm
+  components:
+  - type: Label
+    currentLabel: "meralyne + dermaline"
+  - type: Solution # BF14-BLU: was SolutionContainerManager's drink, which upstream holds here now
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: Dermaline
+        Quantity: 15
+      - ReagentId: BF14Meralyne
+        Quantity: 15

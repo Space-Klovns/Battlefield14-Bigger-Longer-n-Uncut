@@ -21,3 +21,10 @@ ent-BF14WeaponRifleRURPK = РПК
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\AutomaticRifles.yml
 ent-BF14WeaponRifleDELMGK = LMGK
     .desc = Восточногерманская лицензионная копия РПК. Сегодня — большая редкость. Принимает магазины образца АКМ.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\AutomaticRifles.yml
+ent-BF14WeaponRifleUSM27IAR = M27-IAR
+    .desc = Собственная 416-я морской пехоты, призванная заменить M16A4 и M249. Принимает магазины STANAG. Принимает штык-ножи M7.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\AutomaticRifles.yml
+ent-BF14WeaponRifleUSRPK16 = RPK-16
+    .desc = В какой-то момент американские гражданские помешались на собственной M27-IAR, а с распространением формально не автоматических спусковых механизмов незадолго до войны случился взрыв конфигураций AR15 под названием «RPK-16», явно отсылающих к советскому РПК-74. Принимает магазины STANAG. Принимает штык-ножи M7.

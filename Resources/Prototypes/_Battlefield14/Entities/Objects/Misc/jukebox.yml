@@ -1,0 +1,29 @@
+- type: entity
+  parent: BaseItem
+  id: BF14Boombox
+  name: boombox
+  description: "A handheld machine capable of playing a wide variety of tunes. Enjoyment not guaranteed. This item can be worn on your auxillary suit storare slot."
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    state: old-radio
+  - type: Jukebox
+    onState: old-radio
+    offState: old-radio
+    selectState: old-radio
+  - type: Item
+    size: Normal
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+    - suitStorage
+    - SUITSTORAGE2
+  - type: StaticPrice
+    price: 200
+  - type: ActivatableUI
+    key: enum.JukeboxUiKey.Key
+  - type: UserInterface
+    interfaces:
+       enum.JukeboxUiKey.Key:
+         type: JukeboxBoundUserInterface

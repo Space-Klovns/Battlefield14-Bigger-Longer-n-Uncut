@@ -1,0 +1,128 @@
+- type: entity
+  parent: BasePlushie
+  id: BF14PlushieScav
+  name: scav plushie
+  description: You get a feeling this guy is eyeing you up on if your gear is worth the -0.25 scav rep for killing you.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/scav.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Battlefield14/Collections/scav/interact.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: BF14ScavPlush
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Battlefield14/Collections/scav/interact.ogg
+  - type: MeleeWeapon
+    soundHit:
+      collection: BF14ScavPlush
+  - type: UseDelay
+    delay: 30.0
+
+- type: entity
+  parent: BasePlushie
+  id: BF14PlushieSteamhappy
+  name: steamhappy plushie
+  description: A cute toy that resembles an emoji used in the steam chatting feature.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/steamhappy.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Extractable
+    grindableSolutionName: steamhappy
+  - type: SolutionContainerManager
+    solutions:
+      steamhappy:
+        reagents:
+        - ReagentId: BF14WhitePhosphorus
+          Quantity: 10
+  - type: Solution # BF14-BLU: was SolutionContainerManager's food, which upstream plushies hold here now
+    solution:
+      maxVol: 10
+      reagents:
+      - ReagentId: BF14WhitePhosphorus
+        Quantity: 10
+
+- type: entity
+  parent: BaseItem
+  id: BF14PlushieSteamhappyBombFake
+  name: steamhappy plushie
+  description: A cute toy that resembles an emoji used in the steam chatting feature.
+  suffix: FAKE BOMB, DO NOT MAP
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/steamhappy.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: TriggerOnUse # BF14-BLU: OnUseTimerTrigger, split as upstream did
+    keyOut: use
+  - type: TimerTrigger
+    keysIn:
+    - use
+    keyOut: null # BF14-BLU: no key, so every effect goes off, as all of them did in BF14
+    delay: 1.45
+    beepSound:
+      path: "/Audio/_Battlefield14/Effects/YouAreGoingToDieFast.ogg"
+      params:
+        volume: 5
+    initialBeepDelay: 0
+    beepInterval: 3
+  - type: DeleteOnTrigger
+  - type: UseDelay
+    delay: 2.0
+  - type: Extractable
+    grindableSolutionName: steamhappy
+  - type: SolutionContainerManager
+    solutions:
+      steamhappy:
+        reagents:
+        - ReagentId: BF14WhitePhosphorus
+          Quantity: 10
+  - type: Solution # BF14-BLU: was SolutionContainerManager's food, which upstream plushies hold here now
+    solution:
+      maxVol: 10
+      reagents:
+      - ReagentId: BF14WhitePhosphorus
+        Quantity: 10
+
+- type: entity
+  parent: BasePlushie
+  id: BF14PlushieTrump
+  name: Donald Trump plushie
+  description: A cute toy that resembles the sitting president of the United States.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/trump.rsi
+    state: drumpf
+  - type: Item
+    size: Normal
+  - type: Extractable
+    grindableSolutionName: trump
+  - type: SolutionContainerManager
+    solutions:
+      trump:
+        reagents:
+        - ReagentId: BF14WhitePhosphorus
+          Quantity: 10
+  - type: Solution # BF14-BLU: was SolutionContainerManager's food, which upstream plushies hold here now
+    solution:
+      maxVol: 10
+      reagents:
+      - ReagentId: BF14WhitePhosphorus
+        Quantity: 10
+
+- type: entity
+  parent: BF14PlushieTrump
+  id: BF14PlushieTrumpRealistic
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/trump.rsi
+    state: trump

@@ -160,3 +160,101 @@
     whitelist:
       tags:
         - Flare
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  id: BF14PouchFirstAid
+  parent: BF14BasePouch
+  name: first aid pouch
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/pouches.rsi
+    layers:
+      - state: firstaid
+  - type: Storage
+    whitelist:
+      tags:
+        - Brutepack
+        - Gauze
+        - Ointment
+        - PillCanister
+        - BF14BlisterPack
+        - BF14Tourniquet
+        - BF14Syrette
+        - BF14MedicationBox
+        - Packet
+      components:
+#        - Hypospray # BF14-BLU: KS14 hyposprays are Injectors
+        - Injector
+        - Pill
+  - type: ExplosionResistance
+    damageCoefficient: 0.0
+
+- type: entity
+  id: BF14PouchFirstAidSmall
+  parent: BF14PouchFirstAid
+  name: first aid pouch
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/pouches.rsi
+    layers:
+      - state: small_firstaid
+  - type: Storage
+    grid:
+    - 0,0,2,1
+
+- type: entity
+  id: BF14PouchMedkit
+  parent: BF14PouchFirstAid
+  name: medkit pouch
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/pouches.rsi
+    layers:
+      - state: medkit
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,3,2
+    whitelist:
+      tags:
+        - DiscreteHealthAnalyzer
+        - Brutepack
+        - Gauze
+        - Ointment
+        - PillCanister
+        - BF14Tourniquet
+        - BF14Syrette
+        - BF14MedicationBox
+      components:
+#        - Hypospray # BF14-BLU: KS14 hyposprays are Injectors
+        - Injector
+        - Pill
+
+- type: entity
+  id: BF14PouchGrenades
+  parent: BF14PouchMags
+  name: grenade pouch
+  description: A small pouch for holding a bunch of grenades.
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Misc/pouches.rsi
+    layers:
+      - state: grenade
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,5,1
+    whitelist:
+      tags:
+      - BF14Grenade
+      - BF14Cartridge40x46mmGrenade
+      - BF14BreachingCharge
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 100
+  - type: StaticPrice
+    price: 100
+  - type: ExplosionResistance # add to medical pouches too btw
+    damageCoefficient: 0.0

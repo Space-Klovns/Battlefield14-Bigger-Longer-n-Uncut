@@ -1,0 +1,177 @@
+- type: entity
+  parent: BaseBattlemap
+  id: BF14MapTaurus
+  name: 'map (taurus)'
+  description: "It's a map of Taurus, Florida. The red squares mark objectives. To use, place on the floor, hover over the item, and tap E on the keyboard."
+  components:
+    - type: Item
+      size: Tiny
+      storedSprite:
+        sprite: _Battlefield14/Objects/Misc/maps.rsi
+        state: taurus-storage
+    - type: Sprite
+      sprite: _Battlefield14/Objects/Misc/maps.rsi
+      state: taurus
+      scale: 0.7, 0.7
+    - type: TabletopGame
+      size: 190, 200
+      setup:
+        !type:TabletopEmptySetup
+        boardPrototype: BF14PhotoMapTaurus
+
+- type: entity
+  parent: BaseBattlemap
+  id: BF14MapSpringfield
+  name: 'map (springfield)'
+  description: "It's a map of Springfield, Kentucky. The red squares mark objectives. To use, place on the floor, hover over the item, and tap E on the keyboard."
+  components:
+    - type: Item
+      size: Tiny
+      storedSprite:
+        sprite: _Battlefield14/Objects/Misc/maps.rsi
+        state: springfield-storage
+    - type: Sprite
+      sprite: _Battlefield14/Objects/Misc/maps.rsi
+      state: springfield
+      scale: 0.7, 0.7
+    - type: TabletopGame
+      size: 370, 335
+      setup:
+        !type:TabletopEmptySetup
+        boardPrototype: BF14PhotoMapSpringfield
+
+- type: entity
+  parent: BaseBattlemap
+  id: BF14MapInterchange
+  name: 'map (Norvinsk interchange)'
+  description: "It's a map of Norvinsk, UTLRA mall also nicknamed the interchange. objectives are circled in red. To use, place on the floor, hover over the item, and tap E on the keyboard."
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _Battlefield14/Objects/Misc/maps.rsi
+      state: interchange
+      scale: 0.7, 0.7
+    - type: TabletopGame
+      size: 1000, 1520
+      setup:
+        !type:TabletopEmptySetup
+        boardPrototype: BF14PhotoMapInterchange
+
+- type: entity
+  parent: BaseBattlemap
+  id: BF14MapCustoms
+  name: 'hand drawn map (Norvinsk customs)'
+  description: "It's a map of Norvinsk customs. Gotta give credit where it due, atleast this one isnt crumpled to hell like the last batch of maps. To use, place on the floor, hover over the item, and tap E on the keyboard."
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _Battlefield14/Objects/Misc/maps.rsi
+      state: customs
+    - type: TabletopGame
+      size: 1438, 691
+      setup:
+        !type:TabletopEmptySetup
+        boardPrototype: BF14PhotoMapCustoms
+
+- type: entity
+  parent: BaseBattlemap
+  id: BF14MapBengalsk
+  name: 'map (bengalsk)'
+  description: "It's a map of Bengalsk, in the Russian Federation. The red squares mark objectives. To use, place on the floor, hover over the item, and tap E on the keyboard."
+  components:
+    - type: Item
+      size: Tiny
+      storedSprite:
+        sprite: _Battlefield14/Objects/Misc/maps.rsi
+        state: bengalsk-storage
+    - type: Sprite
+      sprite: _Battlefield14/Objects/Misc/maps.rsi
+      state: bengalsk
+#      scale: 0.7, 0.7
+    - type: TabletopGame
+      size: 384, 130
+      setup:
+        !type:TabletopEmptySetup
+        boardPrototype: BF14PhotoMapBengalsk
+
+- type: entity
+  parent: BaseBattlemap
+  id: BF14MapCedarCreek
+  name: 'map (cedar creek)'
+  description: "It's a map of Cedar Creek, in Germany. The red squares mark objectives. To use, place on the floor, hover over the item, and tap E on the keyboard."
+  components:
+    - type: Item
+      size: Tiny
+      storedSprite:
+        sprite: _Battlefield14/Objects/Misc/maps.rsi
+        state: cedarcreek-storage
+    - type: Sprite
+      sprite: _Battlefield14/Objects/Misc/maps.rsi
+      state: cedarcreek
+    - type: TabletopGame
+      size: 282, 357
+      setup:
+        !type:TabletopEmptySetup
+        boardPrototype: BF14PhotoMapCedarCreek
+
+- type: entity
+  parent: BaseBoardTabletop
+  id: BF14PhotoMapInterchange
+  name: map of Norvinsk interchange
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/GroundMaps/interchange.rsi
+    state: marked
+
+- type: entity
+  parent: BaseBoardTabletop
+  id: BF14PhotoMapCustoms
+  name: map of Norvinsk customs
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/GroundMaps/customs.rsi
+    state: map
+
+- type: entity
+  parent: BaseBoardTabletop
+  id: BF14PhotoMapTaurus
+  name: map of Taurus
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/GroundMaps/Taurus.rsi
+    state: map
+
+- type: entity
+  parent: BaseBoardTabletop
+  id: BF14PhotoMapSpringfield
+  name: map of Springfield
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/GroundMaps/Springfield.rsi
+    state: map
+
+- type: entity
+  parent: BaseBoardTabletop
+  id: BF14PhotoMapBengalsk
+  name: map of Bengalsk
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/GroundMaps/Bengalsk.rsi
+    state: map
+
+- type: entity
+  parent: BaseBoardTabletop
+  id: BF14PhotoMapCedarCreek
+  name: map of Cedar Creek
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/GroundMaps/CedarCreek.rsi
+    state: map

@@ -274,3 +274,36 @@
   - "/Audio/_Battlefield14/Weapons/Guns/M60/fire-04.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/M60/fire-05.ogg"
   - "/Audio/_Battlefield14/Weapons/Guns/M60/fire-06.ogg"
+
+- type: soundCollection
+  id: BF14VPO215Gunshots # VPO-215, .366 TKM
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/VPO215/fire1.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/VPO215/fire2.ogg"
+
+- type: soundCollection
+  id: BF14MP18Gunshots # MP-18/Mosin, 7.62x54mmR
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/MP18/fire1.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP18/fire2.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/MP18/fire3.ogg"
+
+- type: soundCollection
+  id: BF14AWMGunshots # AWM - Used for AWM
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/AWM/fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWM/fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWM/fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWM/fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWM/fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWM/fire-06.ogg"
+
+- type: soundCollection
+  id: BF14AWPGunshots # AWP - Used for AWP
+  files:
+  - "/Audio/_Battlefield14/Weapons/Guns/AWP/fire-01.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWP/fire-02.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWP/fire-03.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWP/fire-04.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWP/fire-05.ogg"
+  - "/Audio/_Battlefield14/Weapons/Guns/AWP/fire-06.ogg"

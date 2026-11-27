@@ -17,3 +17,18 @@ ent-BF14PouchMagsPistolLarge = большой подсумок для писто
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
 ent-BF14PouchFlares = подсумок для фальшфейеров
     .desc = Удобный набор подсумков для фальшфейеров и химических источников света, чтобы освещать путь на ходу.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
+ent-BF14PouchFirstAid = подсумок первой помощи
+    .desc = { ent-BaseStorageItem.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
+ent-BF14PouchFirstAidSmall = подсумок первой помощи
+    .desc = { ent-BaseStorageItem.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
+ent-BF14PouchMedkit = подсумок для аптечки
+    .desc = { ent-BaseStorageItem.desc }
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Misc\pouches.yml
+ent-BF14PouchGrenades = гранатный подсумок
+    .desc = Небольшой подсумок для кучи гранат.

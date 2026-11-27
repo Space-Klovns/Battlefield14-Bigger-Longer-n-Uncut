@@ -21,3 +21,10 @@ ent-BF14WeaponRifleRURPK = RPK
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\AutomaticRifles.yml
 ent-BF14WeaponRifleDELMGK = LMGK
     .desc = An east german lisenced copy of the RPK. Quite the rare piece today. Takes AKM pattern magazines.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\AutomaticRifles.yml
+ent-BF14WeaponRifleUSM27IAR = M27-IAR
+    .desc = The Marine corps own 416, intended to replace the M16A4 and the M249. Takes STANAG pattern magazines. Takes M7 pattern bayonets.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\SupportWeapons\AutomaticRifles.yml
+ent-BF14WeaponRifleUSRPK16 = RPK-16
+    .desc = At some point, American civilians became obsessed with having their own M27-IAR, and with the proliferation of technically not full auto triggers shortly before the war; there was an explosion of 'RPK-16' configurations for the AR15, obviously reminiscent of the soviet RPK-74. Takes STANAG pattern magazines. Takes M7 pattern bayonets.

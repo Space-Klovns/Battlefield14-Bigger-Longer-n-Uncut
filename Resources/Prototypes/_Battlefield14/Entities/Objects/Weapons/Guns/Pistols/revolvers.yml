@@ -18,3 +18,25 @@
         - BF14CartridgeShotgun410Bore
   - type: GunSpreadModifier
     spread: 1.5
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  name: MP412 REX
+  parent: WeaponRevolverMateba
+  id: BF14WeaponPistolRevolverRUMP412
+  description: "A rare and nearly extinct revolver designed for export, which of course was a venture doomed from the start. It now finds itself almost exclusively in the hands of high ranking officers (and grandpa back home). Takes .357 magnum."
+  components:
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/MP412REX.rsi
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Pistols/MP412REX.rsi
+  - type: Gun
+    damageModifier: 2.5
+  - type: RevolverAmmoProvider
+    proto: BF14CartridgePistol357
+    capacity: 6
+    whitelist:
+      tags:
+        - BF14CartridgePistol357
+        - BF14SpeedLoader357magnum

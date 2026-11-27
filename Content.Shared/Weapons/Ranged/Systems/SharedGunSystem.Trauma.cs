@@ -49,6 +49,10 @@ public abstract partial class SharedGunSystem
             return;
         }
 
+        // BF14-BLU start: the gun's damage multiplier, on both sides, so a predicted hit deals what the server's does
+        if (gun.DamageModifier != 1f && TryComp<ProjectileComponent>(uid, out var bf14Projectile))
+            bf14Projectile.Damage *= gun.DamageModifier;
+        // BF14-BLU end
         ShootProjectile(uid, mapDirection, gunVelocity, gunUid, user, gun.ProjectileSpeedModified);
     }
 

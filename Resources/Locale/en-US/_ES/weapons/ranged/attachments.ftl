@@ -9,3 +9,4 @@ es-gun-attachment-examine-text = It has an attached [bold][color=gold]{$attachme
 es-gun-attachments-slot-name-barrel = barrel
 es-gun-attachments-slot-name-grip = grip
 es-gun-attachments-slot-name-optic = optic
+es-gun-attachments-slot-name-stock = stock

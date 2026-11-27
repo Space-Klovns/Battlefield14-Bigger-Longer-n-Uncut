@@ -6,3 +6,16 @@
   - "/Audio/_Battlefield14/Misc/gassy/fart3.ogg"
   - "/Audio/_Battlefield14/Misc/gassy/fart4.ogg"
   - "/Audio/_Battlefield14/Misc/gassy/fart5.ogg"
+
+# BF14-BLU: ported from Battlefield14
+
+- type: soundCollection
+  id: BF14ScavPlush
+  files:
+  - "/Audio/_Battlefield14/Collections/scav/hit1.ogg"
+  - "/Audio/_Battlefield14/Collections/scav/hit2.ogg"
+  - "/Audio/_Battlefield14/Collections/scav/hit3.ogg"
+  - "/Audio/_Battlefield14/Collections/scav/hit4.ogg"
+  - "/Audio/_Battlefield14/Collections/scav/hit5.ogg"
+  - "/Audio/_Battlefield14/Collections/scav/hit6.ogg"
+  - "/Audio/_Battlefield14/Collections/scav/hit7.ogg"

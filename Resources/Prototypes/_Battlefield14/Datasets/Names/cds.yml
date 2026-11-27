@@ -1,0 +1,5 @@
+- type: localizedDataset # BF14-BLU: was a dataset
+  id: BF14NamesCDMusicAlbums
+  values:
+    prefix: bf14-names-cdmusic-albums-dataset-
+    count: 7

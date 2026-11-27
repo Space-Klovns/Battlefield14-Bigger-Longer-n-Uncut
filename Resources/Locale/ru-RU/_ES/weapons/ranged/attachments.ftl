@@ -9,3 +9,4 @@ es-gun-attachment-examine-text = На нём установлено: [bold][colo
 es-gun-attachments-slot-name-barrel = ствол
 es-gun-attachments-slot-name-grip = рукоять
 es-gun-attachments-slot-name-optic = прицел
+es-gun-attachments-slot-name-stock = приклад

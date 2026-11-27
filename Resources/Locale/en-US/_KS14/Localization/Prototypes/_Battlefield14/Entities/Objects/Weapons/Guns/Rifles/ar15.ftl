@@ -63,3 +63,6 @@ ent-BF14WeaponRifleUSRandomM4 =
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\ar15.yml
 ent-BF14WeaponRifleUSXM16E1Patriot = XM16E1 'Patriot'
     .desc = A one of a kind chopped down XM16E1 with a double drum magazine, obviously extremely unwieldy and impractical, but you feel kindof important holding it. Takes STANAG magazines.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\ar15.yml
+ent-BF14WeaponRifleUSXM16E1Gold = XM16E1 (gold)
+    .desc = A one of a kind gold plated XM16E1 meant as a gift to JFK, unfortunately he was assassinated before it could be delivered to him. Serial number 050000. Unfired. Takes STANAG magazines.

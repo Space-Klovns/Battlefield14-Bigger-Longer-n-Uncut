@@ -248,3 +248,98 @@
       collection: BF14SPAS12ShellIn
       params:
         volume: -5
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  name: M590
+  parent: BaseWeaponShotgun
+  id: BF14WeaponShotgunUSM590
+  description: "A popular civilian hunting shotgun, chopped down to breach doors more handily. Direct combat use ill-advised. Takes M7 pattern bayonets. This weapon can be stored on your auxillary suit storage slot."
+  suffix: Breaching
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,2,1
+    sprite: _Battlefield14/Objects/Weapons/Guns/Shotguns/M590.rsi
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Shotguns/M590.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - map: ["barrelAttachment"]
+      offset: 0.185, 0
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Shotguns/M590.rsi
+    slots:
+    - Back
+    - suitStorage
+    - SUITSTORAGE2
+    clothingVisuals:
+      suitstorage2:
+      - state: equipped-BACKPACK
+  - type: Gun
+    fireRate: 1
+    projectileSpeed: 25 # short barrel
+  - type: GunSpreadModifier
+    spread: 2 # short barrel
+  - type: Tag
+    tags:
+    - WeaponShotgunKammerer
+  - type: BallisticAmmoProvider
+    autoCycle: true
+    whitelist:
+      tags:
+      - BF14CartridgeShotgun12Gauge
+    capacity: 4
+    proto: BF14CartridgeShotgun12GaugeBreaching
+    soundInsert:
+      collection: BF14MossbergShellIn
+      params:
+        volume: -5
+  - type: ContainerContainer # BAYONET STUFF
+    containers:
+      attachment_barrel: !type:ContainerSlot
+      ballistic-ammo: !type:Container # BF14-BLU: declared, so it does not gain it on spawn
+  - type: ItemSlots
+    slots:
+      attachment_barrel:
+        insertSound: /Audio/Items/screwdriver.ogg
+        ejectSound: /Audio/Items/screwdriver.ogg
+        priority: 0
+        whitelist:
+          tags:
+          - BF14BayonetM7
+  - type: ESAttachableGun
+    slots:
+    - name: es-gun-attachments-slot-name-barrel
+      containerId: attachment_barrel
+      whitelist:
+        tags:
+        - BF14BayonetM7
+  - type: ActivatableUI
+    key: enum.ESAttachableGunUiKey.Key
+    verbOnly: true
+    verbText: es-gun-attachments-verb-text
+  - type: UserInterface
+    interfaces:
+      enum.ESAttachableGunUiKey.Key:
+        type: ESGunAttachmentBui
+  - type: ESItemMapper
+    mappings:
+      barrelAttachment:
+      - containerId: attachment_barrel
+        state: bayonet-m7
+        whitelist:
+          tags:
+          - BF14BayonetM7
+  - type: Appearance
+
+- type: entity
+  parent: BF14WeaponShotgunUSM590
+  id: BF14WeaponShotgunUSM590Buckshot
+  suffix: Buckshot
+  components:
+  - type: BallisticAmmoProvider
+    proto: BF14CartridgeShotgun12GaugeBuckshot

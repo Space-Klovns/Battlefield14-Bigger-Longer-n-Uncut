@@ -649,3 +649,32 @@
     magState: mag
     steps: 1
     zeroVisible: true
+
+# BF14-BLU: ported from Battlefield14
+
+- type: entity
+  parent: BF14WeaponRifleUSM16A1
+  id: BF14WeaponRifleUSXM16E1Gold
+  name: XM16E1 (gold)
+  description: "A one of a kind gold plated XM16E1 meant as a gift to JFK, unfortunately he was assassinated before it could be delivered to him. Serial number 050000. Unfired. Takes STANAG magazines."
+  components:
+  - type: Item
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/XM16E1goldonmob.rsi
+  - type: Sprite
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/XM16E1gold.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Icon
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/XM16E1gold.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Battlefield14/Objects/Weapons/Guns/Rifles/AR15/XM16E1goldonmob.rsi
+  - type: Gun
+    damageModifier: 1.1 # lol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true

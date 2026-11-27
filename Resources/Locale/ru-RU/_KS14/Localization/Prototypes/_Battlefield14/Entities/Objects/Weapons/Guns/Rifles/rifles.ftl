@@ -86,3 +86,14 @@ ent-BF14WeaponRifleRUASH12 = ШАК-12
 # Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\rifles.yml
 ent-BF14WeaponRifleRUASH12Suppressed = ШАК-12 С ГЛУШ.
     .desc = Ранее известный как АШ-12. Создан, чтобы дать максимум огневой мощи в ближнем бою, и даёт её чудовищным патроном 12,7x55. Глушитель здесь не для скрытности, а из милосердия — чтобы вы не выжгли себе глаза, пока чей-то череп принимает форму каноэ. Принимает магазины образца АШ-12.
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\rifles.yml
+ent-BF14WeaponRifleUSXM8 = M8A1
+    .desc = Винтовочная часть OICW под 5,56, выделенная в самостоятельную винтовку. Ответвление серии G36. Принимает магазины под G36.
+
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\rifles.yml
+ent-BF14WeaponRifleUSXM8Tan =
+    .desc = { ent-BF14WeaponRifleUSXM8.desc }
+    .suffix = песочный
+# Resources\Prototypes\_Battlefield14\Entities\Objects\Weapons\Guns\Rifles\rifles.yml
+ent-BF14WeaponRifleRUMP18 = МР-18
+    .desc = Однозарядное переломное охотничье ружьё для российского гражданского рынка. Под патрон 7,62x54 мм R.
